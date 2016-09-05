@@ -29,8 +29,8 @@ menuSelect = function(numCircles, circleNum, left, text) {
 	
 	if (left) {
 		// resets the rotation and origin for easier positioning
-		$(circleName).animateRotate(-startPos,360, 3000, 0, 'easeOutCubic', function() {});
-		$('#left-inner'+ circleNum).animateRotate(startPos,-360, 3000, 0, 'easeOutCubic', function() {});
+		$(circleName).animateRotate(-startPos, 360, 3000, 0, 'easeOutCubic', function() {});
+		$('#left-inner'+ circleNum).animateRotate(startPos, -360, 3000, 0, 'easeOutCubic', function() {});
 		
 		// strip it of it's bubble
 		$(circleName).delay(1500).animate({
@@ -38,15 +38,23 @@ menuSelect = function(numCircles, circleNum, left, text) {
 			borderColor: 'transparent'		
 		}, {
 	    	duration: 1200, 
-	    	easing: "swing"
+	    	easing: 'swing'
 		});
-  
+  		
+  		// fade out image
+		$('#left-inner' + circleNum).delay(500).animate({
+			opacity: '0'
+		},{
+			duration: 1200,
+			easing: 'swing'
+		});
+
 		// fade out label
 		$('#left-text'+ circleNum).delay(500).animate({
 			opacity: '0'
 		},{
 			duration: 1200, 
-	    	easing: "swing"
+	    	easing: 'swing'
 		});
 	} else {
 		// resets the rotation and origin for easier positioning
@@ -59,15 +67,23 @@ menuSelect = function(numCircles, circleNum, left, text) {
 			borderColor: 'transparent'		
 		}, {
 	    	duration: 1200, 
-	    	easing: "swing"
+	    	easing: 'swing'
 		});
-  
+  		
+		// fade out image
+		$('#right-inner' + circleNum).delay(500).animate({
+			opacity: '0'
+		},{
+			duration: 1200,
+			easing: 'swing'
+		});
+
 		// fade out label
 		$('#right-text'+ circleNum).delay(500).animate({
 			opacity: '0'
 		},{
 			duration: 1200, 
-	    	easing: "swing"
+	    	easing: 'swing'
 		});
 	}
 
@@ -169,12 +185,12 @@ closeOtherCircles = function(numCircles, selected, left, shiftBy) {
 
 		// the case the it is not the selected circle -> make it vanish
 		if(('#left-circle'+(i+1)) != selected && ('#right-circle'+(i+1)) != selected) { 
-		    $('#left-circle'+(i+1)).animateRotate(startPos[0],startPos[0]-shiftBy, 1500, delay, 'easeOutCubic', function() {});
-			$('#right-circle'+(i+1)).animateRotate(startPos[1],startPos[1]+shiftBy, 1500, delay, 'easeOutCubic', function() {});
+		    $('#left-circle'+(i+1)).animateRotate(startPos[0], startPos[0]-shiftBy, 1500, delay, 'easeOutCubic', function() {});
+			$('#right-circle'+(i+1)).animateRotate(startPos[1], startPos[1]+shiftBy, 1500, delay, 'easeOutCubic', function() {});
 			    
 			// rotate the inner content circle in the opposite direction to stabalize content
-			$('#left-inner'+(i+1)).animateRotate(-startPos[0],-(startPos[0]-shiftBy), 1500, delay, 'easeOutCubic', function() {});
-			$('#right-inner'+(i+1)).animateRotate(-startPos[1],-(startPos[1]+shiftBy), 1500, delay, 'easeOutCubic', function() {});
+			$('#left-inner'+(i+1)).animateRotate(-startPos[0], -(startPos[0]-shiftBy), 1500, delay, 'easeOutCubic', function() {});
+			$('#right-inner'+(i+1)).animateRotate(-startPos[1], -(startPos[1]+shiftBy), 1500, delay, 'easeOutCubic', function() {});
 
 			$('#left-circle'+(i+1)).delay(800).animate({
 			    opacity: '0.0',
