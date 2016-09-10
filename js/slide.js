@@ -107,10 +107,10 @@ function onSlideChangeEnd() {
 	isAnimating = false;
 	if (currentSlide.attr("id") == "slide-2") {
 		pause();
-		animateBubbleMenu(4);
+		Bubble.animateBubbleMenu(4);
 	} else {
 		resume();
-		closeOtherCircles(4, "", true, 0);
+		Bubble.closeOtherCircles(4, "", true, 0);
 	}
 }
 
