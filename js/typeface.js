@@ -136,26 +136,10 @@ var affine = {
 var vertex3d = function(param) {
 	this.affineIn = new Object;
 	this.affineOut = new Object;
-	if(param.vertex !== undefined) {
-		this.affineIn.vertex = param.vertex;
-	} else {
-		this.affineIn.vertex = {x:0,y:0,z:0};
-	};
-	if(param.size !== undefined) {
-		this.affineIn.size = param.size;
-	} else {
-		this.affineIn.size = {x:1,y:1,z:1};
-	};
-	if(param.rotate !== undefined) {
-		this.affineIn.rotate = param.rotate;
-	} else {
-		this.affineIn.rotate = {x:0,y:0,z:0};
-	};
-	if(param.position !== undefined) {
-		this.affineIn.position = param.position;
-	} else {
-		this.affineIn.position = {x:0,y:0,z:0};
-	};
+	this.affineIn.vertex = param.vertex !== undefined ? param.vertex : {x:0,y:0,z:0};
+	this.affineIn.size = param.size !== undefined ? param.size : this.affineIn.size = {x:1,y:1,z:1};
+	this.affineIn.rotate = param.rotate !== undefined ? param.rotate : this.affineIn.rotate = {x:0,y:0,z:0};
+	this.affineIn.position = param.position !== undefined ? param.position : this.affineIn.position = {x:0,y:0,z:0};
 };
 
 vertex3d.prototype = {
@@ -243,15 +227,21 @@ var ctx	= canvas.getContext("2d");
 ctx.strokeStyle = strokeColor;
 		
 window.onresize = function() {
-	canvas.width = window.innerWidth;
-	canvas.height = window.innerHeight;
-	camera.display.x = window.innerWidth/2;
-	camera.display.y = window.innerHeight/2;
+	var width = window.innerWidth;
+	var height = window.innerHeight;
+	for (text in textSet) {
+		textSet[text].sphereRadius *= (width/canvas.width);
+		textSet[text].sphereSpace *= (width/canvas.width);
+	}
+	canvas.width = width;
+	canvas.height = height;
+	camera.display.x = width/2;
+	camera.display.y = height/2;
 };
 	
 	
 /* 
- * class
+ * Class for sphere
  */
 var	sphere = function(arg) {
 	this.flag = true;
@@ -505,18 +495,20 @@ var fullSet = function() {
 		s[i].type = alpha[i];
 	};
 };
+
+var ratio = window.innerWidth/1440;
 var textSet = [
-	{text:"WELCOME", sphereRadius:140, sphereSpace:85, unitTime:100, time:1000},
-	{text:"THIS_IS", sphereRadius:120, sphereSpace:70, unitTime:100, time:4000},
-	{text:"LIANGHSUAN_MA", sphereRadius:100, sphereSpace:60, unitTime:50, time:2000},
-	{text:"I_AM", sphereRadius:120, sphereSpace:70, unitTime:100, time:4000},
-	{text:"DEVELOPER", sphereRadius:110, sphereSpace:65, unitTime:50, time:2000},
-	{text:"@@@@@@@@", sphereRadius:60 + Math.random()*60, sphereSpace:200, unitTime:100, time:4000},
-	{text:"I_LIKE", sphereRadius:120, sphereSpace:70, unitTime:100, time:4000},
-	{text:"PROGRAMMING", sphereRadius:110, sphereSpace:65, unitTime:50, time:2000},
-	{text:"SPORTS", sphereRadius:120, sphereSpace:70, unitTime:50, time:2000},
-	{text:"EDM", sphereRadius:120, sphereSpace:70, unitTime:50, time:2000},
-	{text:"@@@@@@@@", sphereRadius:60 + Math.random()*60, sphereSpace:200, unitTime:100, time:4000}
+	{text:"WELCOME", sphereRadius:ratio*140, sphereSpace:ratio*85, unitTime:100, time:1000},
+	{text:"THIS_IS", sphereRadius:ratio*120, sphereSpace:ratio*70, unitTime:100, time:4000},
+	{text:"LIANGHSUAN_MA", sphereRadius:ratio*100, sphereSpace:ratio*60, unitTime:50, time:2000},
+	{text:"I_AM", sphereRadius:ratio*120, sphereSpace:ratio*70, unitTime:100, time:4000},
+	{text:"DEVELOPER", sphereRadius:ratio*110, sphereSpace:ratio*65, unitTime:50, time:2000},
+	{text:"@@@@@@@@", sphereRadius:ratio*60 + ratio*Math.random()*60, sphereSpace:200, unitTime:100, time:4000},
+	{text:"I_LIKE", sphereRadius:ratio*120, sphereSpace:ratio*70, unitTime:100, time:4000},
+	{text:"PROGRAMMING", sphereRadius:ratio*110, sphereSpace:ratio*65, unitTime:50, time:2000},
+	{text:"SPORTS", sphereRadius:ratio*120, sphereSpace:ratio*70, unitTime:50, time:2000},
+	{text:"EDM", sphereRadius:ratio*120, sphereSpace:ratio*70, unitTime:50, time:2000},
+	{text:"@@@@@@@@", sphereRadius:ratio*60 + ratio*Math.random()*60, sphereSpace:200, unitTime:100, time:4000}
 ];
 	
 var textSetChangerIncrement = 0;
@@ -569,7 +561,7 @@ var resume = function() {
 /* a function that pause the typeface */
 var pause = function() {
 	clearInterval(timer);
-  	timer = null
+  	timer = null;
 }
 
 var start = function() {

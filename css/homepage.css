@@ -260,11 +260,12 @@ footer ul {
 }
 
 footer li {
+    display: inline-block;
     font-family: 'Optima', sans-serif;
-    font-size: 1.2em;
-    line-height: 40px;
-    height: 40px;
-    border-bottom: 1px solid #000000;
+    font-size: 1em;
+    line-height: 20px;
+    height: 20px;
+    /*border-bottom: 1px solid #000000;*/
 }
              
 footer a {
