@@ -5,12 +5,25 @@
     	<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width,initial-scale=1">
 		<link rel="stylesheet" type="text/css" href="css/homepage.css">
+		<script>
+  			if (!navigator.userAgent.includes('Chrome') && !navigator.userAgent.includes('Firefox'))
+				alert('Please use Chrome (or FireFox) for better performance experience');
+  		</script>
   	</head>
   	<body translate="no">
 		<div class="slides-container">
     		<div class="slide" id="slide-1">
         		<canvas id="canvas"></canvas>
 				<div id="buffer""></div>
+				<a id="toggle"><span></span></a>
+				<div id="menu">
+				    <ul>
+					    <li><a href="#index">Home</a></li>
+					    <li><a href="#project">Project</a></li>
+					    <li><a href="#experience">Experience</a></li>
+					    <li><a href="#contact">Contact</a></li>
+				    </ul>
+				</div>
 				<div class="centered" id="slide-1-centered">
         			<a href="#slide-2">⬇︎</a>
         		</div>
@@ -142,6 +155,7 @@
 	<script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/1.11.6/plugins/CSSPlugin.min.js"></script>
 	<script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/1.11.6/plugins/ScrollToPlugin.min.js"></script>
  	<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+ 	<script type ="text/javascript" src="js/menu.js"></script>
 	<script type="text/javascript" src="js/slide.js"></script>
 	<script type="text/javascript" src="js/typeface.js"></script> 
 	<script type="text/javascript" src="js/bubble.js"></script>
