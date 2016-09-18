@@ -66,26 +66,23 @@ function onMouseWheel(event) {
 	var delta = event.originalEvent.wheelDelta / 30 || - event.originalEvent.detail;
 
 	// if the user scrolled up, it goes to previous slide, otherwise - to next slide
-	if(delta < -1) {
+	if(delta < -1)
 		goToNextSlide();
-	} else if(delta > 1) {
+	else if(delta > 1)
 		goToPrevSlide();
-	}
 	event.preventDefault();
 }
 
 /* If there's a previous slide, slide to it */
 function goToPrevSlide() {
-	if(currentSlide.prev().length) {
+	if(currentSlide.prev().length)
 		goToSlide(currentSlide.prev());
-	}
 }
 
 /* If there's a next slide, slide to it */
 function goToNextSlide() {
-	if(currentSlide.next().length) {
+	if(currentSlide.next().length)
 		goToSlide(currentSlide.next());
-	}
 }
 
 /* Actual transition between slides */
