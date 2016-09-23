@@ -8,113 +8,113 @@ a {
 
 /*------------ Menu ------------- */
 #toggle {
-  position: absolute;
-  display: block;
-  cursor: pointer;
-  width: 28px;
-  height: 30px;
-  top: 30px;
-  margin-left: auto;
-  margin-right: auto;
-  left: 0;
-  right: 0;
+    position: absolute;
+    display: block;
+    cursor: pointer;
+    width: 28px;
+    height: 30px;
+    top: 30px;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
 }
 
 #toggle span:after,
 #toggle span:before {
-  content: "";
-  position: absolute;
-  left: 0;
-  top: -9px;
+    content: "";
+    position: absolute;
+    left: 0;
+    top: -9px;
 }
 
 #toggle span:after{
-  top: 9px;
+    top: 9px;
 }
 
 #toggle span {
-  position: relative;
-  display: block;
+    position: relative;
+    display: block;
 }
 
 #toggle span,
 #toggle span:after,
 #toggle span:before {
-  width: 100%;
-  height: 5px;
-  background-color: #c3c3c3;
-  transition: all 0.3s;
-  backface-visibility: hidden;
-  border-radius: 2px;
+    width: 100%;
+    height: 5px;
+    background-color: #c3c3c3;
+    transition: all 0.3s;
+    backface-visibility: hidden;
+    border-radius: 2px;
 }
 
 /* on activation */
 #toggle.on span {
-  background-color: transparent;
+    background-color: transparent;
 }
 
 #toggle.on span:before {
-  transform: rotate(45deg) translate(5px, 5px);
+    transform: rotate(45deg) translate(5px, 5px);
 }
 
 #toggle.on span:after {
-  transform: rotate(-45deg) translate(7px, -8px);
+    transform: rotate(-45deg) translate(7px, -8px);
 }
 
 #toggle.on + #menu {
-  opacity: 1;
-  visibility: visible;
+    opacity: 1;
+    visibility: visible;
 }
 
 #menu {
-  position: absolute;
-  top: 55px;
-  margin-left: auto;
-  margin-right: auto;
-  left: 0;
-  right: 0;
-  color: #999;
-  width: 200px;
-  padding: 10px;
-  margin: auto;
-  font-family: 'Optima', sans-serif;
-  text-align: center;
-  border-radius: 4px;
-  background: white;
-  box-shadow: 0 1px 8px rgba(0,0,0,0.05);
-  opacity: 0;
-  visibility: hidden;
-  transition: opacity .4s;
+    position: absolute;
+    top: 55px;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+    color: #999;
+    width: 200px;
+    padding: 10px;
+    margin: auto;
+    font-family: 'Optima', sans-serif;
+    text-align: center;
+    border-radius: 4px;
+    background: white;
+    box-shadow: 0 1px 8px rgba(0,0,0,0.05);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity .4s;
 }
 
 #menu:after {
-  position: absolute;
-  top: -15px;
-  left: 95px;
-  content: "";
-  display: block;
-  border-left: 15px solid transparent;
-  border-right: 15px solid transparent;
-  border-bottom: 20px solid white;
+    position: absolute;
+    top: -15px;
+    left: 95px;
+    content: "";
+    display: block;
+    border-left: 15px solid transparent;
+    border-right: 15px solid transparent;
+    border-bottom: 20px solid white;
 }
 
 #menu ul, li, li a {
-  list-style: none;
-  display: block;
-  margin: 0;
-  padding: 0;
+    list-style: none;
+    display: block;
+    margin: 0;
+    padding: 0;
 }
 
 #menu li a {
-  padding: 5px;
-  color: black;
-  transition: all .2s;
+    padding: 5px;
+    color: black;
+    transition: all .2s;
 }
 
 #menu li a:hover,
 #menu li a:focus {
-  background: black;
-  color: white;
+    background: black;
+    color: white;
 }
 /*------------ End Menu ------------- */
 
@@ -156,6 +156,12 @@ ul#spinner li {
     outline:1px solid transparent; 
 }
 
+figure#spinner img:hover {
+    transform: scale(1.5);
+    -moz-transform: scale(1.5);
+    -webkit-transform: scale(1.5);
+}
+
 figure#spinner img:nth-child(1) { transform: rotateY(0deg); }
 figure#spinner img:nth-child(2) { transform: rotateY(-45deg); }
 figure#spinner img:nth-child(3) { transform: rotateY(-90deg); }
@@ -174,5 +180,11 @@ ul#spinner li:nth-child(6) { transform: rotateY(-225deg); }
 ul#spinner li:nth-child(7) { transform: rotateY(-270deg); }
 ul#spinner li:nth-child(8) { transform: rotateY(-315deg); }
 
-div#upper ~ span:hover { color: #888; cursor: pointer; }
+div#upper ~ span:hover { 
+    color: #888; 
+    cursor: pointer; 
+    transform: scale(1.5);
+    -moz-transform: scale(1.5);
+    -webkit-transform: scale(1.5);
+}
 /*------------ End Spinner ------------- */
