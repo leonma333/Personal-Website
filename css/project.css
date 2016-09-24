@@ -156,12 +156,6 @@ ul#spinner li {
     outline:1px solid transparent; 
 }
 
-figure#spinner img:hover {
-    transform: scale(1.5);
-    -moz-transform: scale(1.5);
-    -webkit-transform: scale(1.5);
-}
-
 figure#spinner img:nth-child(1) { transform: rotateY(0deg); }
 figure#spinner img:nth-child(2) { transform: rotateY(-45deg); }
 figure#spinner img:nth-child(3) { transform: rotateY(-90deg); }
