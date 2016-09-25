@@ -5,18 +5,24 @@
         <title>Liang-Hsuan Ma | Project</title>
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" type="text/css" href="css/project.css">
+        <script>
+            if (!navigator.userAgent.includes('Chrome') && !navigator.userAgent.includes('Firefox')) {
+                alert('Currently only support Chrome and Firefox. Sorry for the inconvenience.\nWorking on more browsers compatibility...');
+                close();
+            }
+        </script>
     </head>
     <body translate="no" >
         <div id="upper">
             <figure id="spinner">
-                <img src="assets/image/kicks4love.png">
-                <img src="assets/image/survival-game.png">
-                <img src="assets/image/personal-website.png">
-                <img src="assets/image/order-manager.png">
-                <img src="assets/image/ace.png">
-                <img src="assets/image/sku-manager.png">
-                <img src="assets/image/mini-rover.png">
-                <img src="assets/image/coming-soon.png">
+                <img onmouseover="MouseOver.scaleup(this)" onmouseout="MouseOver.scaledown(this)" id="0" src="assets/image/kicks4love.png">
+                <img onmouseover="MouseOver.scaleup(this)" onmouseout="MouseOver.scaledown(this)" id="1" src="assets/image/survival-game.png">
+                <img onmouseover="MouseOver.scaleup(this)" onmouseout="MouseOver.scaledown(this)" id="2" src="assets/image/personal-website.png">
+                <img onmouseover="MouseOver.scaleup(this)" onmouseout="MouseOver.scaledown(this)" id="3" src="assets/image/order-manager.png">
+                <img onmouseover="MouseOver.scaleup(this)" onmouseout="MouseOver.scaledown(this)" id="4" src="assets/image/ace.png">
+                <img onmouseover="MouseOver.scaleup(this)" onmouseout="MouseOver.scaledown(this)" id="5" src="assets/image/sku-manager.png">
+                <img onmouseover="MouseOver.scaleup(this)" onmouseout="MouseOver.scaledown(this)" id="6" src="assets/image/mini-rover.png">
+                <img onmouseover="MouseOver.scaleup(this)" onmouseout="MouseOver.scaledown(this)" id="7" src="assets/image/coming-soon.png">
             </figure>
         </div>
         <span style="float:left;font-size:30pt" class="ss-icon" onclick="galleryspin('-')"><</span>
@@ -91,29 +97,39 @@
         var angle = 0;
         function galleryspin(sign) { 
             spinner = document.querySelectorAll("#spinner");
-            angle = !sign ? angle + 45 : angle - 45;
+            if (!sign) {
+                angle += 45; 
+                MouseOver.currentIndex++;
+                if (MouseOver.currentIndex > 7) MouseOver.currentIndex = 0;
+            } else {
+                angle -= 45; 
+                MouseOver.currentIndex--;
+                if (MouseOver.currentIndex < 1) MouseOver.currentIndex = 7;
+            }
             spinner[0].setAttribute("style","-webkit-transform: rotateY("+ angle +"deg); -moz-transform: rotateY("+ angle +"deg); transform: rotateY("+ angle +"deg);");
             spinner[1].setAttribute("style","-webkit-transform: rotateY("+ angle +"deg); -moz-transform: rotateY("+ angle +"deg); transform: rotateY("+ angle +"deg);");
         }
 
+        /* can do it on hover in css, so I make it in javascript onmouseover */
+        var MouseOver = {
+            currentIndex: 0,
+            scaleup: function(source) {
+                if (source.id != this.currentIndex) return;
+                source.setAttribute("style", "-webkit-transform: rotateY(-"+ this.currentIndex*45 +"deg) scale(1.2); -moz-transform: rotateY(-"+ this.currentIndex*45 +"deg) scale(1.2); transform: rotateY(-"+ this.currentIndex*45 +"deg) scale(1.2);")
+            },
+            scaledown: function(source) {
+                if (source.id != this.currentIndex) return;
+                source.setAttribute("style","-webkit-transform: rotateY(-"+ this.currentIndex*45 +"deg) scale(1); -moz-transform: rotateY(-"+ this.currentIndex*45 +"deg) scale(1.2); transform: rotateY(-"+ this.currentIndex*45 +"deg) scale(1);");
+            }
+        }
+
         document.body.onkeydown = function onKeyDown(event) {
             var PRESSED_KEY = event.keyCode;
-            console.log(PRESSED_KEY);
             if(PRESSED_KEY == 37)
                 galleryspin('-');
             else if(PRESSED_KEY == 39)
                 galleryspin('');
         }
-
-        /*document.addEventListener("wheel", function onMouseWheel(event) {
-            var delta = event.originalEvent.wheelDelta / 30 || - event.originalEvent.detail;
-
-            if(delta < -1)
-                galleryspin('');
-            else if(delta > 1)
-                galleryspin('-');
-            event.preventDefault();
-        });*/
     </script>
     <script type ="text/javascript" src="js/menu.js"></script>
 </html>
