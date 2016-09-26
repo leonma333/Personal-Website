@@ -131,7 +131,6 @@ figure#spinner img {
     max-width: 380px;
     max-height: 380px;
     position: absolute;
-    left: 32%;
     transform-origin: 50% 50% -500px;
     margin: auto;
 }

@@ -43,6 +43,7 @@
                     <h3>Personal Website</h3>
                     <p>My own personal website with dedcicated front-end design</p>
                     <p>You are now viewing it, hope you enjoy.</p>
+                    <br/><br/>
                 </li>
                 <li style="background-color:white">
                     <h3>Order Manager</h3>
@@ -54,6 +55,7 @@
                     <h3>A.C.E.</h3>
                     <p>A web application that can query existing customers, place order, and create quote.</p>
                     <p>Enhance quoting efficiency and accuracy.</p>
+                    <br/>
                 </li>
                 <li style="background-color:white">
                     <h3>SKU Manager</h3>
@@ -69,6 +71,7 @@
                     <h3>Coming Soon</h3>
                     <p>More projects are going to coming up</p>
                     <p>I won't let you down.</p>
+                    <br/><br/><br/><br/>
                 </li>
             </ul>
         </div>
@@ -85,10 +88,18 @@
     <script>
         var upper = document.getElementById("upper");
         var lower = document.getElementById("lower");
+        var img = document.querySelectorAll("figure#spinner img");
         function resize() {
+            // vertical ratio
             ratio = window.innerWidth < 1040 ? 3 : 2.1;
             upper.style.height = (window.innerHeight / ratio) + "px";
             lower.style.height = (window.innerHeight / 2.1) + "px";
+
+            // horizontal ratio
+            left = 0.000007611 * Math.pow(window.innerWidth, 2) - 0.005308 * window.innerWidth + 27.47;
+            console.log(window.innerWidth + " ++ " + left);
+            for (i = 0; i < img.length; i++)
+                img[i].style.left = left + '%'; 
         }
 
         window.onresize = resize;
@@ -104,7 +115,7 @@
             } else {
                 angle -= 45; 
                 MouseOver.currentIndex--;
-                if (MouseOver.currentIndex < 1) MouseOver.currentIndex = 7;
+                if (MouseOver.currentIndex < 0) MouseOver.currentIndex = 7;
             }
             spinner[0].setAttribute("style","-webkit-transform: rotateY("+ angle +"deg); -moz-transform: rotateY("+ angle +"deg); transform: rotateY("+ angle +"deg);");
             spinner[1].setAttribute("style","-webkit-transform: rotateY("+ angle +"deg); -moz-transform: rotateY("+ angle +"deg); transform: rotateY("+ angle +"deg);");
