@@ -89,17 +89,21 @@
         var upper = document.getElementById("upper");
         var lower = document.getElementById("lower");
         var img = document.querySelectorAll("figure#spinner img");
+        var li = document.querySelectorAll("ul#spinner li");
+        var left = 0;
         function resize() {
             // vertical ratio
-            ratio = window.innerWidth < 1040 ? 3 : 2.1;
+            var ratio = window.innerWidth < 1040 ? 3 : 2.1;
             upper.style.height = (window.innerHeight / ratio) + "px";
             lower.style.height = (window.innerHeight / 2.1) + "px";
 
             // horizontal ratio
             left = 0.000007611 * Math.pow(window.innerWidth, 2) - 0.005308 * window.innerWidth + 27.47;
             console.log(window.innerWidth + " ++ " + left);
-            for (i = 0; i < img.length; i++)
+            for (i = 0; i < img.length; i++) {
                 img[i].style.left = left + '%'; 
+                li[i].style.left = left + '%';
+            }
         }
 
         window.onresize = resize;
@@ -107,7 +111,7 @@
 
         var angle = 0;
         function galleryspin(sign) { 
-            spinner = document.querySelectorAll("#spinner");
+            var spinner = document.querySelectorAll("#spinner");
             if (!sign) {
                 angle += 45; 
                 MouseOver.currentIndex++;
@@ -126,11 +130,11 @@
             currentIndex: 0,
             scaleup: function(source) {
                 if (source.id != this.currentIndex) return;
-                source.setAttribute("style", "-webkit-transform: rotateY(-"+ this.currentIndex*45 +"deg) scale(1.2); -moz-transform: rotateY(-"+ this.currentIndex*45 +"deg) scale(1.2); transform: rotateY(-"+ this.currentIndex*45 +"deg) scale(1.2);")
+                source.setAttribute("style", "-webkit-transform: rotateY(-"+ this.currentIndex*45 +"deg) scale(1.2); -moz-transform: rotateY(-"+ this.currentIndex*45 +"deg) scale(1.2); transform: rotateY(-"+ this.currentIndex*45 +"deg) scale(1.2); left: " + left + "%;")
             },
             scaledown: function(source) {
                 if (source.id != this.currentIndex) return;
-                source.setAttribute("style","-webkit-transform: rotateY(-"+ this.currentIndex*45 +"deg) scale(1); -moz-transform: rotateY(-"+ this.currentIndex*45 +"deg) scale(1.2); transform: rotateY(-"+ this.currentIndex*45 +"deg) scale(1);");
+                source.setAttribute("style","-webkit-transform: rotateY(-"+ this.currentIndex*45 +"deg) scale(1); -moz-transform: rotateY(-"+ this.currentIndex*45 +"deg) scale(1.2); transform: rotateY(-"+ this.currentIndex*45 +"deg) scale(1); left: " + left + "%;");
             }
         }
 

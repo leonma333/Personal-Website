@@ -148,7 +148,6 @@ ul#spinner li {
     max-width: 380px;
     max-height: 380px;
     position: absolute;
-    left: 32%;
     transform-origin: 50% 50% -500px;
     text-align: center;
     font-family: 'Optima', sans-serif;
@@ -174,7 +173,7 @@ ul#spinner li:nth-child(7) { transform: rotateY(-270deg); }
 ul#spinner li:nth-child(8) { transform: rotateY(-315deg); }
 
 div#upper ~ span:hover { 
-    color: #888; 
+    color: #c3c3c3; 
     cursor: pointer; 
     transform: scale(1.5);
     -moz-transform: scale(1.5);
