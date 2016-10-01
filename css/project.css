@@ -154,6 +154,21 @@ ul#spinner li {
     outline:1px solid transparent; 
 }
 
+.link {
+    position: relative;
+}
+
+.link a {
+    position: relative;
+    display: inline-block;
+    width: 10%;
+    margin: 0% 3%;
+}
+
+.link img {
+    width: 100%;
+}
+
 figure#spinner img:nth-child(1) { transform: rotateY(0deg); }
 figure#spinner img:nth-child(2) { transform: rotateY(-45deg); }
 figure#spinner img:nth-child(3) { transform: rotateY(-90deg); }

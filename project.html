@@ -32,12 +32,19 @@
                 <li style="background-color:black;color:white">
                     <h3>Kicks4Love</h3>
                     <p>Collaborating with other sneaker enthusiasts to produce a latest sportswear information website.</p>
-                    <p>Dedicated to front-end design and user experience to ensure page visits.</p>   
+                    <p>Dedicated to front-end design and user experience to ensure page visits.</p>
+                    <div class="link">
+                        <a class="project-link" title="go to see kicks4love.com" target="_blank" href="http://kicks4love.com"><img src="assets/image/browser-white.png"></a>
+                    </div> 
                 </li>
                 <li style="background-color:white">
                     <h3>The Survival Game</h3>
                     <p>An online multiplayer game with an incredible environment for cooperation to survive.</p>
                     <p>Reliable and fast server side plus a traditional gamelooking theme.</p>
+                    <div class="link">
+                        <a class="project-link" title="go to see survivalgameonline.com" target="_blank" href="http://www.survivalgameonline.com"><img src="assets/image/browser-black.png"></a>
+                        <a class="project-link" title="go to see survival game github" target="_blank" href="https://github.com/x65han/EngHack-2016"><img src="assets/image/git-black.png"></a>
+                    </div>
                 </li>
                 <li style="background-color:black;color:white">
                     <h3>Personal Website</h3>
@@ -85,6 +92,7 @@
             </ul>
         </div>
     </body>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
     <script>
         var upper = document.getElementById("upper");
         var lower = document.getElementById("lower");
@@ -99,7 +107,6 @@
 
             // horizontal ratio
             left = 0.000007611 * Math.pow(window.innerWidth, 2) - 0.005308 * window.innerWidth + 27.47;
-            console.log(window.innerWidth + " ++ " + left);
             for (i = 0; i < img.length; i++) {
                 img[i].style.left = left + '%'; 
                 li[i].style.left = left + '%';
@@ -125,7 +132,7 @@
             spinner[1].setAttribute("style","-webkit-transform: rotateY("+ angle +"deg); -moz-transform: rotateY("+ angle +"deg); transform: rotateY("+ angle +"deg);");
         }
 
-        /* can do it on hover in css, so I make it in javascript onmouseover */
+        /* cannot do it on hover in css, so I make it in javascript onmouseover */
         var MouseOver = {
             currentIndex: 0,
             scaleup: function(source) {
@@ -134,7 +141,7 @@
             },
             scaledown: function(source) {
                 if (source.id != this.currentIndex) return;
-                source.setAttribute("style","-webkit-transform: rotateY(-"+ this.currentIndex*45 +"deg) scale(1); -moz-transform: rotateY(-"+ this.currentIndex*45 +"deg) scale(1.2); transform: rotateY(-"+ this.currentIndex*45 +"deg) scale(1); left: " + left + "%;");
+                source.setAttribute("style","-webkit-transform: rotateY(-"+ this.currentIndex*45 +"deg) scale(1); -moz-transform: rotateY(-"+ this.currentIndex*45 +"deg) scale(1); transform: rotateY(-"+ this.currentIndex*45 +"deg) scale(1); left: " + left + "%;");
             }
         }
 
@@ -145,6 +152,8 @@
             else if(PRESSED_KEY == 39)
                 galleryspin('');
         }
+
+        $(".project-link").tooltip();
     </script>
     <script type ="text/javascript" src="js/menu.js"></script>
 </html>
