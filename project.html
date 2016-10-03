@@ -164,10 +164,14 @@
 
         document.body.onkeydown = function onKeyDown(event) {
             var PRESSED_KEY = event.keyCode;
-            if(PRESSED_KEY == 37)
+            if(PRESSED_KEY == 37) {
                 galleryspin('-');
-            else if(PRESSED_KEY == 39)
+                event.preventDefault();
+            }
+            else if(PRESSED_KEY == 39) {
                 galleryspin('');
+                event.preventDefault();
+            }
         }
 
         $(".project-link").tooltip();
