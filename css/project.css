@@ -161,6 +161,7 @@ ul#spinner li {
 .link a {
     position: relative;
     display: inline-block;
+    vertical-align: middle;
     width: 10%;
     margin: 0% 3%;
 }
