@@ -25,8 +25,8 @@
                 <img onmouseover="MouseOver.scaleup(this)" onmouseout="MouseOver.scaledown(this)" id="7" src="assets/image/coming-soon.png">
             </figure>
         </div>
-        <span style="float:left;font-size:30pt" class="ss-icon" onclick="galleryspin('-')"><</span>
-        <span style="float:right;font-size:30pt" class="ss-icon" onclick="galleryspin('')">></span>
+        <span style="float:left;font-size:30pt" class="ss-icon" onclick="galleryspin(true)"><</span>
+        <span style="float:right;font-size:30pt" class="ss-icon" onclick="galleryspin(false)">></span>
         <div id="lower">
             <ul id="spinner">
                 <li style="background-color:black;color:white">
@@ -137,13 +137,13 @@
         function galleryspin(sign) { 
             var spinner = document.querySelectorAll("#spinner");
             if (!sign) {
-                angle += 45; 
-                MouseOver.currentIndex++;
-                if (MouseOver.currentIndex > 7) MouseOver.currentIndex = 0;
-            } else {
                 angle -= 45; 
                 MouseOver.currentIndex--;
                 if (MouseOver.currentIndex < 0) MouseOver.currentIndex = 7;
+            } else {
+                angle += 45; 
+                MouseOver.currentIndex++;
+                if (MouseOver.currentIndex > 7) MouseOver.currentIndex = 0;
             }
             spinner[0].setAttribute("style","-webkit-transform: rotateY("+ angle +"deg); -moz-transform: rotateY("+ angle +"deg); transform: rotateY("+ angle +"deg);");
             spinner[1].setAttribute("style","-webkit-transform: rotateY("+ angle +"deg); -moz-transform: rotateY("+ angle +"deg); transform: rotateY("+ angle +"deg);");
@@ -164,15 +164,27 @@
 
         document.body.onkeydown = function onKeyDown(event) {
             var PRESSED_KEY = event.keyCode;
-            if(PRESSED_KEY == 37) {
-                galleryspin('-');
+            if (PRESSED_KEY == 37) {
+                galleryspin(true);
                 event.preventDefault();
-            }
-            else if(PRESSED_KEY == 39) {
-                galleryspin('');
+            } else if(PRESSED_KEY == 39) {
+                galleryspin(false);
                 event.preventDefault();
-            }
+            } else if (PRESSED_KEY == 38 || PRESSED_KEY == 40)
+                event.preventDefault();
         }
+
+        var lastPosition = 0;
+        $("#upper").scroll(function() {
+            var currentPosition = $(document).scrollLeft();
+
+            if (lastPosition < currentPosition)
+                galleryspin(true);
+            else if (lastPosition > currentPosition)
+                galleryspin(false);
+
+            lastPosition = currentPosition;
+        });
 
         $(".project-link").tooltip();
     </script>
