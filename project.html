@@ -174,17 +174,23 @@
                 event.preventDefault();
         }
 
-        var lastPosition = 0;
-        $("#upper").scroll(function() {
-            var currentPosition = $(document).scrollLeft();
-
-            if (lastPosition < currentPosition)
-                galleryspin(true);
-            else if (lastPosition > currentPosition)
-                galleryspin(false);
-
-            lastPosition = currentPosition;
-        });
+        var spinning = false;
+        $(document).bind('mousewheel DOMMouseScroll', function(event) {
+            if (event.originalEvent.wheelDeltaX) {
+                if (event.originalEvent.wheelDeltaX < -5 && !spinning) {
+                    galleryspin(false);
+                    spinning = true;
+                }
+                else if (event.originalEvent.wheelDeltaX > 5 && !spinning) {
+                    galleryspin(true);
+                    spinning = true;
+                }
+                else
+                    spinning = false;
+            } else if (event.originalEvent.axis) {
+                console.log(event.originalEvent.detail);
+            }
+        })
 
         $(".project-link").tooltip();
     </script>
