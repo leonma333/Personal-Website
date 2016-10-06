@@ -175,22 +175,37 @@
         }
 
         var spinning = false;
-        $(document).bind('mousewheel DOMMouseScroll', function(event) {
-            if (event.originalEvent.wheelDeltaX) {
-                if (event.originalEvent.wheelDeltaX < -5 && !spinning) {
-                    galleryspin(false);
-                    spinning = true;
-                }
-                else if (event.originalEvent.wheelDeltaX > 5 && !spinning) {
-                    galleryspin(true);
-                    spinning = true;
-                }
-                else
-                    spinning = false;
-            } else if (event.originalEvent.axis) {
-                console.log(event.originalEvent.detail);
+        const STAGE_IDLE = 1;
+        const STAGE_QUARTER = 2;
+        const STAGE_HALF = 3;
+        const STAGE_THREE_QUARTERS = 4;
+        var currentStage = STAGE_IDLE;
+
+        $(document).bind('wheel', function(event) {
+            switch(currentStage) {
+                case STAGE_IDLE:
+                    if (Math.abs(event.originalEvent.deltaX) > 0 && Math.abs(event.originalEvent.deltaX) <= 10)
+                        currentStage = STAGE_QUARTER;
+                    break;
+                case STAGE_QUARTER:
+                    if (Math.abs(event.originalEvent.deltaX) > 10 && Math.abs(event.originalEvent.deltaX) <= 20)
+                        currentStage = STAGE_HALF;
+                    break;
+                case STAGE_HALF:
+                    if (Math.abs(event.originalEvent.deltaX) > 20 && Math.abs(event.originalEvent.deltaX) <= 30)
+                        currentStage = STAGE_THREE_QUARTERS;
+                    break;
+                case STAGE_THREE_QUARTERS:
+                    if (event.originalEvent.deltaX > 30) {
+                        galleryspin(true);
+                        currentStage = STAGE_IDLE;
+                    } else if (event.originalEvent.deltaX < -30) {
+                        galleryspin(false);
+                        currentStage = STAGE_IDLE;
+                    }
+                    break;
             }
-        })
+        });
 
         $(".project-link").tooltip();
     </script>
