@@ -6,7 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" type="text/css" href="css/project.css">
         <script>
-            if (!navigator.userAgent.includes('Chrome') && !navigator.userAgent.includes('Firefox')) {
+            if ((!window.chrome || !window.chrome.webstore) && typeof InstallTrigger === 'undefined') {
                 alert('Currently only support Chrome and Firefox. Sorry for the inconvenience.\nWorking on more browsers compatibility...');
                 close();
             }
