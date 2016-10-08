@@ -103,10 +103,10 @@ function goToSlide(nextSlide) {
 function onSlideChangeEnd() {
 	isAnimating = false;
 	if (currentSlide.attr("id") == "slide-2") {
-		pause();
+		try { pause(); } catch(error) { console.log(error.message); }
 		Bubble.animateBubbleMenu(4);
 	} else {
-		resume();
+		try { resume(); } catch(error) { console.log(error.message); }
 		Bubble.closeOtherCircles(4, "", true, 0);
 	}
 }
