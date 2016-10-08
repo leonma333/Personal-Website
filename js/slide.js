@@ -23,12 +23,6 @@ var keyCodes = {
 // going to the first slide
 goToSlide(currentSlide);
 
-// register event listeners
-homeWindow.on("resize", onResize).resize();
-homeWindow.on("mousewheel DOMMouseScroll", onMouseWheel);
-homeDocument.on("keydown", onKeyDown);
-updownButtons.on("click", onSlideButtonClick);
-
 /* When a button is clicked - first get the button href, and then slide to the container, if there's such a container */
 function onSlideButtonClick(event) {
 	// get clicked button
@@ -108,22 +102,5 @@ function onSlideChangeEnd() {
 	} else {
 		try { resume(); } catch(error) { console.log(error.message); }
 		Bubble.closeOtherCircles(4, "", true, 0);
-	}
-}
-
-/* When user resize it's browser we need to know the new height, so we can properly align the current slide */
-function onResize(event) {
-	// this will give us the new height of the window
-	var newPageHeight = homeWindow.innerHeight();
-
-	// if the new height is different from the old height ( the browser is resized vertically ), the slides are resized
-	if(pageHeight !== newPageHeight) {
-		pageHeight = newPageHeight;
-
-		// this can be done via CSS only, but fails into some old browsers, so I prefer to set height via JS
-		TweenLite.set([slidesContainer, slidesList], {height: pageHeight + "px"});
-
-		// the current slide should be always on the top
-		TweenLite.set(slidesContainer, {scrollTo: {y: pageHeight * currentSlide.index()}});
 	}
 }

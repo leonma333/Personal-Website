@@ -225,20 +225,7 @@ canvas.width = canvasWidth;
 canvas.height = canvasHeight;
 var ctx	= canvas.getContext("2d");
 ctx.strokeStyle = strokeColor;
-		
-window.onresize = function() {
-	var width = window.innerWidth;
-	var height = window.innerHeight;
-	for (text in textSet) {
-		textSet[text].sphereRadius *= (width/canvas.width);
-		textSet[text].sphereSpace *= (width/canvas.width);
-	}
-	canvas.width = width;
-	canvas.height = height;
-	camera.display.x = width/2;
-	camera.display.y = height/2;
-};
-	
+			
 	
 /* 
  * Class for sphere

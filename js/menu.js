@@ -41,9 +41,3 @@ var Menu = {
             elem.className += className;
     }
 };
-
-/* set menu toggle on click event listener */
-Menu.theToggle.onclick = function() {
-    Menu.toggleClass(this, 'on');
-    return false;
-}

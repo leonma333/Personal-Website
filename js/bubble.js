@@ -1,16 +1,3 @@
-/* a function that start the document */
-$(document).ready(function(){
-	// event listners trigger page transition on click of menu item
-	$("#language").click(function(){Bubble.menuSelect(4, 1, true, 'Java, C#, C++, Ruby, JavaScript, SQL, HTML, CSS, XML, JSON, UML ...');});
-	$("#front-end").click(function(){Bubble.menuSelect(4, 2, true, 'jQuery, React, Angular, Bootstrap, Pure, Phaser ...');});
-    $("#back-end").click(function(){Bubble.menuSelect(4, 3, true, 'ASP.Net, Ruby on Rails, Node ...');});
-    $("#database").click(function(){Bubble.menuSelect(4, 4, true, 'SQL Server, MySQL, PostgreSQL, Firebase ...');});
-	$("#technology").click(function(){Bubble.menuSelect(4, 1, false, 'AJAX, RESTful API, Microsoft Azure, Android ...');});
-	$("#tool").click(function(){Bubble.menuSelect(4, 2, false, 'Eclipse, Visual Studio, Xcode, Sublime Text, Dreamweaver, Android Studio, SSMS ...');});
-    $("#version-control").click(function(){Bubble.menuSelect(4, 3, false, 'GitHub, Bitbucket, GitLab, SVN ...');});
-    $("#other").click(function(){Bubble.menuSelect(4, 4, false, 'jUnit, OpenCV, JavaFX/Swing ...');});
-});
-
 /*
  * Class for bubble
  */
@@ -252,17 +239,3 @@ $.fn.animateRotate = function(startAngle, endAngle, duration, delay, easing, com
         });
     });
 };
-
-/* when span in the modal is clicked -> close the modal */
-$('#bubble-modal span').click(function() {
-    Bubble.bubbleModal.css('display', 'none');
-    Bubble.animateBubbleMenu(4);
-});
-
-/* when outside of the modal is clicked -> close the modal */
-window.onclick = function(event) {
-    if (event.target.id == Bubble.bubbleModal.attr('id')) {
-        Bubble.bubbleModal.css('display', 'none');
-        Bubble.animateBubbleMenu(4);
-    }
-}

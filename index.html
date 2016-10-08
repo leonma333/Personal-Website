@@ -9,9 +9,8 @@
 		<link rel="icon" type="image/png" sizes="96x96" href="favicon-96x96.png">
 		<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
 		<script>
-  			if ((!window.chrome || !window.chrome.webstore) && typeof InstallTrigger === "undefined") {
+  			if ((!window.chrome || !window.chrome.webstore) && typeof InstallTrigger === "undefined")
 				window.location.href = "index-mobile.html"
-  			}
   		</script>
   	</head>
   	<body translate="no">
@@ -159,6 +158,61 @@
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.11.6/plugins/CSSPlugin.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.11.6/plugins/ScrollToPlugin.min.js"></script>
  	<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+ 	<script>
+ 		$(document).ready(function(){
+			Menu.theToggle.onclick = function() {
+			    Menu.toggleClass(this, 'on');
+			    return false;
+			}
+
+			homeWindow.on("mousewheel DOMMouseScroll", onMouseWheel);
+			homeDocument.on("keydown", onKeyDown);
+			updownButtons.on("click", onSlideButtonClick);
+			
+			// event listners trigger page transition on click of menu item
+			$("#language").click(function(){Bubble.menuSelect(4, 1, true, 'Java, C#, C++, Ruby, JavaScript, SQL, HTML, CSS, XML, JSON, UML ...');});
+			$("#front-end").click(function(){Bubble.menuSelect(4, 2, true, 'jQuery, React, Angular, Bootstrap, Pure, Phaser ...');});
+		    $("#back-end").click(function(){Bubble.menuSelect(4, 3, true, 'ASP.Net, Ruby on Rails, Node ...');});
+		    $("#database").click(function(){Bubble.menuSelect(4, 4, true, 'SQL Server, MySQL, PostgreSQL, Firebase ...');});
+			$("#technology").click(function(){Bubble.menuSelect(4, 1, false, 'AJAX, RESTful API, Microsoft Azure, Android ...');});
+			$("#tool").click(function(){Bubble.menuSelect(4, 2, false, 'Eclipse, Visual Studio, Xcode, Sublime Text, Dreamweaver, Android Studio, SSMS ...');});
+		    $("#version-control").click(function(){Bubble.menuSelect(4, 3, false, 'GitHub, Bitbucket, GitLab, SVN ...');});
+		    $("#other").click(function(){Bubble.menuSelect(4, 4, false, 'jUnit, OpenCV, JavaFX/Swing ...');});
+
+		    $('#bubble-modal span').click(function() {
+			    Bubble.bubbleModal.css('display', 'none');
+			    Bubble.animateBubbleMenu(4);
+			});
+
+			window.onclick = function(event) {
+			    if (event.target.id == Bubble.bubbleModal.attr('id')) {
+			        Bubble.bubbleModal.css('display', 'none');
+			        Bubble.animateBubbleMenu(4);
+			    }
+			}
+
+			window.onresize = function(event) {
+				/* Slide */
+				var newPageHeight = homeWindow.innerHeight();
+				if(pageHeight !== newPageHeight) {
+					pageHeight = newPageHeight;
+					TweenLite.set([slidesContainer, slidesList], {height: pageHeight + "px"});
+					TweenLite.set(slidesContainer, {scrollTo: {y: pageHeight * currentSlide.index()}});
+				}
+
+				/* Typeface */
+				var newPageWidth = homeWindow.innerWidth();
+				for (text in textSet) {
+					textSet[text].sphereRadius *= (newPageWidth/canvas.width);
+					textSet[text].sphereSpace *= (newPageWidth/canvas.width);
+				}
+				canvas.width = newPageWidth;
+				canvas.height = newPageHeight;
+				camera.display.x = newPageWidth/2;
+				camera.display.y = newPageHeight/2;
+			}
+		});
+ 	</script>
  	<script type ="text/javascript" src="js/menu.js"></script>
 	<script type="text/javascript" src="js/slide.js"></script>
 	<script type="text/javascript" src="js/typeface.js"></script> 
