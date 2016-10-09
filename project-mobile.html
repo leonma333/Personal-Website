@@ -16,7 +16,10 @@
 				   onclick="Popup.clickHandler('Kicks4Love', [
 				   					'Collaborating with other sneaker enthusiasts to produce a latest sportswear information website.',
 				   					'Dedicated to front-end design and user experience to ensure page visits.'
-				   				], { website: 'http://kicks4love.com' });">
+				   				], { website: {
+				   						link: 'http://kicks4love.com',
+				   						title: 'visit kicks4love.com',
+				   						source: 'assets/image/browser-white.png' }});">
 					<span class="layer one" style="background:#c3c3c3"></span>
 					<span class="layer two" style="background:white"><img src="assets/image/kicks4love.png"></span>
 					<span class="layer three" style="color:black">Kicks4Love</span>
@@ -80,6 +83,7 @@
 		    	<div class="popup-content">
 		      		<div class="popup-close"></div>
 		      		<h3 id="popup-title" class="popup-heading"></h3>
+		      		<div class="link"></div>
 		    	</div>
 		  	</div>
 		</div>
@@ -93,7 +97,7 @@
 
 			for (var i = 1; i <= Popup.numOfPieces; i++) {
 				var piece = document.createElement("div");
-				piece.classList.add('popup__piece');
+				piece.classList.add("popup-piece");
 				Popup.insertInnerPieces(piece, 3);
 				Popup.frag.appendChild(piece);
 			}
@@ -111,6 +115,7 @@
 			frag: document.createDocumentFragment(),
 			popupsContent: document.querySelector(".popups-content"),
 			popupContent: document.querySelector(".popup-content"),
+			popupLinks: document.querySelector(".link"),
 		 	popup: document.querySelector(".popup"),
 			popupAT: 900,
 			insertInnerPieces: function(element, innerPieces) {
@@ -121,8 +126,25 @@
 				}
 			},
 			clickHandler: function(title, textList, linkDictionary) {
+				console.log(JSON.stringify(linkDictionary,null,3));
+				for (var link in linkDictionary) {
+					if (link == "website") {
+						var popupLink = document.createElement('a');
+						popupLink.className = "project-link";
+						popupLink.href = linkDictionary[link].link;
+						popupLink.title = linkDictionary[link].title;
+						popupLink.target = "_blank";
+
+						var popupLinkImg = document.createElement("img");
+						popupLinkImg.src = linkDictionary[link].source;
+
+						popupLink.appendChild(popupLinkImg);
+						Popup.popupLinks.appendChild(popupLink);
+					}
+				}
+
 				document.getElementById("popup-title").innerHTML = title;
-				for (text in textList) {
+				for (var text in textList) {
 					var popupText = document.createElement('p');
 					popupText.innerHTML = textList[text];
 					popupText.className = "popup-text";
@@ -133,6 +155,10 @@
 			  	Popup.popup.classList.add("s-active");
 			},
 			closeHandler: function() {
+				var linkList = document.querySelectorAll(".link a");
+				for (var i = 0; i < linkList.length; i++)
+					Popup.popupLinks.removeChild(linkList[i]);
+
 				var textList = document.querySelectorAll(".popup-content p");
 				for (var i = 0; i < textList.length; i++)
 					Popup.popupContent.removeChild(textList[i]);
