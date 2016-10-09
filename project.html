@@ -9,10 +9,8 @@
 		<link rel="icon" type="image/png" sizes="96x96" href="favicon-96x96.png">
 		<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
         <script>
-            if ((!window.chrome || !window.chrome.webstore) && typeof InstallTrigger === 'undefined') {
-                alert('Currently only support desktop version of Chrome and Firefox. Sorry for the inconvenience.\nWorking on more browsers compatibility...');
-                window.open('','_self').close() || close();
-            }
+            if ((!window.chrome || !window.chrome.webstore) && typeof InstallTrigger === "undefined") 
+                window.location.href = "project-mobile.html"
         </script>
     </head>
     <body translate="no" >
@@ -114,6 +112,15 @@
     </body>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
     <script>
+        $(document).ready(function(){
+            Menu.theToggle.onclick = function() {
+                Menu.toggleClass(this, "on");
+                return false;
+            }
+
+            $(".project-link").tooltip();
+        });
+
         var upper = document.getElementById("upper");
         var lower = document.getElementById("lower");
         var img = document.querySelectorAll("figure#spinner img");
@@ -209,8 +216,6 @@
                     break;
             }
         });
-
-        $(".project-link").tooltip();
     </script>
     <script type ="text/javascript" src="js/menu.js"></script>
 </html>

@@ -6,7 +6,7 @@ a {
     text-decoration: none;
 }
 
-/*------------ Menu ------------- */
+/* ------------ Menu ------------- */
 #toggle {
     position: absolute;
     display: block;
@@ -116,9 +116,9 @@ a {
     background: black;
     color: white;
 }
-/*------------ End Menu ------------- */
+/* ------------ End Menu ------------- */
 
-/*------------ Spinner ------------- */
+/* ------------ Spinner ------------- */
 figure#spinner { 
     transform-style: preserve-3d;
     transform-origin: 50% 50% -500px; 
@@ -195,4 +195,4 @@ div#upper ~ span:hover {
     -moz-transform: scale(1.5);
     -webkit-transform: scale(1.5);
 }
-/*------------ End Spinner ------------- */
+/* ------------ End Spinner ------------- */

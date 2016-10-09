@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html >
+  	<head>
+    	<meta charset="UTF-8">
+        	<title>Liang-Hsuan Ma | Project</title>
+        	<meta name="viewport" content="width=device-width, initial-scale=1">
+        	<link rel="stylesheet" type="text/css" href="css/project-mobile.css">
+        	<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+			<link rel="icon" type="image/png" sizes="96x96" href="favicon-96x96.png">
+			<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">   
+  	</head>
+  	<body translate="no" >
+		<div class="content">
+			<div class="row">
+				<a id="kicks4love" class="set" style="background:black" 
+				   onclick="Popup.clickHandler('Kicks4Love', [
+				   					'Collaborating with other sneaker enthusiasts to produce a latest sportswear information website.',
+				   					'Dedicated to front-end design and user experience to ensure page visits.'
+				   				], { website: 'http://kicks4love.com' });">
+					<span class="layer one" style="background:#c3c3c3"></span>
+					<span class="layer two" style="background:white"><img src="assets/image/kicks4love.png"></span>
+					<span class="layer three" style="color:black">Kicks4Love</span>
+				</a>
+				<a class="set" style="background:#c3c3c3">
+					<span class="layer one" style="background:white"></span>
+					<span class="layer two" style="background:black"><img src="assets/image/survival-game.png"></span>
+					<span class="layer three">The Survival Game</span>
+				</a>
+				<a class="set" style="background:black">
+					<span class="layer one" style="background:#c3c3c3"></span>
+					<span class="layer two" style="background:white"><img src="assets/image/ace.png"></span>
+					<span class="layer three" style="color:black">A.C.E.</span>
+				</a>
+			</div>
+			<div class="row follow">
+				<a class="set" style="background:#c3c3c3">
+						<span class="layer one" style="background:white"></span>
+						<span class="layer two" style="background:black"><img src="assets/image/order-manager.png"></span>
+						<span class="layer three">Order Manager</span>
+				</a>
+			</div>
+			<div class="row follow">
+				<a class="set" style="background:black">
+					<span class="layer one" style="background:#c3c3c3"></span>
+					<span class="layer two" style="background:white"><img src="assets/image/personal-website.png"></span>
+					<span class="layer three" style="color:black">Personal Website</span>
+				</a>
+				<a class="set" style="background:#c3c3c3">
+					<span class="layer one" style="background:white"></span>
+					<span class="layer two" style="background:black"><img src="assets/image/sku-manager.png"></span>
+					<span class="layer three">SKU Manager</span>
+				</a>
+				<a class="set" style="background:black">
+					<span class="layer one" style="background:#c3c3c3"></span>
+					<span class="layer two" style="background:white"><img src="assets/image/mini-rover.png"></span>
+					<span class="layer three" style="color:black">Mini Rover</span>
+				</a>
+			</div>
+			<div class="row follow">
+				<a class="set" style="background:#c3c3c3">
+					<span class="layer one" style="background:white"></span>
+					<span class="layer two" style="background:black"><img src="assets/image/coming-soon.png"></span>
+					<span class="layer three" style="color:white">Comming Soon</span>
+				</a>
+			</div>
+		</div>
+		<a id="toggle"><span></span></a>
+        <div id="menu">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a>Project</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>  
+        <div class="popups-content">
+		  	<div class="popups-content-overlay"></div>
+		  	<div class="popup">
+		    	<div class="popup-pieces"></div>
+		    	<div class="popup-content">
+		      		<div class="popup-close"></div>
+		      		<h3 id="popup-title" class="popup-heading"></h3>
+		    	</div>
+		  	</div>
+		</div>
+  	</body>
+    <script>
+        window.onload = function(){
+			Menu.theToggle.onclick = function() {
+			    Menu.toggleClass(this, "on");
+			    return false;
+			}
+
+			for (var i = 1; i <= Popup.numOfPieces; i++) {
+				var piece = document.createElement("div");
+				piece.classList.add('popup__piece');
+				Popup.insertInnerPieces(piece, 3);
+				Popup.frag.appendChild(piece);
+			}
+
+			document.querySelector(".popup-pieces").appendChild(Popup.frag);
+			document.querySelector(".popup-close").addEventListener("click", Popup.closeHandler);
+			document.querySelector(".popups-content-overlay").addEventListener("click", Popup.closeHandler);
+		}
+
+        /*
+         * Class for Popup
+         */
+		var Popup = {
+			numOfPieces: 6 * 6,
+			frag: document.createDocumentFragment(),
+			popupsContent: document.querySelector(".popups-content"),
+			popupContent: document.querySelector(".popup-content"),
+		 	popup: document.querySelector(".popup"),
+			popupAT: 900,
+			insertInnerPieces: function(element, innerPieces) {
+				for (var i = 0; i < innerPieces; i++) {
+				    var inner = document.createElement("div");
+				    inner.classList.add("popup-piece-inner");
+				    element.appendChild(inner);
+				}
+			},
+			clickHandler: function(title, textList, linkDictionary) {
+				document.getElementById("popup-title").innerHTML = title;
+				for (text in textList) {
+					var popupText = document.createElement('p');
+					popupText.innerHTML = textList[text];
+					popupText.className = "popup-text";
+					Popup.popupContent.appendChild(popupText);
+				}
+
+				Popup.popupsContent.classList.add("s-popup-active");
+			  	Popup.popup.classList.add("s-active");
+			},
+			closeHandler: function() {
+				var textList = document.querySelectorAll(".popup-content p");
+				for (var i = 0; i < textList.length; i++)
+					Popup.popupContent.removeChild(textList[i]);
+
+				Popup.popupsContent.classList.remove("s-popup-active");
+				Popup.popup.classList.remove("s-active");
+				Popup.popup.classList.add("s-closed");
+				  
+				setTimeout(function() {
+				   	Popup.popup.classList.remove("s-closed");
+				}, Popup.popupAT);
+			}
+		}
+    </script>
+    <script type ="text/javascript" src="js/menu.js"></script>
+</html>
+ 
