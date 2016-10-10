@@ -13,7 +13,7 @@
 		<div class="content">
 			<div class="row">
 				<a id="kicks4love" class="set" style="background:black" 
-				   onclick="Popup.clickHandler('Kicks4Love', [
+				   onclick="Popup.clickHandler(true, 'Kicks4Love', [
 				   					'Collaborating with other sneaker enthusiasts to produce a latest sportswear information website.',
 				   					'Dedicated to front-end design and user experience to ensure page visits.'
 				   				], { website: {
@@ -24,7 +24,19 @@
 					<span class="layer two" style="background:white"><img src="assets/image/kicks4love.png"></span>
 					<span class="layer three" style="color:black">Kicks4Love</span>
 				</a>
-				<a class="set" style="background:#c3c3c3">
+				<a class="set" style="background:#c3c3c3"
+				   onclick="Popup.clickHandler(false, 'The Survival Game', [
+				   					'An online multiplayer game with an incredible environment for cooperation to survive.',
+				   					'Reliable and fast server side plus a traditional gamelooking theme.'
+				   ], { website: {
+				   			link: 'http://www.survivalgameonline.com',
+				   			title: 'visit survivalgameonline.com',
+				   			source: 'assets/image/browser-black.png'
+				   	},	git: {
+				   			link: 'https://github.com/x65han/EngHack-2016',
+				   			title: 'go to see survival game on github',
+				   			source: 'assets/image/git-black.png'
+				   		}});">
 					<span class="layer one" style="background:white"></span>
 					<span class="layer two" style="background:black"><img src="assets/image/survival-game.png"></span>
 					<span class="layer three">The Survival Game</span>
@@ -125,21 +137,25 @@
 				    element.appendChild(inner);
 				}
 			},
-			clickHandler: function(title, textList, linkDictionary) {
+			clickHandler: function(isBlack, title, textList, linkDictionary) {
+				if (!isBlack) {
+					Popup.popupContent.style.background = "white";
+					Popup.popupContent.style.color = "black";
+					//Popup.popupContent.childNodes[1].style.background = "black";
+				}
+
 				for (var link in linkDictionary) {
-					if (link == "website") {
-						var popupLink = document.createElement('a');
-						popupLink.className = "project-link";
-						popupLink.href = linkDictionary[link].link;
-						popupLink.title = linkDictionary[link].title;
-						popupLink.target = "_blank";
+					var popupLink = document.createElement('a');
+					popupLink.className = "project-link";
+					popupLink.href = linkDictionary[link].link;
+					popupLink.title = linkDictionary[link].title;
+					popupLink.target = "_blank";
 
-						var popupLinkImg = document.createElement("img");
-						popupLinkImg.src = linkDictionary[link].source;
+					var popupLinkImg = document.createElement("img");
+					popupLinkImg.src = linkDictionary[link].source;
 
-						popupLink.appendChild(popupLinkImg);
-						Popup.popupLinks.appendChild(popupLink);
-					}
+					popupLink.appendChild(popupLinkImg);
+					Popup.popupLinks.appendChild(popupLink);
 				}
 
 				document.getElementById("popup-title").innerHTML = title;
@@ -154,6 +170,10 @@
 			  	Popup.popup.classList.add("s-active");
 			},
 			closeHandler: function() {
+				Popup.popupContent.style.background = "black";
+				Popup.popupContent.style.color = "white";
+				//Popup.popupContent.childNodes[1].style.background = "white";
+
 				var linkList = document.querySelectorAll(".link a");
 				for (var i = 0; i < linkList.length; i++)
 					Popup.popupLinks.removeChild(linkList[i]);
