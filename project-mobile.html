@@ -5,9 +5,7 @@
         	<title>Liang-Hsuan Ma | Project</title>
         	<meta name="viewport" content="width=device-width, initial-scale=1">
         	<link rel="stylesheet" type="text/css" href="css/project-mobile.css">
-        	<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
-			<link rel="icon" type="image/png" sizes="96x96" href="favicon-96x96.png">
-			<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">   
+			<link rel="icon" type="image/png" sizes="96x96" href="favicon-96x96.png">   
   	</head>
   	<body translate="no" >
 		<div class="content">
@@ -16,10 +14,11 @@
 				   onclick="Popup.clickHandler(true, 'Kicks4Love', [
 				   					'Collaborating with other sneaker enthusiasts to produce a latest sportswear information website.',
 				   					'Dedicated to front-end design and user experience to ensure page visits.'
-				   				], { website: {
-				   						link: 'http://kicks4love.com',
-				   						title: 'visit kicks4love.com',
-				   						source: 'assets/image/browser-white.png' }});">
+				   ], { website: {
+				   			link: 'http://kicks4love.com',
+				   			title: 'visit kicks4love.com',
+				   			source: 'assets/image/browser-white.png' 
+				   }});">
 					<span class="layer one" style="background:#c3c3c3"></span>
 					<span class="layer two" style="background:white"><img src="assets/image/kicks4love.png"></span>
 					<span class="layer three" style="color:black">Kicks4Love</span>
@@ -32,47 +31,100 @@
 				   			link: 'http://www.survivalgameonline.com',
 				   			title: 'visit survivalgameonline.com',
 				   			source: 'assets/image/browser-black.png'
-				   	},	git: {
+				   },	git: {
 				   			link: 'https://github.com/x65han/EngHack-2016',
 				   			title: 'go to see survival game on github',
 				   			source: 'assets/image/git-black.png'
-				   		}});">
+				   }});">
 					<span class="layer one" style="background:white"></span>
 					<span class="layer two" style="background:black"><img src="assets/image/survival-game.png"></span>
 					<span class="layer three">The Survival Game</span>
 				</a>
-				<a class="set" style="background:black">
+				<a class="set" style="background:black" 
+				   onclick="Popup.clickHandler(true, 'A.C.E.', [
+				   					'A web application that can query existing customers, place order, and create quote.',
+				   					'Enhance quoting efficiency and accuracy.'
+				   ], { git: {
+				   			link: 'https://bitbucket.org/leonma333/a.c.e.',
+				   			title: 'go to see A.C.E. on bitbucket',
+				   			source: 'assets/image/git-white.png'
+				   }});">
 					<span class="layer one" style="background:#c3c3c3"></span>
 					<span class="layer two" style="background:white"><img src="assets/image/ace.png"></span>
 					<span class="layer three" style="color:black">A.C.E.</span>
 				</a>
 			</div>
-			<div class="row follow">
-				<a class="set" style="background:#c3c3c3">
+			<div class="row alone">
+				<a class="set" style="background:#c3c3c3"
+				   onclick="Popup.clickHandler(false, 'Order Manager', [
+				   					'A desktop application that can manage orders from various online shopping channels.',
+				   					'A flexible and modularized software due to multichannel handling.',
+				   					'Plenty of data manipulation, data processing and data exchange via XML, JSON and CSV files.'
+				   ], { git: {
+				   			link: 'https://bitbucket.org/leonma333/order-manager',
+				   			title: 'go to see order manager on bitbucket',
+				   			source: 'assets/image/git-black.png'
+				   }, 	video: {
+				   			link: 'https://youtu.be/E7fsC4W7EdU',
+				   			title: 'watch order manager demo video',
+				   			source: 'assets/image/video-black.png'
+				   }});">
 						<span class="layer one" style="background:white"></span>
 						<span class="layer two" style="background:black"><img src="assets/image/order-manager.png"></span>
 						<span class="layer three">Order Manager</span>
 				</a>
 			</div>
-			<div class="row follow">
-				<a class="set" style="background:black">
+			<div class="row">
+				<a class="set" style="background:black"
+				   onclick="Popup.clickHandler(true, 'Personal Website', [
+				   					'My own personal website with dedcicated front-end design',
+				   					'You are now viewing it, hope you enjoy.'
+				   ], { website: {
+				   			link: 'homepage-mobile.html',
+				   			title: 'visit awesome home page',
+				   			source: 'assets/image/browser-white.png'
+				   },	git: {
+				   			link: 'https://github.com/Liang-Hsuan/personal-website',
+				   			title: 'go to see survival game on github',
+				   			source: 'assets/image/git-white.png'
+				   }});">
 					<span class="layer one" style="background:#c3c3c3"></span>
 					<span class="layer two" style="background:white"><img src="assets/image/personal-website.png"></span>
 					<span class="layer three" style="color:black">Personal Website</span>
 				</a>
-				<a class="set" style="background:#c3c3c3">
+				<a class="set" style="background:#c3c3c3"
+				   onclick="Popup.clickHandler(false, 'SKU Manager', [
+				   					'An enterprise application that can manage company’s products, pricings and various eCommerce platform exports.',
+				   					'Remarkable object-oriented design.'
+				   ], { git: {
+				   			link: 'https://bitbucket.org/leonma333/sku-manager',
+				   			title: 'go to see SKU manager on bitbucket',
+				   			source: 'assets/image/git-black.png'
+				   }});">
 					<span class="layer one" style="background:white"></span>
 					<span class="layer two" style="background:black"><img src="assets/image/sku-manager.png"></span>
 					<span class="layer three">SKU Manager</span>
 				</a>
-				<a class="set" style="background:black">
+				<a class="set" style="background:black"
+				   onclick="Popup.clickHandler(true, 'Mini Rover', [
+				   					'Designed a rover, which include calculating the balance of its mass, clearly labeled the joints that require to rotate and the parts that need electric motor.',
+				   					'Assembled the rover, while solving unforeseen problems to improve our model.'
+				   ], { photo: {
+				   			link: 'https://1drv.ms/f/s!Ai9uR7d_jCB9h1Hx7aMjEwTFoNeZ',
+				   			title: 'look at some photos of the rover',
+				   			source: 'assets/image/photo-white.png'
+				   }});">
 					<span class="layer one" style="background:#c3c3c3"></span>
 					<span class="layer two" style="background:white"><img src="assets/image/mini-rover.png"></span>
 					<span class="layer three" style="color:black">Mini Rover</span>
 				</a>
 			</div>
-			<div class="row follow">
-				<a class="set" style="background:#c3c3c3">
+			<div class="row alone">
+				<a class="set" style="background:#c3c3c3"
+				   onclick="Popup.clickHandler(false, 'Comming Soon', [
+				   					'More projects are going to coming up',
+				   					'I won\'t let you down.'
+				   ],{});">
 					<span class="layer one" style="background:white"></span>
 					<span class="layer two" style="background:black"><img src="assets/image/coming-soon.png"></span>
 					<span class="layer three" style="color:white">Comming Soon</span>
