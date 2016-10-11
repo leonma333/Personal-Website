@@ -20,9 +20,6 @@ var keyCodes = {
 	DOWN: 40
 }
 
-// going to the first slide
-goToSlide(currentSlide);
-
 /* When a button is clicked - first get the button href, and then slide to the container, if there's such a container */
 function onSlideButtonClick(event) {
 	// get clicked button

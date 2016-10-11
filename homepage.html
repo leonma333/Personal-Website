@@ -159,7 +159,7 @@
  	<script>
  		$(document).ready(function(){
 			Menu.theToggle.onclick = function() {
-			    Menu.toggleClass(this, 'on');
+			    Menu.toggleClass(this, "on");
 			    return false;
 			}
 
@@ -209,7 +209,9 @@
 				camera.display.x = newPageWidth/2;
 				camera.display.y = newPageHeight/2;
 			}
+
 			window.onresize();
+			goToSlide(currentSlide);
 		});
  	</script>
  	<script type ="text/javascript" src="js/menu.js"></script>
