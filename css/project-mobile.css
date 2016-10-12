@@ -1,7 +1,3 @@
-*, *::before, *::after {
-	box-sizing: border-box;
-}
-
 html {
 	overflow-y: scroll;
 }
@@ -21,7 +17,7 @@ a {
     cursor: pointer;
     width: 28px;
     height: 30px;
-    top: 60px;
+    top: 30px;
     margin-left: auto;
     margin-right: auto;
     left: 0;
@@ -76,19 +72,18 @@ a {
 
 #menu {
     position: absolute;
-    top: 85px;
+    top: 55px;
     margin-left: auto;
     margin-right: auto;
     left: 0;
     right: 0;
-    color: #999;
     width: 200px;
     padding: 10px;
     margin: auto;
     font-family: 'Optima', sans-serif;
     text-align: center;
     border-radius: 4px;
-    background: white;
+    background: black;
     box-shadow: 0 1px 8px rgba(0,0,0,0.05);
     opacity: 0;
     visibility: hidden;
@@ -103,7 +98,7 @@ a {
     display: block;
     border-left: 15px solid transparent;
     border-right: 15px solid transparent;
-    border-bottom: 20px solid white;
+    border-bottom: 20px solid black;
 }
 
 #menu ul, li, li a {
@@ -115,124 +110,124 @@ a {
 
 #menu li a {
     padding: 5px;
-    color: black;
+    color: white;
     transition: all .2s;
 }
 
 #menu li a:hover,
 #menu li a:focus {
-    background: black;
-    color: white;
+    background: white;
+    color: black;
 }
 /* ------------ End Menu ------------- */
 
 /* ------------ Gallery ------------- */
 .content {
-	width: 100%;
-	display: block;
-	margin-top: 80px;
+  	width: 100%;
+  	display: block;
+  	margin-top: 80px;
 }
 
 .row {
-	width: 100%;
-	margin: 0;
-	padding: 0;
-	display: block;
-	text-align: center;
-	-webkit-perspective: 1000px;
-	perspective: 1000px;
+  	width: 100%;
+  	margin: 0;
+  	padding: 0;
+  	display: block;
+  	text-align: center;
+  	-webkit-perspective: 1000px;
+  	perspective: 1000px;
 }
 
 .row:first-child .set {
-	margin-top: 0;
+	 margin-top: 0;
 }
 
 .set {
-	width: 256px;
-	height: 256px;
-	margin: -60px 8px 0;
-	display: inline-block;
-	outline: 1px solid transparent;
-	box-shadow: 0 0 1px 0 rgba(0, 0, 0, 1);
-	position: relative;
-	-webkit-transform: rotateX(45deg);
-	transform: rotateX(45deg);
-	-webkit-transform-style: preserve-3d;
-	transform-style: preserve-3d;
-	font-weight: 700;
-	color: white;
-	text-decoration: none;
+  	width: 256px;
+  	height: 256px;
+  	margin: -60px 8px 0;
+  	display: inline-block;
+  	outline: 1px solid transparent;
+  	box-shadow: 0 0 1px 0 rgba(0, 0, 0, 1);
+  	position: relative;
+  	-webkit-transform: rotateX(45deg);
+  	transform: rotateX(45deg);
+  	-webkit-transform-style: preserve-3d;
+  	transform-style: preserve-3d;
+  	font-weight: 700;
+  	color: white;
+  	text-decoration: none;
 }
 
 .set:hover .layer:not(.three) {
-	box-shadow: 0 0 8px 0 black;
-	cursor: pointer;
+  	box-shadow: 0 0 8px 0 black;
+  	cursor: pointer;
 }
 
 .set:hover .layer.one {
-	-webkit-transform: translateZ(12px);
-	transform: translateZ(12px);
+  	-webkit-transform: translateZ(12px);
+  	transform: translateZ(12px);
 }
 
 .set:hover .layer.two {
-	-webkit-transform: translateZ(24px);
-	transform: translateZ(24px);
+  	-webkit-transform: translateZ(24px);
+  	transform: translateZ(24px);
 }
 
 .set:hover .layer.three {
-	-webkit-transform: translateZ(32px);
-	transform: translateZ(32px);
-	text-shadow: 0 0 4px black;
+  	-webkit-transform: translateZ(32px);
+  	transform: translateZ(32px);
+  	text-shadow: 0 0 4px black;
 }
 
 .set img {
-	width: 100%;
-	height: 100%;
-	display: block;
-	opacity: 0.25;
-	-webkit-transition: opacity 0.5s;
-	transition: opacity 0.5s;
+  	width: 100%;
+  	height: 100%;
+  	display: block;
+  	opacity: 0.25;
+  	-webkit-transition: opacity 0.5s;
+  	transition: opacity 0.5s;
 }
 
 .set:hover img {
-	opacity: 1;
+	 opacity: 1;
 }
 
 .layer {
-	display: block;
-	outline: 1px solid transparent;
-	box-shadow: 0 0 4px 0 black;
-	top: 0;
-	right: 0;
-	bottom: 0;
-	left: 0;
-	position: absolute;
-	-webkit-transition: box-shadow 0.5s, text-shadow 0.5s, -webkit-transform 0.5s;
-	transition: box-shadow 0.5s, text-shadow 0.5s, -webkit-transform 0.5s;
-	transition: box-shadow 0.5s, transform 0.5s, text-shadow 0.5s;
-	transition: box-shadow 0.5s, transform 0.5s, text-shadow 0.5s, -webkit-transform 0.5s;
-	text-align: left;
+  	display: block;
+  	outline: 1px solid transparent;
+  	box-shadow: 0 0 4px 0 black;
+  	top: 0;
+  	right: 0;
+  	bottom: 0;
+  	left: 0;
+  	position: absolute;
+  	-webkit-transition: box-shadow 0.5s, text-shadow 0.5s, -webkit-transform 0.5s;
+  	transition: box-shadow 0.5s, text-shadow 0.5s, -webkit-transform 0.5s;
+  	transition: box-shadow 0.5s, transform 0.5s, text-shadow 0.5s;
+  	transition: box-shadow 0.5s, transform 0.5s, text-shadow 0.5s, -webkit-transform 0.5s;
+	 text-align: left;
 }
 
 .layer.one {
-	-webkit-transform: translateZ(4px);
-	transform: translateZ(4px);
+  	-webkit-transform: translateZ(4px);
+  	transform: translateZ(4px);
 }
 
 .layer.two {
-	-webkit-transform: translateZ(8px);
-	transform: translateZ(8px);
+  	-webkit-transform: translateZ(8px);
+  	transform: translateZ(8px);
 }
 
 .layer.three {
-	background: none;
-	padding: 16px;
-	box-shadow: none;
-	top: auto;
-	right: auto;
-	font-family: 'Optima', sans-serif;
-	-webkit-transform: translateZ(8px);
-	transform: translateZ(8px);
+  	background: none;
+  	padding: 16px;
+  	box-shadow: none;
+  	top: auto;
+  	right: auto;
+  	font-family: 'Optima', sans-serif;
+  	-webkit-transform: translateZ(8px);
+  	transform: translateZ(8px);
 }
 
 @media screen and (max-width: 855px) {
@@ -507,19 +502,21 @@ a {
     transform: translate3d(26vw, 0, 0) rotateX(345deg) rotateY(437deg);
 }
 
-
-
-
 .popup .popup-piece:nth-child(5) {
-  height: 21.66667%;
-  width: 13.66667%;
+    height: 21.66667%;
+    width: 13.66667%;
 }
+
 .popup .popup-piece:nth-child(5) .popup-piece-inner:nth-child(1) {
-  -webkit-transform: translate3d(-44vw, 8vh, -226px) rotateX(255deg) rotateY(144deg);
-          transform: translate3d(-44vw, 8vh, -226px) rotateX(255deg) rotateY(144deg);
-  -webkit-clip-path: polygon(0 0, 0 100%, 51% 100%);
-          clip-path: polygon(0 0, 0 100%, 51% 100%);
+    -webkit-transform: translate3d(-44vw, 8vh, -226px) rotateX(255deg) rotateY(144deg);
+    transform: translate3d(-44vw, 8vh, -226px) rotateX(255deg) rotateY(144deg);
+    -webkit-clip-path: polygon(0 0, 0 100%, 51% 100%);
+    clip-path: polygon(0 0, 0 100%, 51% 100%);
 }
+
+
+
+
 .popup .popup-piece:nth-child(5) .popup-piece-inner:nth-child(2) {
   -webkit-transform: translate3d(21vw, -50vh, -817px) rotateX(419deg) rotateY(251deg);
           transform: translate3d(21vw, -50vh, -817px) rotateX(419deg) rotateY(251deg);
