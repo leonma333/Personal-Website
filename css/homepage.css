@@ -344,6 +344,12 @@ a {
     cursor: pointer;
 }
 
+@media screen and (min-width: 1510px) {
+    .score-text {
+        font-size: 20px;
+    }
+}
+
 @-webkit-keyframes animatetop {
     from {top: -300px; opacity: 0}
     to {top: 0; opacity: 1}
