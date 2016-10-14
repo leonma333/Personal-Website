@@ -458,7 +458,7 @@ form input[type="submit"]:focus {
 .envelope-container .envelope .paper a:hover {
         color: gray;
 }
-.envelope-container .envelope .paper a.mail .i {
+.envelope-container .envelope .paper a.resume .i {
         position: absolute;
         top: 0px;
         left: 17px;
