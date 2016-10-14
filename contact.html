@@ -40,7 +40,7 @@
               </form>
         </section>
         <div class="envelope-container">
-              <div class="envelope">
+            <div class="envelope">
                 <div class="top">
                     <div class="outer"><div class="inner"></div></div>
                 </div>
@@ -63,6 +63,10 @@
             }
 
             var contact = new ContactForm();
+            $(".envelope-container").on("touchstart", function() {
+                $(this).addClass("hover");
+            });
+            
         });
     </script>
     <script type ="text/javascript" src="js/menu.js"></script>

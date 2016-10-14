@@ -285,6 +285,7 @@ form input[type="submit"]:focus {
 }
 /* ------------ End Contact Form ------------- */
 
+/* ------------ Envelope ------------- */
 .envelope-container * { -webkit-backface-visibility: hidden; }
 
 .paper:hover { color: black; }
@@ -292,7 +293,8 @@ form input[type="submit"]:focus {
 .envelope-container { 
     position: relative;
     margin: 20px auto;
-    height: 250px;
+    height: 150px;
+    width: 165px;
 }
 
 .envelope-container .envelope {
@@ -311,19 +313,19 @@ form input[type="submit"]:focus {
     -webkit-transition: margin-top 300ms;
 }
 
-.envelope-container:hover .envelope {
-        transition-delay: 150ms;
-        -ms-transition-delay: 150ms;
-        -moz-transition-delay: 150ms;
-        -o-transition-delay: 150ms;
-        margin-top: -20px;
+.envelope-container:hover .envelope, .envelope-container.hover .envelope {
+    transition-delay: 150ms;
+    -ms-transition-delay: 150ms;
+    -moz-transition-delay: 150ms;
+    -o-transition-delay: 150ms;
+    margin-top: -20px;
 }
 
 .envelope-container .envelope .top {
-        position: absolute;
-        top: -3px;
-        left: 0px;
-        width: 100%;
+    position: absolute;
+    top: -3px;
+    left: 0px;
+    width: 100%;
         height: 73px;
         z-index: 30;
         overflow: hidden;
@@ -340,7 +342,8 @@ form input[type="submit"]:focus {
         -o-transition: -o-transform 300ms 150ms, z-index 0ms 150ms, height 300ms 0ms, top 300ms 0ms;
         -webkit-transition: -webkit-transform 300ms 150ms, z-index 0ms 150ms, height 300ms 0ms, top 300ms 0ms;
 }
-.envelope-container:hover .envelope .top {
+
+.envelope-container:hover .envelope .top, .envelope-container.hover .envelope .top {
         transition: transform 300ms 0ms, height 300ms 150ms, top 300ms 150ms;
         -ms-transition: -ms-transform 300ms 0ms, height 300ms 150ms, top 300ms 150ms;
         -moz-transition: -moz-transform 300ms 0ms, height 300ms 150ms, top 300ms 150ms;
@@ -356,6 +359,7 @@ form input[type="submit"]:focus {
         -o-transform: rotateX(180deg);
         -webkit-transform: rotateX(180deg);
 }
+
 .envelope-container .envelope .outer {
         position: absolute;
         bottom: 0px;
@@ -364,6 +368,7 @@ form input[type="submit"]:focus {
         border-right: 82px solid transparent;
         border-top: 70px solid #EEE;
 }
+
 .envelope-container .envelope .outer .inner {
         position: absolute;
         left: -81px;
@@ -422,7 +427,7 @@ form input[type="submit"]:focus {
         -o-transition: margin-top 300ms 0ms;
         -webkit-transition: margin-top 300ms 0ms;
 }
-.envelope-container:hover .envelope .paper {
+.envelope-container:hover .envelope .paper, .envelope-container.hover .envelope .paper {
         margin-top: -60px;
         transition: margin-top 300ms 150ms;
         -ms-transition: margin-top 300ms 150ms;

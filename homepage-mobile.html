@@ -189,11 +189,13 @@
 			});
 
 			window.onclick = function(event) {
-			    if (event.target.id == Bubble.bubbleModal.attr('id')) {
-			        Bubble.bubbleModal.css('display', 'none');
+				console.log(event.target.id);
+			    if (event.target.id == Bubble.bubbleModal.attr("id")) {
+			        Bubble.bubbleModal.css("display", "none");
 			        Bubble.animateBubbleMenu(4);
 			    }
 			}
+			document.body.addEventListener("touchstart", window.onclick, false);
 
 			window.onresize = function(event) {
 				/* Slide */
