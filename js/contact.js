@@ -54,7 +54,10 @@ ContactForm.prototype.initHandler = function() {
 
 /* function that submit data to server */
 ContactForm.prototype.sumbitForm = function(url, method) {
-    console.log("SUMBITTING");
+    // get the submit button first
+    submitButton = $("form#email-form input[type='submit']");
+
+    // set email form submit action
     $("#email-form").submit(function(event) {
         $.ajax({
             type: method,
@@ -62,6 +65,8 @@ ContactForm.prototype.sumbitForm = function(url, method) {
             data: $(this).serialize(),
             dataType: "json",
             success: function(data) {
+                submitButton.prop("disabled", true);
+                submitButton.val("Sent");
                 console.log(data);
             },
             error: function(data) {

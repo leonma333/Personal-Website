@@ -131,7 +131,6 @@ section#hire {
 section#hire h1 {
     margin-bottom: 40px;
     font-size: 4em;
-    text-transform: uppercase;
     font-family: 'Optima', sans-serif;
     font-weight: 100;
 }
@@ -195,7 +194,6 @@ form#email-form .field textarea {
     color: black;
     font-size: 1.4em;
     letter-spacing: 0.05em;
-    text-transform: uppercase;
 }
 
 form#email-form .field input[type="text"]#msg,
@@ -245,7 +243,6 @@ form#email-form input[type="submit"] {
     color: black;
     -webkit-appearance: none;
     border: none;
-    text-transform: uppercase;
     position: relative;
     padding: 13px 50px;
     font-size: 1.4em;
