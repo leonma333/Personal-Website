@@ -20,19 +20,19 @@
         </div>
         <section id="hire">
             <h1>Contact Me</h1>
-                <form>
+                <form id="email-form" action="php/email.php" method="POST">
             	      <div class="field name-box">
-            		        <input type="text" id="name" placeholder="Who Are You?"/>
+            		        <input type="text" id="name" name="contact_name" placeholder="Who Are You?"/>
                     		<label for="name">Name</label>
             		        <span class="ss-icon">✓</span>
             	      </div>
             	      <div class="field email-box">
-            		        <input type="text" id="email" placeholder="name@email.com"/>
+            		        <input type="text" id="email" name="contact_email" placeholder="name@email.com"/>
             		        <label for="email">Email</label>
             		        <span class="ss-icon">✓</span>
             	      </div>
             	      <div class="field msg-box">
-            		        <textarea id="msg" rows="4" placeholder="Your message goes here..."/></textarea>
+            		        <textarea id="msg" rows="4" name="contact_msg" placeholder="Your message goes here..."/></textarea>
             		        <label for="msg">Msg</label>
             		        <span class="ss-icon">✓</span>
             	      </div>
@@ -63,6 +63,7 @@
             }
 
             var contact = new ContactForm();
+            contact.initHandler();
         });
     </script>
     <script type ="text/javascript" src="js/menu.js"></script>
