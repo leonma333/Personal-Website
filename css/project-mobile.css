@@ -206,7 +206,7 @@ a {
   	transition: box-shadow 0.5s, text-shadow 0.5s, -webkit-transform 0.5s;
   	transition: box-shadow 0.5s, transform 0.5s, text-shadow 0.5s;
   	transition: box-shadow 0.5s, transform 0.5s, text-shadow 0.5s, -webkit-transform 0.5s;
-	 text-align: left;
+	  text-align: left;
 }
 
 .layer.one {
@@ -276,14 +276,14 @@ a {
 }
 
 .popups-content-overlay {
-	position: absolute;
-	left: 0;
-	top: 0;
-	width: 100%;
-	height: 100%;
-	opacity: 0;
-	-webkit-transition: opacity 0.35s;
-	transition: opacity 0.35s;
+  	position: absolute;
+  	left: 0;
+  	top: 0;
+  	width: 100%;
+  	height: 100%;
+  	opacity: 0;
+  	-webkit-transition: opacity 0.35s;
+  	transition: opacity 0.35s;
 }
 
 .popups-content.s-popup-active .popups-content-overlay {
@@ -293,12 +293,12 @@ a {
 }
 
 .popup {
-	z-index: 2;
-	position: relative;
-	width: 500px;
-	height: 500px;
-	-webkit-transform-style: preserve-3d;
-	transform-style: preserve-3d;
+  	z-index: 2;
+  	position: relative;
+  	width: 500px;
+  	height: 500px;
+  	-webkit-transform-style: preserve-3d;
+  	transform-style: preserve-3d;
 }
 
 .link {
@@ -514,85 +514,97 @@ a {
     clip-path: polygon(0 0, 0 100%, 51% 100%);
 }
 
-
-
-
 .popup .popup-piece:nth-child(5) .popup-piece-inner:nth-child(2) {
-  -webkit-transform: translate3d(21vw, -50vh, -817px) rotateX(419deg) rotateY(251deg);
-          transform: translate3d(21vw, -50vh, -817px) rotateX(419deg) rotateY(251deg);
-  -webkit-clip-path: polygon(0 0, 51% 100%, 100% 0);
-          clip-path: polygon(0 0, 51% 100%, 100% 0);
+    -webkit-transform: translate3d(21vw, -50vh, -817px) rotateX(419deg) rotateY(251deg);
+    transform: translate3d(21vw, -50vh, -817px) rotateX(419deg) rotateY(251deg);
+    -webkit-clip-path: polygon(0 0, 51% 100%, 100% 0);
+    clip-path: polygon(0 0, 51% 100%, 100% 0);
 }
+
 .popup .popup-piece:nth-child(5) .popup-piece-inner:nth-child(3) {
-  -webkit-transform: translate3d(35vw, 51vh, 232px) rotateX(338deg) rotateY(301deg);
-          transform: translate3d(35vw, 51vh, 232px) rotateX(338deg) rotateY(301deg);
-  -webkit-clip-path: polygon(100% 0, 100% 100%, 51% 100%);
-          clip-path: polygon(100% 0, 100% 100%, 51% 100%);
+    -webkit-transform: translate3d(35vw, 51vh, 232px) rotateX(338deg) rotateY(301deg);
+    transform: translate3d(35vw, 51vh, 232px) rotateX(338deg) rotateY(301deg);
+    -webkit-clip-path: polygon(100% 0, 100% 100%, 51% 100%);
+    clip-path: polygon(100% 0, 100% 100%, 51% 100%);
 }
+
 .popup.s-closed .popup-piece:nth-child(5) {
-  -webkit-transform: translate3d(0, 107vh, 0);
-          transform: translate3d(0, 107vh, 0);
+    -webkit-transform: translate3d(0, 107vh, 0);
+    transform: translate3d(0, 107vh, 0);
 }
+
 .popup.s-closed .popup-piece:nth-child(5) .popup-piece-inner:nth-child(1) {
-  -webkit-transform: translate3d(52vw, 0, 0) rotateX(230deg) rotateY(124deg);
-          transform: translate3d(52vw, 0, 0) rotateX(230deg) rotateY(124deg);
+    -webkit-transform: translate3d(52vw, 0, 0) rotateX(230deg) rotateY(124deg);
+    transform: translate3d(52vw, 0, 0) rotateX(230deg) rotateY(124deg);
 }
+
 .popup.s-closed .popup-piece:nth-child(5) .popup-piece-inner:nth-child(2) {
-  -webkit-transform: translate3d(77vw, 0, 0) rotateX(475deg) rotateY(405deg);
-          transform: translate3d(77vw, 0, 0) rotateX(475deg) rotateY(405deg);
+    -webkit-transform: translate3d(77vw, 0, 0) rotateX(475deg) rotateY(405deg);
+    transform: translate3d(77vw, 0, 0) rotateX(475deg) rotateY(405deg);
 }
+
 .popup.s-closed .popup-piece:nth-child(5) .popup-piece-inner:nth-child(3) {
-  -webkit-transform: translate3d(-66vw, 0, 0) rotateX(263deg) rotateY(273deg);
-          transform: translate3d(-66vw, 0, 0) rotateX(263deg) rotateY(273deg);
+    -webkit-transform: translate3d(-66vw, 0, 0) rotateX(263deg) rotateY(273deg);
+    transform: translate3d(-66vw, 0, 0) rotateX(263deg) rotateY(273deg);
 }
+
 .popup .popup-piece:nth-child(6) {
-  height: 21.66667%;
-  width: 15.66667%;
+    height: 21.66667%;
+    width: 15.66667%;
 }
+
 .popup .popup-piece:nth-child(6) .popup-piece-inner:nth-child(1) {
-  -webkit-transform: translate3d(42vw, -4vh, -685px) rotateX(230deg) rotateY(411deg);
-          transform: translate3d(42vw, -4vh, -685px) rotateX(230deg) rotateY(411deg);
-  -webkit-clip-path: polygon(0 0, 0 100%, 57% 100%);
-          clip-path: polygon(0 0, 0 100%, 57% 100%);
+    -webkit-transform: translate3d(42vw, -4vh, -685px) rotateX(230deg) rotateY(411deg);
+    transform: translate3d(42vw, -4vh, -685px) rotateX(230deg) rotateY(411deg);
+    -webkit-clip-path: polygon(0 0, 0 100%, 57% 100%);
+    clip-path: polygon(0 0, 0 100%, 57% 100%);
 }
+
 .popup .popup-piece:nth-child(6) .popup-piece-inner:nth-child(2) {
-  -webkit-transform: translate3d(-52vw, 10vh, 73px) rotateX(179deg) rotateY(295deg);
-          transform: translate3d(-52vw, 10vh, 73px) rotateX(179deg) rotateY(295deg);
-  -webkit-clip-path: polygon(0 0, 57% 100%, 100% 0);
-          clip-path: polygon(0 0, 57% 100%, 100% 0);
+    -webkit-transform: translate3d(-52vw, 10vh, 73px) rotateX(179deg) rotateY(295deg);
+    transform: translate3d(-52vw, 10vh, 73px) rotateX(179deg) rotateY(295deg);
+    -webkit-clip-path: polygon(0 0, 57% 100%, 100% 0);
+    clip-path: polygon(0 0, 57% 100%, 100% 0);
 }
+
 .popup .popup-piece:nth-child(6) .popup-piece-inner:nth-child(3) {
-  -webkit-transform: translate3d(4vw, 31vh, 554px) rotateX(265deg) rotateY(383deg);
-          transform: translate3d(4vw, 31vh, 554px) rotateX(265deg) rotateY(383deg);
-  -webkit-clip-path: polygon(100% 0, 100% 100%, 57% 100%);
-          clip-path: polygon(100% 0, 100% 100%, 57% 100%);
+    -webkit-transform: translate3d(4vw, 31vh, 554px) rotateX(265deg) rotateY(383deg);
+    transform: translate3d(4vw, 31vh, 554px) rotateX(265deg) rotateY(383deg);
+    -webkit-clip-path: polygon(100% 0, 100% 100%, 57% 100%);
+    clip-path: polygon(100% 0, 100% 100%, 57% 100%);
 }
 .popup.s-closed .popup-piece:nth-child(6) {
-  -webkit-transform: translate3d(0, 110vh, 0);
-          transform: translate3d(0, 110vh, 0);
+    -webkit-transform: translate3d(0, 110vh, 0);
+    transform: translate3d(0, 110vh, 0);
 }
+
 .popup.s-closed .popup-piece:nth-child(6) .popup-piece-inner:nth-child(1) {
-  -webkit-transform: translate3d(-32vw, 0, 0) rotateX(240deg) rotateY(448deg);
-          transform: translate3d(-32vw, 0, 0) rotateX(240deg) rotateY(448deg);
+    -webkit-transform: translate3d(-32vw, 0, 0) rotateX(240deg) rotateY(448deg);
+    transform: translate3d(-32vw, 0, 0) rotateX(240deg) rotateY(448deg);
 }
+
 .popup.s-closed .popup-piece:nth-child(6) .popup-piece-inner:nth-child(2) {
-  -webkit-transform: translate3d(39vw, 0, 0) rotateX(325deg) rotateY(319deg);
-          transform: translate3d(39vw, 0, 0) rotateX(325deg) rotateY(319deg);
+    -webkit-transform: translate3d(39vw, 0, 0) rotateX(325deg) rotateY(319deg);
+    transform: translate3d(39vw, 0, 0) rotateX(325deg) rotateY(319deg);
 }
+
 .popup.s-closed .popup-piece:nth-child(6) .popup-piece-inner:nth-child(3) {
-  -webkit-transform: translate3d(-8vw, 0, 0) rotateX(298deg) rotateY(379deg);
-          transform: translate3d(-8vw, 0, 0) rotateX(298deg) rotateY(379deg);
+    -webkit-transform: translate3d(-8vw, 0, 0) rotateX(298deg) rotateY(379deg);
+    transform: translate3d(-8vw, 0, 0) rotateX(298deg) rotateY(379deg);
 }
+
 .popup .popup-piece:nth-child(7) {
-  height: 18.66667%;
-  width: 13.66667%;
+    height: 18.66667%;
+    width: 13.66667%;
 }
+
 .popup .popup-piece:nth-child(7) .popup-piece-inner:nth-child(1) {
-  -webkit-transform: translate3d(-39vw, -51vh, -310px) rotateX(371deg) rotateY(432deg);
-          transform: translate3d(-39vw, -51vh, -310px) rotateX(371deg) rotateY(432deg);
-  -webkit-clip-path: polygon(0 0, 0 100%, 69% 100%);
-          clip-path: polygon(0 0, 0 100%, 69% 100%);
+    -webkit-transform: translate3d(-39vw, -51vh, -310px) rotateX(371deg) rotateY(432deg);
+    transform: translate3d(-39vw, -51vh, -310px) rotateX(371deg) rotateY(432deg);
+    -webkit-clip-path: polygon(0 0, 0 100%, 69% 100%);
+    clip-path: polygon(0 0, 0 100%, 69% 100%);
 }
+
 .popup .popup-piece:nth-child(7) .popup-piece-inner:nth-child(2) {
   -webkit-transform: translate3d(-16vw, 6vh, 168px) rotateX(335deg) rotateY(259deg);
           transform: translate3d(-16vw, 6vh, 168px) rotateX(335deg) rotateY(259deg);

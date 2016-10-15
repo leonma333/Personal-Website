@@ -288,8 +288,6 @@ form input[type="submit"]:focus {
 /* ------------ Envelope ------------- */
 .envelope-container * { -webkit-backface-visibility: hidden; }
 
-.paper:hover { color: black; }
-
 .envelope-container { 
     position: relative;
     margin: 20px auto;
@@ -326,143 +324,149 @@ form input[type="submit"]:focus {
     top: -3px;
     left: 0px;
     width: 100%;
-        height: 73px;
-        z-index: 30;
-        overflow: hidden;
+    height: 73px;
+    z-index: 30;
+    overflow: hidden;
                         
-        transform-origin: top;
-        -ms-transform-origin: top;
-        -moz-transform-origin: top;
-        -o-transform-origin: top;
-        -webkit-transform-origin: top;
+    transform-origin: top;
+    -ms-transform-origin: top;
+    -moz-transform-origin: top;
+    -o-transform-origin: top;
+    -webkit-transform-origin: top;
                     
-        transition: transform 300ms 150ms, z-index 0ms 150ms, height 300ms 0ms, top 300ms 0ms;
-        -ms-transition: -ms-transform 300ms 150ms, z-index 0ms 150ms, height 300ms 0ms, top 300ms 0ms;
-        -moz-transition: -moz-transform 300ms 150ms, z-index 0ms 150ms, height 300ms 0ms, top 300ms 0ms;
-        -o-transition: -o-transform 300ms 150ms, z-index 0ms 150ms, height 300ms 0ms, top 300ms 0ms;
-        -webkit-transition: -webkit-transform 300ms 150ms, z-index 0ms 150ms, height 300ms 0ms, top 300ms 0ms;
+    transition: transform 300ms 150ms, z-index 0ms 150ms, height 300ms 0ms, top 300ms 0ms;
+    -ms-transition: -ms-transform 300ms 150ms, z-index 0ms 150ms, height 300ms 0ms, top 300ms 0ms;
+    -moz-transition: -moz-transform 300ms 150ms, z-index 0ms 150ms, height 300ms 0ms, top 300ms 0ms;
+    -o-transition: -o-transform 300ms 150ms, z-index 0ms 150ms, height 300ms 0ms, top 300ms 0ms;
+    -webkit-transition: -webkit-transform 300ms 150ms, z-index 0ms 150ms, height 300ms 0ms, top 300ms 0ms;
 }
 
 .envelope-container:hover .envelope .top, .envelope-container.hover .envelope .top {
-        transition: transform 300ms 0ms, height 300ms 150ms, top 300ms 150ms;
-        -ms-transition: -ms-transform 300ms 0ms, height 300ms 150ms, top 300ms 150ms;
-        -moz-transition: -moz-transform 300ms 0ms, height 300ms 150ms, top 300ms 150ms;
-        -o-transition: -o-transform 300ms 0ms, height 300ms 150ms, top 300ms 150ms;
-        -webkit-transition: -webkit-transform 300ms 0ms, height 300ms 150ms, top 300ms 150ms;
+    transition: transform 300ms 0ms, height 300ms 150ms, top 300ms 150ms;
+    -ms-transition: -ms-transform 300ms 0ms, height 300ms 150ms, top 300ms 150ms;
+    -moz-transition: -moz-transform 300ms 0ms, height 300ms 150ms, top 300ms 150ms;
+    -o-transition: -o-transform 300ms 0ms, height 300ms 150ms, top 300ms 150ms;
+    -webkit-transition: -webkit-transform 300ms 0ms, height 300ms 150ms, top 300ms 150ms;
         
-        height: 10px;
-        top: -60px;
+    height: 10px;
+    top: -60px;
   
-        transform: rotateX(180deg);
-        -ms-transform: rotateX(180deg);
-        -moz-transform: rotateX(180deg);
-        -o-transform: rotateX(180deg);
-        -webkit-transform: rotateX(180deg);
+    transform: rotateX(180deg);
+    -ms-transform: rotateX(180deg);
+    -moz-transform: rotateX(180deg);
+    -o-transform: rotateX(180deg);
+    -webkit-transform: rotateX(180deg);
 }
 
 .envelope-container .envelope .outer {
-        position: absolute;
-        bottom: 0px;
-        left: 0px;
-        border-left: 83px solid transparent;
-        border-right: 82px solid transparent;
-        border-top: 70px solid #EEE;
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    border-left: 83px solid transparent;
+    border-right: 82px solid transparent;
+    border-top: 70px solid #EEE;
 }
 
 .envelope-container .envelope .outer .inner {
-        position: absolute;
-        left: -81px;
-        top: -73px;
-        border-left: 81px solid transparent;
-        border-right: 80px solid transparent;
-        border-top: 68px solid #333;
+    position: absolute;
+    left: -81px;
+    top: -73px;
+    border-left: 81px solid transparent;
+    border-right: 80px solid transparent;
+    border-top: 68px solid black;
 }
+
 .envelope-container .envelope .bottom {
-        position: absolute;
-        z-index: 20;
-        bottom: 0px;
-        left: 2px;
-        border-left: 81px solid transparent;
-        border-right: 80px solid transparent;
-        border-bottom: 45px solid #333;
+    position: absolute;
+    z-index: 20;
+    bottom: 0px;
+    left: 2px;
+    border-left: 81px solid transparent;
+    border-right: 80px solid transparent;
+    border-bottom: 45px solid black;
 }
+
 .envelope-container .envelope .left {
-        position: absolute;
-        z-index: 20; top: 0px;
-        left: 0px;
-        border-left: 81px solid #333;
-        border-top: 45px solid transparent;
-        border-bottom: 45px solid transparent;
+    position: absolute;
+    z-index: 20; top: 0px;
+    left: 0px;
+    border-left: 81px solid black;
+    border-top: 45px solid transparent;
+    border-bottom: 45px solid transparent;
 }
+
 .envelope-container .envelope .right {
-        position: absolute;
-        z-index: 20;
-        top: 0px;
-        right: 0px;
-        border-right: 80px solid #333;
-        border-top: 45px solid transparent;
-        border-bottom: 45px solid transparent;
+    position: absolute;
+    z-index: 20;
+    top: 0px;
+    right: 0px;
+    border-right: 80px solid black;
+    border-top: 45px solid transparent;
+    border-bottom: 45px solid transparent;
 }
+
 .envelope-container .envelope .cover {
-        position: absolute;
-        z-index: 15;
-        bottom: 0px;
-        left: 0px;
-        height: 55%;
-        width: 100%;
-        background: #EEE;
+    position: absolute;
+    z-index: 15;
+    bottom: 0px;
+    left: 0px;
+    height: 55%;
+    width: 100%;
 }
+
 .envelope-container .envelope .paper {
-        position: absolute;
-        height: 83px;
-        padding-top: 10px;
-        width: 100%;
-        top: 0px;
-        left: 0px;
-        background: #F9F9F9;
-        z-index: 10;
-        transition: margin-top 300ms 0ms;
-        -ms-transition: margin-top 300ms 0ms;
-        -moz-transition: margin-top 300ms 0ms;
-        -o-transition: margin-top 300ms 0ms;
-        -webkit-transition: margin-top 300ms 0ms;
+    position: absolute;
+    height: 83px;
+    padding-top: 10px;
+    width: 100%;
+    top: 0px;
+    left: 0px;
+    background: white;
+    z-index: 10;
+    transition: margin-top 300ms 0ms;
+    -ms-transition: margin-top 300ms 0ms;
+    -moz-transition: margin-top 300ms 0ms;
+    -o-transition: margin-top 300ms 0ms;
+    -webkit-transition: margin-top 300ms 0ms;
 }
+
 .envelope-container:hover .envelope .paper, .envelope-container.hover .envelope .paper {
-        margin-top: -60px;
-        transition: margin-top 300ms 150ms;
-        -ms-transition: margin-top 300ms 150ms;
-        -moz-transition: margin-top 300ms 150ms;
-        -o-transition: margin-top 300ms 150ms;
-        -webkit-transition: margin-top 300ms 150ms;
-}
-.envelope-container .envelope .paper a {
-        position: relative;
-        display: block;
-        font-size: 14px;
-        margin: 5px;
-        margin-bottom: 0px;
-        text-align: center;
-        color: #333;
-        text-decoration: none;
+    margin-top: -60px;
+    transition: margin-top 300ms 150ms;
+    -ms-transition: margin-top 300ms 150ms;
+    -moz-transition: margin-top 300ms 150ms;
+    -o-transition: margin-top 300ms 150ms;
+    -webkit-transition: margin-top 300ms 150ms;
 }
 
 .envelope-container .envelope .paper a {
-        color: #333;
-  
-        transition: color 200ms;
-        -ms-transition: color 200ms;
-        -moz-transition: color 200ms;
-        -o-transition: color 200ms;
-        -webkit-transition: color 200ms;
+    position: relative;
+    display: block;
+    font-size: 14px;
+    margin: 5px;
+    margin-bottom: 0px;
+    text-align: center;
+    color: #333;
+    text-decoration: none;
+
+    transition: color 200ms;
+    -ms-transition: color 200ms;
+    -moz-transition: color 200ms;
+    -o-transition: color 200ms;
+    -webkit-transition: color 200ms;
 }
+
 .envelope-container .envelope .paper a:hover {
-        color: gray;
+    color: #c3c3c3;
+    cursor: pointer;
 }
+
 .envelope-container .envelope .paper a.resume .i {
-        position: absolute;
-        top: 0px;
-        left: 17px;
-        display: inline-block;
-        font-size: 13px;
-        font-weight: bold;
+    position: absolute;
+    top: 0px;
+    left: 17px;
+    display: inline-block;
+    font-size: 13px;
+    font-weight: bold;
 }
+/* ------------ End Envelope ------------- */

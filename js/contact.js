@@ -1,3 +1,6 @@
+/*
+ * Class for ContactForm
+ */
 function ContactForm() {
 	$("textarea").blur(function () {
         $("#hire textarea").each(function () {
