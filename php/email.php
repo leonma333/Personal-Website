@@ -1,20 +1,26 @@
 <?php
 
-$to      = 'leonma333@hotmail.com';
-$subject = 'Testing';
-$message = 'hello';
+echo $_POST['contact_name'] . "\n" . $_POST['contact_email'] . "\n" . $_POST['contact_msg'];
 
-$headers   = array();
-$headers[] = "Content-type: text/plain; charset=iso-8859-1";
-$headers[] = "From: Sender Name <leonma333@gmail.com>";
-$headers[] = "X-Mailer: PHP/".phpversion();
+if (isset($_POST['contact_name']) && isset($_POST['contact_email']) && isset($_POST['contact_msg'])) {
+	$to      = 'leonma333@hotmail.com';
+	$subject = 'Testing';
+	$message = 'hello';
 
-echo implode("\r\n", $headers);
+	$headers   = array();
+	$headers[] = "Content-type: text/plain; charset=iso-8859-1";
+	$headers[] = "From: Sender Name <leonma333@gmail.com>";
+	$headers[] = "X-Mailer: PHP/".phpversion();
 
-if(mail($to, $subject, $message, implode("\r\n", $headers))) {
-	echo 'SUCCESS';
+	echo implode("\r\n", $headers);
+
+	if(mail($to, $subject, $message, implode("\r\n", $headers))) {
+		echo 'SUCCESS';
+	} else {
+		echo 'FAILED';
+	}
 } else {
-	echo 'FAILED';
+	echo 'Not Success';
 }
 
 ?>
