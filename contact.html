@@ -53,6 +53,16 @@
                 </div>
             </div>
         </div>
+        <div id="phone-popup">
+            <div id="close" class="close">✕</div>
+            <div id="new"><span>NEW!</span></div>
+            <form id="phone-form">
+                <h2>Enter your phone number to receive my contact information:</h2>
+                <input type="text" id="phone-number" name="contact_number" placeholder="Phone Number"/>
+                <input class="button" type="submit" value="Send"/>
+            </form>
+        </div>
+        <div id="plus"><span>NEW<br>&nbsp;&nbsp;✚</span></div>
     </body>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
     <script>
@@ -63,6 +73,7 @@
             }
 
             var contact = new ContactForm();
+            var phone = new PhonePopup();
             contact.initHandler();
         });
     </script>

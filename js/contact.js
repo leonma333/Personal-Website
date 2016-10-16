@@ -63,7 +63,7 @@ function ContactForm() {
             });
         });
 
-        $(".envelope-container").on("click touchstart", function() {
+        $(".envelope-container").on("touchstart", function() {
             var $this = $(this);
             $this.hasClass("hover") ? $this.removeClass("hover") : $this.addClass("hover");
         });
@@ -114,4 +114,24 @@ function ContactForm() {
             event.preventDefault();
         });
     };
+}
+
+function PhonePopup() {
+    $(document).scroll(function() {
+        var scroll = $(this).scrollTop();
+        if (scroll >= 150) {
+            $("#phone-popup").css("margin-left", "-425px");
+            $("#plus").css("margin-left", "-5px");
+        }
+    });
+
+    $("#plus").click(function() {
+        $("#phone-popup").css("margin-left", "-5px");
+        $("#plus").css("margin-left", "-425px");
+    });
+
+    $("#close").click(function() {
+        $("#phone-popup").css("margin-left", "-425px");
+        $("#plus").css("margin-left", "-5px");
+    });
 }
