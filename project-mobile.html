@@ -193,7 +193,6 @@
 				if (!isBlack) {
 					Popup.popupContent.style.background = "white";
 					Popup.popupContent.style.color = "black";
-					//Popup.popupContent.childNodes[1].style.background = "black";
 				}
 
 				for (var link in linkDictionary) {
@@ -224,7 +223,6 @@
 			closeHandler: function() {
 				Popup.popupContent.style.background = "black";
 				Popup.popupContent.style.color = "white";
-				//Popup.popupContent.childNodes[1].style.background = "white";
 
 				var linkList = document.querySelectorAll(".link a");
 				for (var i = 0; i < linkList.length; i++)
