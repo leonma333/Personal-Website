@@ -67,10 +67,10 @@ ContactForm.prototype.sumbitForm = function(url, method) {
             success: function(data) {
                 submitButton.prop("disabled", true);
                 submitButton.val("Sent");
-                console.log(data);
+                console.log(data.responseJSON["message"]);
             },
             error: function(data) {
-                console.log(data);
+                console.log(data.responseJSON["message"]);
             }
         });
 

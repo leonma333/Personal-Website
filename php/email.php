@@ -22,12 +22,13 @@ if (isset($_POST['contact_name']) && isset($_POST['contact_email']) && isset($_P
 	$mail->SMTPSecure = 'tls';                            
 	$mail->Port = 587;                                    
 
-	$mail->setFrom($config['email'], 'Liang-Hsuan Ma');
-	$mail->addAddress($config['email'], 'Liang-Hsuan Ma');    
+	$mail->setFrom($config['email']);
+	$mail->addAddress($config['email'], 'Liang-Husan Ma');  
+	$mail->addCC($_POST['contact_email'], $_POST['contact_name']);  
 	$mail->isHTML(true);                                  
 
-	$mail->Subject = $_POST['contact_name'] . ' sent me a message via my website.';
-	$mail->Body = '<b>The email is:</b> ' . $_POST['contact_email'] . '<br/><br/><b>The message is:</b><br/>' . $_POST['contact_msg'];
+	$mail->Subject = $_POST['contact_name'] . ' sent Liang-Husan Ma an email via Liang-Hsuan\'s website.';
+	$mail->Body = '<b>Sender email is:</b> ' . $_POST['contact_email'] . '<br/><br/><b>The message is:</b><br/>' . $_POST['contact_msg'];
 
 	# start sending email
 	$success = false;
@@ -39,7 +40,6 @@ if (isset($_POST['contact_name']) && isset($_POST['contact_email']) && isset($_P
 	    # respond with status code 200 and success true if email sent successfully
 	    $success = true;
 	    $message = 'Email sent';
-	    $status_code = 200;
 	} catch (Exception $e) {
 		# respond with status code 400 and success false if email sent unsuccessfully
 		$success = false;
