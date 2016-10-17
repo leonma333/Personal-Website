@@ -49,7 +49,7 @@ if (isset($_POST['contact_name']) && isset($_POST['contact_email']) && isset($_P
 
 	# construct response
 	$response = array('success' => $success, 'message' => $message);
-	http_response_code($success);
+	http_response_code($status_code);
 	echo json_encode($response);
 	return;
 } 

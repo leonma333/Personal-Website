@@ -63,11 +63,6 @@ function ContactForm() {
             });
         });
 
-        $(".envelope-container").on("touchstart", function() {
-            var $this = $(this);
-            $this.hasClass("hover") ? $this.removeClass("hover") : $this.addClass("hover");
-        });
-
         // initialize email form submit handler
         this.sumbitForm("php/email.php", "POST");
     }
@@ -103,11 +98,10 @@ function ContactForm() {
                 success: function(data) {
                     submitButton.prop("disabled", true);
                     submitButton.val("Sent");
-                    console.log(data.responseJSON["message"]);
                 },
                 error: function(data) {
                     submitButton.val("Send");
-                    alert("Error occurs: my server said that\n" + JSON.stringify(data));
+                    alert("Sorry, my server said that\n" + data["responseJSON"]["message"]);
                 }
             });
 
