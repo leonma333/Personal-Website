@@ -467,7 +467,7 @@ form#email-form input[type="submit"]:focus {
 }
 /* ------------ End Envelope ------------- */
 
-/* ------------ Messenger Popup ------------- */
+/* ------------ SMS Popup ------------- */
 #phone-popup {
   position: fixed;
   max-width: 350px;
@@ -520,6 +520,7 @@ form#email-form input[type="submit"]:focus {
 form#phone-form input.button {
   margin-top: 20px;
   text-align: center;
+  -webkit-appearance: none;
   width: 120px;
   font-size: 15px;
   color: white;
@@ -584,4 +585,4 @@ form#phone-form input[type="text"]:focus {
         margin-left: -5px;
     }
 }
-/* ------------ End Messenger Popup ------------- */
+/* ------------ End SMS Popup ------------- */
