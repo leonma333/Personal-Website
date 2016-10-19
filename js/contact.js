@@ -63,6 +63,15 @@ function ContactForm() {
             });
         });
 
+        /* envelope animation events */
+        $(".envelope-container").on("touchstart", function() {
+            var $this = $(this);
+            $this.hasClass("hover") ? $this.removeClass("hover") : $this.addClass("hover");
+        });
+        // can do it in css :hover, but have issue to address touchstart on mobile
+        $(".envelope-container").mouseover(function() {$(this).addClass("hover");});
+        $(".envelope-container").mouseout(function() {$(this).removeClass("hover");});
+
         // initialize email form submit handler
         this.sumbitForm("php/email.php", "POST");
     }
