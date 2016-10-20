@@ -8,6 +8,24 @@
         <link rel="stylesheet" href="css/contact.css">
         <link rel="icon" type="image/png" sizes="96x96" href="favicon-96x96.png">
     </head>
+    <script>
+        /* Set up Facebook SDK */
+        window.fbAsyncInit = function() {
+            FB.init({
+                appId: "1016163328505701",
+                xfbml: true,
+                version: "v2.8"
+            });
+        };
+
+        (function(d, s, id){
+            var js, fjs = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id)) { return; }
+            js = d.createElement(s); js.id = id;
+            js.src = "//connect.facebook.net/en_US/sdk.js";
+            fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));
+    </script>
     <body translate="no" >
         <a id="toggle"><span></span></a>
         <div id="menu">
@@ -39,6 +57,7 @@
             	<input class="button" type="submit" value="Send"/>
             </form>
         </section>
+        <div class="fb-send-to-messenger" messenger_app_id="1016163328505701" page_id="369114930100946" data-ref="optin" color="blue" size="xlarge"></div> 
         <div class="envelope-container">
             <div class="envelope">
                 <div class="top">
