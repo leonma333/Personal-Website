@@ -5,6 +5,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 }
 
 # Get request from Facebook -> webhook callback verification
-echo $_GET['hub.challenge'];
+echo $_GET['hub_challenge'];
 
 ?>

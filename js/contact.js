@@ -63,9 +63,9 @@ function ContactForm() {
             });
         });
 
-        /* envelope animation events */
+        /* envelope animation events | TODO: make envelop able to close */
         var enveloperContainer = $(".envelope-container");
-        $(".envelope").on("touchstart", function() {
+        $(".envelope").on("touchstart", function(event) {
             enveloperContainer.hasClass("hover") ? enveloperContainer.removeClass("hover") : enveloperContainer.addClass("hover");
         });
         // can do it in css :hover, but have issue to address touchstart on mobile
