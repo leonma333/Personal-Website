@@ -4,14 +4,16 @@
 require 'vendor/autoload.php';
 $config = include('config.php');
 
+# using Twilio REST API Client
+use Twilio\Rest\Client;
+
 # set response header to json object
 header('Content-type: application/json');
 
 # only send the email if all parameters are satisfied
 if (isset($_POST['contact_number'])) {
 
-	# using Twilio REST API Client and initialize the Object
-	use Twilio\Rest\Client;
+	# initialize the Client object
 	$client = new Client($config['sid'], $config['token']);
 
 	// strat sending text messages
@@ -19,11 +21,23 @@ if (isset($_POST['contact_number'])) {
 	$message = null;
 	$status_code = 200;
 	try {
+		# send to client
 		$client->messages->create(
-		    '+15197228665',
+		    $_POST['contact_number'],
 		    array(
-		        'from' => $config['phone'],
-		        'body' => 'Hey Testing'
+		        'from' => $config['phone-twilio'],
+		        'body' => "(lhm.com)\nThanks for visiting my website. The following are my contact information:\nemail: " . 
+		        		  $config['email'] . "\nphone: +15197228665\nFeel free to contact me, and here are my mottos:\n" .
+		        		  "1.Write clean and elegant code.\n2.Design with user in mind.\nBy the way, Any time is House time."
+		    )
+		);
+
+		# send to myself for reference
+		$client->messages->create(
+		    $config['phone-mobile'],
+		    array(
+		        'from' => $config['phone-twilio'],
+		        'body' => "(lhm.com)\n" . $_POST['contact_number'] . ' sent text from my website.'
 		    )
 		);
 

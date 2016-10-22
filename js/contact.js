@@ -68,9 +68,6 @@ function ContactForm() {
         $(".envelope").on("touchstart", function(event) {
             enveloperContainer.hasClass("hover") ? enveloperContainer.removeClass("hover") : enveloperContainer.addClass("hover");
         });
-        // can do it in css :hover, but have issue to address touchstart on mobile
-        enveloperContainer.mouseover(function() {$(this).addClass("hover");});
-        enveloperContainer.mouseout(function() {$(this).removeClass("hover");});
 
         // initialize email form submit handler
         this.sumbitForm("php/email.php", "POST");
@@ -97,6 +94,7 @@ function ContactForm() {
                 return false;
             }
             submitButton.val("Sending");
+            submitButton.prop("disabled", true);
 
             // ajax post request
             $.ajax({
@@ -104,12 +102,10 @@ function ContactForm() {
                 url: url,
                 data: $(this).serialize(),
                 dataType: "json",
-                success: function(data) {
-                    submitButton.prop("disabled", true);
-                    submitButton.val("Sent");
-                },
+                success: function(data) { submitButton.val("Sent"); },
                 error: function(data) {
                     submitButton.val("Send");
+                    submitButton.prop("disabled", false);
                     alert("Sorry, my server said that\n" + data["responseJSON"]["message"]);
                 }
             });
@@ -125,7 +121,8 @@ function ContactForm() {
 function PhonePopup() {
     // private flag
     var numberPass = false;
-    var validKeyCode = { Delete: 8, Return: 1 }
+    var sendAlready = false;
+    var validKeyCode = { Delete: 8, Return: 13 }
 
     /* function that initialize event handler */
     this.initHandler = function() {
@@ -140,16 +137,26 @@ function PhonePopup() {
         });
 
         $("form#phone-form input[type='text']").keydown(function (event) {
+            // only allow number input
             var valid = /^[0-9]+$/.test(String.fromCharCode(event.keyCode));
-            if (!valid && event.keyCode != validKeyCode.Delete) event.preventDefault();
+            if (!valid && event.keyCode != validKeyCode.Delete && event.keyCode != validKeyCode.Return) event.preventDefault();
+        });
 
+        $("form#phone-form input[type='text']").on("input", function() {
             var $this = $(this);
             var value = $this.val();
 
-            if (value.length > 0 && value[0] != '+') {
+            if (value.length == 1 && value[0] == '+') {
+                $this.val('');
+                numberPass = false;
+            } else if (value.length > 0 && value[0] != '+') {
                 $this.val('+' + $this.val());
+                numberPass = true;
             }
         });
+
+        // initialize phone form submit handler
+        this.sumbitForm("php/phone.php", "POST");
     }
 
     /* function that submit data to server */
@@ -158,9 +165,9 @@ function PhonePopup() {
         submitButton = $("form#phone-form input[type='submit']");
 
         // set email form submit action
-        $("#email-form").submit(function(event) {
+        $("#phone-form").submit(function(event) {
             // fields missing or incorrect handling
-            if (!numberPass) return false;
+            if (!numberPass || sendAlready) return false;
         
             submitButton.val("Sending");
             submitButton.prop("disabled", true);
@@ -171,7 +178,10 @@ function PhonePopup() {
                 url: url,
                 data: $(this).serialize(),
                 dataType: "json",
-                success: function(data) { submitButton.val("Sent"); },
+                success: function(data) { 
+                    submitButton.val("Sent");
+                    sendAlready = true; 
+                },
                 error: function(data) {
                     submitButton.val("Send");
                     submitButton.prop("disabled", false);

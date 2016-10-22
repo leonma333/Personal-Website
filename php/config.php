@@ -6,7 +6,8 @@ return array(
     'email-password' => null,
     'sid' => null,
     'token' => null,
-    'phone' => null 
+    'phone-twilio' => null,
+    'phone-mobile' => null 
 );
 
 ?>
