@@ -322,7 +322,7 @@ form#email-form input[type="submit"]:focus {
     -webkit-transition: margin-top 300ms;
 }
 
-.envelope-container.hover .envelope {
+.envelope-container.hover .envelope, .envelope-container:focus .envelope {
     transition-delay: 150ms;
     -ms-transition-delay: 150ms;
     -moz-transition-delay: 150ms;
@@ -352,7 +352,7 @@ form#email-form input[type="submit"]:focus {
     -webkit-transition: -webkit-transform 300ms 150ms, z-index 0ms 150ms, height 300ms 0ms, top 300ms 0ms;
 }
 
-.envelope-container.hover .envelope .top {
+.envelope-container.hover .envelope .top, .envelope-container:focus .envelope .top {
     transition: transform 300ms 0ms, height 300ms 150ms, top 300ms 150ms;
     -ms-transition: -ms-transform 300ms 0ms, height 300ms 150ms, top 300ms 150ms;
     -moz-transition: -moz-transform 300ms 0ms, height 300ms 150ms, top 300ms 150ms;
@@ -440,7 +440,7 @@ form#email-form input[type="submit"]:focus {
     -webkit-transition: margin-top 300ms 0ms;
 }
 
-.envelope-container.hover .envelope .paper {
+.envelope-container.hover .envelope .paper, .envelope-container:focus .envelope .paper {
     margin-top: -60px;
     transition: margin-top 300ms 150ms;
     -ms-transition: margin-top 300ms 150ms;
@@ -483,49 +483,49 @@ form#email-form input[type="submit"]:focus {
 
 /* ------------ SMS Popup ------------- */
 #phone-popup {
-  position: fixed;
-  max-width: 350px;
-  height: 225px;
-  background: white;
-  border: 7px solid black;
-  bottom: 0;
-  margin-left: -5px;
-  z-index: 4;
-  font-family: 'Optima', sans-serif;
-  -webkit-transition: all 1.5s ease;
-  -moz-transition: all 1.5s ease;
-  -o-transition: all 1.5s ease;
-  transition: all 1.5s ease;
+    position: fixed;
+    max-width: 350px;
+    height: 225px;
+    background: white;
+    border: 7px solid black;
+    bottom: 0;
+    margin-left: -5px;
+    z-index: 4;
+    font-family: 'Optima', sans-serif;
+    -webkit-transition: all 1.5s ease;
+    -moz-transition: all 1.5s ease;
+    -o-transition: all 1.5s ease;
+    transition: all 1.5s ease;
 }
 
 #new span {
-  background: black;
-  position: absolute;
-  color: white;
-  padding: 4px 10px;
-  font-size: 16px;
-  font-weight: 600;
-  letter-spacing: 1px;
-  margin-top: -5px;
+    background: black;
+    position: absolute;
+    color: white;
+    padding: 4px 10px;
+    font-size: 16px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    margin-top: -5px;
 }
 
 #phone-popup .close {
-  color: black;
-  right: 8px;
-  top: 0px;
-  position: absolute;
-  font-size: 20px;
-  cursor: pointer;
+    color: black;
+    right: 8px;
+    top: 0px;
+    position: absolute;
+    font-size: 20px;
+    cursor: pointer;
 }
 
 #phone-popup h2 {
-  font-size: 17px;
-  color: black;
-  line-height: 24px;
-  font-weight: 400;
-  text-align: center;
-  margin-top: 50px;
-  padding: 0 20px;
+    font-size: 17px;
+    color: black;
+    line-height: 24px;
+    font-weight: 400;
+    text-align: center;
+    margin-top: 50px;
+    padding: 0 20px;
 }
 
 #phone-form {
@@ -533,15 +533,15 @@ form#email-form input[type="submit"]:focus {
 }
 
 form#phone-form input.button {
-  margin-top: 20px;
-  text-align: center;
-  -webkit-appearance: none;
-  width: 120px;
-  font-size: 15px;
-  color: white;
-  background: #FD9638;
-  border: none;
-  padding: 8px 0;
+    margin-top: 20px;
+    text-align: center;
+    -webkit-appearance: none;
+    width: 120px;
+    font-size: 15px;
+    color: white;
+    background: #FD9638;
+    border: none;
+    padding: 8px 0;
 }
 
 form#phone-form input[type="submit"]:hover {
@@ -563,33 +563,33 @@ form#phone-form input[type="text"]:focus {
 }
 
 #plus {
-  position: fixed;
-  color: white;
-  bottom: 14%;
-  font-size: 15px;
-  margin-left: -425px;
-  -webkit-transition: all 1.25s ease;
-  -moz-transition: all 1.25s ease;
-  -o-transition: all 1.25s ease;
-  transition: all 1.25s ease;
-  cursor: pointer;
-  text-align: left;
-  letter-spacing: 1px;
+    position: fixed;
+    color: white;
+    bottom: 14%;
+    font-size: 15px;
+    margin-left: -425px;
+    -webkit-transition: all 1.25s ease;
+    -moz-transition: all 1.25s ease;
+    -o-transition: all 1.25s ease;
+    transition: all 1.25s ease;
+    cursor: pointer;
+    text-align: left;
+    letter-spacing: 1px;
 }
 
 #plus span {
-  position: absolute;
-  margin-top: 40px;
-  left: 2.5px;
+    position: absolute;
+    margin-top: 40px;
+    left: 2.5px;
 }
 
 #plus::after {
-  content: "";
-  display: block;
-  display: relative;
-  border-top: 55px solid transparent;
-  border-bottom: 55px solid transparent;
-  border-left: 55px solid black;
+    content: "";
+    display: block;
+    display: relative;
+    border-top: 55px solid transparent;
+    border-bottom: 55px solid transparent;
+    border-left: 55px solid black;
 }
 
 @media all and (max-width: 900px) {
