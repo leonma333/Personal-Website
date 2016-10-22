@@ -1,0 +1,15 @@
+{
+	"config": {
+        "vendor-dir": "php/vendor"
+    },
+    "name": "leonma/together",
+    "authors": [
+        {
+            "name": "Liang-Hsuan Ma",
+            "email": "leonma333@hotmail.com"
+        }
+    ],
+    "require": {
+        "twilio/sdk": "^5.4"
+    }
+}

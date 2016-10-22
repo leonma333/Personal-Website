@@ -42,7 +42,6 @@ if (isset($_POST['contact_name']) && isset($_POST['contact_email']) && isset($_P
 	    $message = 'Email sent';
 	} catch (Exception $e) {
 		# respond with status code 400 and success false if email sent unsuccessfully
-		$success = false;
 		$message = $e->getMessage();
 		$status_code = 400;
 	}

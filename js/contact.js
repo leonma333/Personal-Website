@@ -119,14 +119,67 @@ function ContactForm() {
     };
 }
 
+/*
+ * Class for PhonePopup
+ */
 function PhonePopup() {
-    $("#plus").click(function() {
-        $("#phone-popup").css("margin-left", "-5px");
-        $("#plus").css("margin-left", "-425px");
-    });
+    // private flag
+    var numberPass = false;
+    var validKeyCode = { Delete: 8, Return: 1 }
 
-    $("#close").click(function() {
-        $("#phone-popup").css("margin-left", "-425px");
-        $("#plus").css("margin-left", "-5px");
-    });
+    /* function that initialize event handler */
+    this.initHandler = function() {
+        $("#plus").click(function() {
+            $("#phone-popup").css("margin-left", "-5px");
+            $("#plus").css("margin-left", "-425px");
+        });
+
+        $("#close").click(function() {
+            $("#phone-popup").css("margin-left", "-425px");
+            $("#plus").css("margin-left", "-5px");
+        });
+
+        $("form#phone-form input[type='text']").keydown(function (event) {
+            var valid = /^[0-9]+$/.test(String.fromCharCode(event.keyCode));
+            if (!valid && event.keyCode != validKeyCode.Delete) event.preventDefault();
+
+            var $this = $(this);
+            var value = $this.val();
+
+            if (value.length > 0 && value[0] != '+') {
+                $this.val('+' + $this.val());
+            }
+        });
+    }
+
+    /* function that submit data to server */
+    this.sumbitForm = function(url, method) {
+        // get the submit button first
+        submitButton = $("form#phone-form input[type='submit']");
+
+        // set email form submit action
+        $("#email-form").submit(function(event) {
+            // fields missing or incorrect handling
+            if (!numberPass) return false;
+        
+            submitButton.val("Sending");
+            submitButton.prop("disabled", true);
+
+            // ajax post request
+            $.ajax({
+                type: method,
+                url: url,
+                data: $(this).serialize(),
+                dataType: "json",
+                success: function(data) { submitButton.val("Sent"); },
+                error: function(data) {
+                    submitButton.val("Send");
+                    submitButton.prop("disabled", false);
+                    alert("Sorry, my server said that\n" + data["responseJSON"]["message"]);
+                }
+            });
+
+            event.preventDefault();
+        });
+    }
 }
