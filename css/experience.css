@@ -5,14 +5,71 @@
     -webkit-font-smoothing: antialiased;
 }
 
-p {
-    color: #596c7c;
-    font-family: helvetica, arial, san-serif;
-    font-size: 0.875em;
-    font-weight: normal;
-    text-shadow: 0 1px #ffffff;
+body {
+    background-color: black;
 }
 
+p, h3 {
+    font-family: 'Optima', sans-serif;
+    color: white;
+}
+
+/* ------------ Flip ------------- */
+.overlay{
+    width: 130px;
+    height: 130px;
+    border-radius: 100%;
+    border: 15px solid white;
+}
+
+.flip-container:hover .flipper, .flip-container.hover .flipper {
+    transform: rotateY(180deg);
+}
+                 
+.flip-container, .front, .back {
+    width: 131.5px;
+    height: 131.5px;
+    margin: -0.3px 0 0 -0.3px;
+    border-radius: 100%;
+}
+
+.flipper {
+    transition: 0.6s;
+    transform-style: preserve-3d;
+    position: relative;
+}
+
+.front, .back {
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+    text-align: center;
+}
+
+.front {
+    z-index: 2; 
+    background: white;
+}
+
+.front img {
+    width: 70%;
+    opacity: 0.8;
+    margin-top: 20%;
+}
+
+.back {
+    transform: rotateY(180deg);
+}
+
+.back h3 {
+    color: white;
+    vertical-align: middle;
+}
+/* ------------ End Flip ------------- */
+
+/* ------------ History ------------- */
 #history {
     display: block;
     position: relative;
@@ -26,7 +83,7 @@ p {
     margin: 0 auto;
     width: 6px;
     height: 800px;
-    background-color: #e9edf0;
+    background-color: white;
     -webkit-border-radius: 3px;
     -moz-border-radius: 3px;
     -o-border-radius: 3px;
@@ -68,9 +125,9 @@ p {
 }
 
 #historic-event-1 {
-    top: 100px;
+    top: 50px;
     left: 50%;
-    margin-left: -12px;
+    margin-left: -13px;
 }
 
 #historic-event-2 {
@@ -121,16 +178,16 @@ p {
     width: 14px;
     height: 14px;
     margin: 0 auto;
-    background-color: #e9edf0;
+    background-color: #c3c3c3;
     cursor: pointer;
-    z-index: 100;
+    z-index: 1;
     -webkit-border-radius: 100%;
     -moz-border-radius: 100%;
     -o-border-radius: 100%;
     border-radius: 100%;
-    -webkit-box-shadow: 0 0 0 1px #d1d8de inset, 0 2px 0 #ffffff inset, 0 2px 0 #d1d8de, transparent 0 0 0, transparent 0 0 0, transparent 0 0 0;
-    -moz-box-shadow: 0 0 0 1px #d1d8de inset, 0 2px 0 #ffffff inset, 0 2px 0 #d1d8de, transparent 0 0 0, transparent 0 0 0, transparent 0 0 0;
-    box-shadow: 0 0 0 1px #d1d8de inset, 0 2px 0 #ffffff inset, 0 2px 0 #d1d8de, transparent 0 0 0, transparent 0 0 0, transparent 0 0 0;
+    -webkit-box-shadow: 0 0 0 1px #d1d8de inset, 0 2px 0 white inset, 0 2px 0 #d1d8de, transparent 0 0 0, transparent 0 0 0, transparent 0 0 0;
+    -moz-box-shadow: 0 0 0 1px #d1d8de inset, 0 2px 0 white inset, 0 2px 0 #d1d8de, transparent 0 0 0, transparent 0 0 0, transparent 0 0 0;
+    box-shadow: 0 0 0 1px #d1d8de inset, 0 2px 0 white inset, 0 2px 0 #d1d8de, transparent 0 0 0, transparent 0 0 0, transparent 0 0 0;
 }
 
 #historic-event-1:hover #historic-dot-1,
@@ -156,20 +213,20 @@ p {
 #history-clock {
     display: block;
     position: absolute;
-    top: 100px;
+    top: 110px;
     left: 50%;
     margin-left: -17px;
     width: 34px;
     height: 34px;
-    background-color: #f7f9fa;
-    z-index: 200;
+    background-color: white;
+    z-index: 2;
     -webkit-border-radius: 100%;
     -moz-border-radius: 100%;
     -o-border-radius: 100%;
     border-radius: 100%;
-    -webkit-box-shadow: 0 0 0 1px #d1d8de inset, 0 2px 0 #ffffff inset, 0 2px 0 #d1d8de, transparent 0 0 0, transparent 0 0 0, transparent 0 0 0;
-    -moz-box-shadow: 0 0 0 1px #d1d8de inset, 0 2px 0 #ffffff inset, 0 2px 0 #d1d8de, transparent 0 0 0, transparent 0 0 0, transparent 0 0 0;
-    box-shadow: 0 0 0 1px #d1d8de inset, 0 2px 0 #ffffff inset, 0 2px 0 #d1d8de, transparent 0 0 0, transparent 0 0 0, transparent 0 0 0;
+    -webkit-box-shadow: 0 0 0 1px #d1d8de inset, 0 2px 0 white inset, 0 2px 0 #d1d8de, transparent 0 0 0, transparent 0 0 0, transparent 0 0 0;
+    -moz-box-shadow: 0 0 0 1px #d1d8de inset, 0 2px 0 white inset, 0 2px 0 #d1d8de, transparent 0 0 0, transparent 0 0 0, transparent 0 0 0;
+    box-shadow: 0 0 0 1px #d1d8de inset, 0 2px 0 white inset, 0 2px 0 #d1d8de, transparent 0 0 0, transparent 0 0 0, transparent 0 0 0;
     -webkit-transition: top 1s cubic-bezier(0.645, 0.045, 0.355, 1);
     -moz-transition: top 1s cubic-bezier(0.645, 0.045, 0.355, 1);
     -ms-transition: top 1s cubic-bezier(0.645, 0.045, 0.355, 1);
@@ -177,7 +234,7 @@ p {
 }
 
 #history-clock.animate1 {
-    top: 300px;
+    top: 310px;
 }
 
 #history-clock.animate2 {
@@ -199,22 +256,14 @@ p {
     -moz-border-radius: 100%;
     -o-border-radius: 100%;
     border-radius: 100%;
-    background-color: #596c7c;
-    /* Old browsers */
-    background-image: -moz-linear-gradient(90deg, #596c7c 25%, #3d4a55 75%);
-    /*FF3.6+ */
-    background-image: -webkit-gradient(90deg, left top, right bottom, color-stop(25%, #596c7c), color-stop(75%, #3d4a55));
-    /*Chrome,Safari4+ */
-    background-image: -webkit-linear-gradient(90deg, #596c7c 25%, #3d4a55 75%);
-    /*Chrome10+,Safari5.1+ */
-    background-image: -o-linear-gradient(90deg, #596c7c 25%, #3d4a55 75%);
-    /* Opera 11.10+ */
-    background-image: -ms-linear-gradient(90deg, #596c7c 25%, #3d4a55 75%);
-    /*IE10+ */
-    background-image: linear-gradient(90deg, #596c7c 25%, #3d4a55 75%);
-    /* W3C */
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3d4a55', endColorstr='#596c7c', GradientType='0' );
-    /* IE6-9 */
+    background-color: white;
+    background-image: -moz-linear-gradient(90deg, #c3c3c3 25%, black 75%);
+    background-image: -webkit-gradient(90deg, left top, right bottom, color-stop(25%, #c3c3c3), color-stop(75%, black));
+    background-image: -webkit-linear-gradient(90deg, #c3c3c3 25%, black 75%);
+    background-image: -o-linear-gradient(90deg, #c3c3c3 25%, black 75%);
+    background-image: -ms-linear-gradient(90deg, #c3c3c3 25%, black 75%);
+    background-image: linear-gradient(90deg, #c3c3c3 25%, black 75%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#c3c3c3', endColorstr='black', GradientType='0' );
     -webkit-box-shadow: 0 0 0 1px #d1d8de, 0 0 20px rgba(0, 0, 0, 0.25) inset, transparent 0 0 0, transparent 0 0 0, transparent 0 0 0, transparent 0 0 0;
     -moz-box-shadow: 0 0 0 1px #d1d8de, 0 0 20px rgba(0, 0, 0, 0.25) inset, transparent 0 0 0, transparent 0 0 0, transparent 0 0 0, transparent 0 0 0;
     box-shadow: 0 0 0 1px #d1d8de, 0 0 20px rgba(0, 0, 0, 0.25) inset, transparent 0 0 0, transparent 0 0 0, transparent 0 0 0, transparent 0 0 0;
@@ -232,21 +281,13 @@ p {
     -o-border-radius: 100%;
     border-radius: 100%;
     background-color: rgba(255, 255, 255, 0);
-    /* Old browsers */
     background-image: -moz-linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.4) 100%);
-    /*FF3.6+ */
     background-image: -webkit-gradient(90deg, left top, right bottom, color-stop(0%, rgba(255, 255, 255, 0)), color-stop(100%, rgba(255, 255, 255, 0.4)));
-    /*Chrome,Safari4+ */
     background-image: -webkit-linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.4) 100%);
-    /*Chrome10+,Safari5.1+ */
     background-image: -o-linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.4) 100%);
-    /* Opera 11.10+ */
     background-image: -ms-linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.4) 100%);
-    /*IE10+ */
     background-image: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.4) 100%);
-    /* W3C */
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='rgba(255, 255, 255, 0.4)', endColorstr='rgba(255, 255, 255, 0)', GradientType='0' );
-    /* IE6-9 */
 }
 
 #clockarm1,
@@ -264,8 +305,8 @@ p {
     left: 12px;
     width: 2px;
     height: 10px;
-    background-color: #ffffff;
-    z-index: 10;
+    background-color: white;
+    z-index: 1;
     -webkit-border-radius: 1px;
     -moz-border-radius: 1px;
     -o-border-radius: 1px;
@@ -286,8 +327,8 @@ p {
     left: 12px;
     width: 2px;
     height: 9px;
-    background-color: #ffffff;
-    z-index: 20;
+    background-color: white;
+    z-index: 2;
     -webkit-border-radius: 1px;
     -moz-border-radius: 1px;
     -o-border-radius: 1px;
@@ -370,3 +411,4 @@ p {
     -ms-transform-origin: 50% 8px;
     -o-transform-origin: 50% 8px;
 }
+/* ------------ End History ------------- */
