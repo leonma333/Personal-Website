@@ -580,7 +580,7 @@ form#phone-form input[type="text"]:focus {
 #plus span {
     position: absolute;
     margin-top: 40px;
-    left: 2.5px;
+    left: 5px;
 }
 
 #plus::after {

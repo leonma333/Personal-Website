@@ -36,10 +36,10 @@ p {
     box-shadow: 0 2px 2px rgba(0, 0, 0, 0.25) inset, transparent 0 0 0, transparent 0 0 0, transparent 0 0 0, transparent 0 0 0, transparent 0 0 0;
 }
 
-#historic_event_1,
-#historic_event_2,
-#historic_event_3,
-#historic_event_4 {
+#historic-event-1,
+#historic-event-2,
+#historic-event-3,
+#historic-event-4 {
     display: table;
     position: absolute;
     width: 300px;
@@ -54,68 +54,68 @@ p {
     -o-transition: opacity 600ms ease;
 }
 
-#historic_event_1:hover,
-#historic_event_1.current,
-#historic_event_2:hover,
-#historic_event_2.current,
-#historic_event_3:hover,
-#historic_event_3.current,
-#historic_event_4:hover,
-#historic_event_4.current {
+#historic-event-1:hover,
+#historic-event-1.current,
+#historic-event-2:hover,
+#historic-event-2.current,
+#historic-event-3:hover,
+#historic-event-3.current,
+#historic-event-4:hover,
+#historic-event-4.current {
     opacity: 1;
     filter: "alpha(opacity=100)";
     -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
 }
 
-#historic_event_1 {
+#historic-event-1 {
     top: 100px;
     left: 50%;
     margin-left: -12px;
 }
 
-#historic_event_2 {
+#historic-event-2 {
     top: 300px;
     left: 50%;
     margin-left: -273px;
 }
 
-#historic_event_3 {
+#historic-event-3 {
     top: 500px;
     left: 50%;
     margin-left: -12px;
 }
 
-#historic_event_4 {
+#historic-event-4 {
     top: 700px;
     left: 50%;
     margin-left: -273px;
 }
 
-.historic_year {
+.historic-year {
     display: table-cell;
     vertical-align: middle;
     width: 33%;
     text-align: center;
 }
 
-#historic_text_1,
-#historic_text_2,
-#historic_text_3,
-#historic_text_4 {
+#historic-text-1,
+#historic-text-2,
+#historic-text-3,
+#historic-text-4 {
     display: table-cell;
     vertical-align: middle;
     width: 53%;
     text-align: left;
 }
 
-.historic_dot_wrapper {
+.historic-dot-wrapper {
     display: table-cell;
     vertical-align: middle;
     width: 13%;
     text-align: center;
 }
 
-.historic_dot {
+.historic-dot {
     display: block;
     position: relative;
     width: 14px;
@@ -133,27 +133,27 @@ p {
     box-shadow: 0 0 0 1px #d1d8de inset, 0 2px 0 #ffffff inset, 0 2px 0 #d1d8de, transparent 0 0 0, transparent 0 0 0, transparent 0 0 0;
 }
 
-#historic_event_1:hover #historic_dot_1,
-#historic_event_2:hover #historic_dot_2,
-#historic_event_3:hover #historic_dot_3,
-#historic_event_4:hover #historic_dot_4 {
+#historic-event-1:hover #historic-dot-1,
+#historic-event-2:hover #historic-dot-2,
+#historic-event-3:hover #historic-dot-3,
+#historic-event-4:hover #historic-dot-4 {
     -webkit-transform: scale(1.15) translate3d(0, 0, 0);
     -moz-transform: scale(1.15) translate3d(0, 0, 0);
     -ms-transform: scale(1.15) translate3d(0, 0, 0);
     -o-transform: scale(1.15) translate3d(0, 0, 0);
 }
 
-#historic_dot_1,
-#historic_dot_2,
-#historic_dot_3,
-#historic_dot_4 {
+#historic-dot-1,
+#historic-dot-2,
+#historic-dot-3,
+#historic-dot-4 {
     display: block;
     position: relative;
     margin: 0 auto;
     left: -7px;
 }
 
-#history_clock {
+#history-clock {
     display: block;
     position: absolute;
     top: 100px;
@@ -176,15 +176,15 @@ p {
     -o-transition: top 1s cubic-bezier(0.645, 0.045, 0.355, 1);
 }
 
-#history_clock.animate1 {
+#history-clock.animate1 {
     top: 300px;
 }
 
-#history_clock.animate2 {
+#history-clock.animate2 {
     top: 500px;
 }
 
-#history_clock.animate3 {
+#history-clock.animate3 {
     top: 697px;
 }
 
@@ -249,15 +249,15 @@ p {
     /* IE6-9 */
 }
 
-#clockarm_1,
-#clockarm_2 {
+#clockarm1,
+#clockarm2 {
     -webkit-transition: all 1s cubic-bezier(0.645, 0.045, 0.355, 1);
     -moz-transition: all 1s cubic-bezier(0.645, 0.045, 0.355, 1);
     -ms-transition: all 1s cubic-bezier(0.645, 0.045, 0.355, 1);
     -o-transition: all 1s cubic-bezier(0.645, 0.045, 0.355, 1);
 }
 
-#clockarm_1 {
+#clockarm1 {
     display: block;
     position: absolute;
     top: 4px;
@@ -279,7 +279,7 @@ p {
     -o-transform-origin: 50% 10px;
 }
 
-#clockarm_2 {
+#clockarm2 {
     display: block;
     position: absolute;
     top: 6px;
@@ -305,7 +305,7 @@ p {
     -o-transform-origin: 50% 8px;
 }
 
-#history_clock.animate1 #clockarm_1 {
+#history-clock.animate1 #clockarm1 {
     -webkit-transform: rotate(10.85turn) translate3d(0, 0, 0);
     -moz-transform: rotate(10.85turn) translate3d(0, 0, 0);
     -ms-transform: rotate(10.85turn) translate3d(0, 0, 0);
@@ -316,7 +316,7 @@ p {
     -o-transform-origin: 50% 10px;
 }
 
-#history_clock.animate1 #clockarm_2 {
+#history-clock.animate1 #clockarm2 {
     -webkit-transform: rotate(10.25turn) translate3d(0, 0, 0);
     -moz-transform: rotate(10.25turn) translate3d(0, 0, 0);
     -ms-transform: rotate(10.25turn) translate3d(0, 0, 0);
@@ -327,7 +327,7 @@ p {
     -o-transform-origin: 50% 8px;
 }
 
-#history_clock.animate2 #clockarm_1 {
+#history-clock.animate2 #clockarm1 {
     -webkit-transform: rotate(13.11turn) translate3d(0, 0, 0);
     -moz-transform: rotate(13.11turn) translate3d(0, 0, 0);
     -ms-transform: rotate(13.11turn) translate3d(0, 0, 0);
@@ -338,7 +338,7 @@ p {
     -o-transform-origin: 50% 10px;
 }
 
-#history_clock.animate2 #clockarm_2 {
+#history-clock.animate2 #clockarm2 {
     -webkit-transform: rotate(13.34turn) translate3d(0, 0, 0);
     -moz-transform: rotate(13.34turn) translate3d(0, 0, 0);
     -ms-transform: rotate(13.34turn) translate3d(0, 0, 0);
@@ -349,7 +349,7 @@ p {
     -o-transform-origin: 50% 8px;
 }
 
-#history_clock.animate3 #clockarm_1 {
+#history-clock.animate3 #clockarm1 {
     -webkit-transform: rotate(16.46turn) translate3d(0, 0, 0);
     -moz-transform: rotate(16.46turn) translate3d(0, 0, 0);
     -ms-transform: rotate(16.46turn) translate3d(0, 0, 0);
@@ -360,7 +360,7 @@ p {
     -o-transform-origin: 50% 10px;
 }
 
-#history_clock.animate3 #clockarm_2 {
+#history-clock.animate3 #clockarm2 {
     -webkit-transform: rotate(16.84turn) translate3d(0, 0, 0);
     -moz-transform: rotate(16.84turn) translate3d(0, 0, 0);
     -ms-transform: rotate(16.84turn) translate3d(0, 0, 0);
