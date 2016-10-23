@@ -11,6 +11,8 @@ body {
 
 p, h3 {
     font-family: 'Optima', sans-serif;
+    font-weight: normal;
+    font-size: 1em;
     color: white;
 }
 
@@ -19,7 +21,7 @@ p, h3 {
     width: 130px;
     height: 130px;
     border-radius: 100%;
-    border: 15px solid white;
+    border: 10px solid white;
 }
 
 .flip-container:hover .flipper, .flip-container.hover .flipper {
@@ -64,8 +66,7 @@ p, h3 {
 }
 
 .back h3 {
-    color: white;
-    vertical-align: middle;
+    margin-top: 35%;
 }
 /* ------------ End Flip ------------- */
 
@@ -127,7 +128,7 @@ p, h3 {
 #historic-event-1 {
     top: 50px;
     left: 50%;
-    margin-left: -13px;
+    margin-left: -12px;
 }
 
 #historic-event-2 {
