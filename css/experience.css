@@ -13,7 +13,6 @@ p, h3 {
     font-family: 'Optima', sans-serif;
     font-weight: normal;
     font-size: 1em;
-    color: white;
 }
 
 /* ------------ Flip ------------- */
@@ -44,6 +43,7 @@ p, h3 {
 .front, .back {
     -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
+    transform: rotateX(0deg);
     position: absolute;
     top: 0;
     left: 0;
@@ -58,15 +58,11 @@ p, h3 {
 .front img {
     width: 70%;
     opacity: 0.8;
-    margin-top: 20%;
 }
 
 .back {
     transform: rotateY(180deg);
-}
-
-.back h3 {
-    margin-top: 35%;
+    color: white;
 }
 /* ------------ End Flip ------------- */
 
@@ -78,7 +74,7 @@ p, h3 {
     text-align: center;
 }
 
-#timeline_track {
+#timeline-track {
     display: block;
     position: relative;
     margin: 0 auto;
@@ -132,13 +128,13 @@ p, h3 {
 }
 
 #historic-event-2 {
-    top: 300px;
+    top: 250px;
     left: 50%;
     margin-left: -273px;
 }
 
 #historic-event-3 {
-    top: 500px;
+    top: 450px;
     left: 50%;
     margin-left: -12px;
 }
@@ -154,6 +150,7 @@ p, h3 {
     vertical-align: middle;
     width: 33%;
     text-align: center;
+    color: white;
 }
 
 #historic-text-1,
@@ -411,5 +408,20 @@ p, h3 {
     -moz-transform-origin: 50% 8px;
     -ms-transform-origin: 50% 8px;
     -o-transform-origin: 50% 8px;
+}
+
+@media screen and (max-width: 600px) {
+    #timeline-track {
+        margin: 0 0 0 30px;
+    }
+
+    #history-clock {
+        left: 33px;
+    }
+
+    #historic-event-1, #historic-event-2, #historic-event-3 {
+        left: 20px;
+        margin-left: 0;
+    }
 }
 /* ------------ End History ------------- */

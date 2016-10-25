@@ -17,7 +17,7 @@
 					<div id="clockarm2"></div>
 				</div>
 			</div>
-			<div id="timeline_track"></div>
+			<div id="timeline-track"></div>
 			<ul id="historic-event-1" class="current">
                 <li class="historic-dot-wrapper"><div id="historic-dot-1" class="historic-dot"></div></li>
     			<li class="historic-year"><p style="font-size:18px">2016</p></li>
@@ -25,22 +25,40 @@
                     <div class="overlay">
                         <div class="flip-container" ontouchstart="this.classList.toggle('hover');">
                             <div class="flipper">
-                                <div class="front"><img src="assets/image/jewlr.png"></div>
-                                <div class="back"><h3>eCommerce Web Developer</h3></div>
+                                <div class="front"><img style="margin-top:20%" src="assets/image/jewlr.png"></div>
+                                <div class="back"><h3 style="margin-top:35%">eCommerce Web Developer</h3></div>
                             </div>
                         </div>
                     </div>         
                 </li>
 			</ul>
 			<ul id="historic-event-2">
-                <li id="historic-text-2"><p>Sting releases "...Nothing Like the Sun".</p></li>
+                <li id="historic-text-2">
+                    <div class="overlay">
+                        <div class="flip-container" ontouchstart="this.classList.toggle('hover');">
+                            <div class="flipper">
+                                <div class="front"><img style="margin-top:15%" src="assets/image/ashlin.png"></div>
+                                <div class="back"><h3 style="margin-top:30%">eCommerce Application Developer</h3></div>
+                            </div>
+                        </div>
+                    </div>         
+                </li>
                 <li class="historic-year"><p>2016</p></li>
                 <li class="historic-dot-wrapper"><div id="historic-dot-2" class="historic-dot"></div></li>
 			</ul>
 			<ul id="historic-event-3">  
         		<li class="historic-dot-wrapper"><div id="historic-dot-3" class="historic-dot"></div></li>
         		<li class="historic-year"><p>2015</p></li>
-        		<li id="historic-text-3"><p>Duran Duran releases "Decade: Greatest Hits".</p></li>
+        		<li id="historic-text-3">
+                    <div class="overlay">
+                        <div class="flip-container" ontouchstart="this.classList.toggle('hover');">
+                            <div class="flipper">
+                                <div class="front"><img style="margin-top:20%" src="assets/image/uw.png"></div>
+                                <div class="back"><h3 style="margin-top:35%">Computer Engineering</h3></div>
+                            </div>
+                        </div>
+                    </div>         
+                </li>
 			</ul>
 			<ul id="historic-event-4">
       			<li id="historic-text-4"><p>Gotye releases a new Sting album</p></li>
@@ -53,6 +71,29 @@
     <script>
         $(document).ready(function() {
             initHistoryHandler();
+
+            var changeSmall = false;
+            var changeLarge = true;
+
+            $(window).resize(function() {
+                if ($(this).width() < 600) {
+                    if (!changeSmall) {
+                        changeSmall = true;
+                        changeLarge = false;
+                        $("#historic-event-2 li:eq(0)").before($("#historic-event-2 li:eq(2)"));
+                        $("#historic-event-2 li:eq(1)").before($("#historic-event-2 li:eq(2)"));
+                        return;
+                    }
+                } else {
+                    if (!changeLarge) {
+                        changeSmall = false;
+                        changeLarge = true;
+                        $("#historic-event-2 li:eq(0)").before($("#historic-event-2 li:eq(2)"));
+                        $("#historic-event-2 li:eq(1)").before($("#historic-event-2 li:eq(2)"));
+                    }
+                }
+            });
+            $(window).resize();
         });
     </script>
     <script type="text/javascript" src="js/lib/tipso.js"></script>

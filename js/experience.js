@@ -54,14 +54,44 @@ function initHistoryHandler() {
     $("#historic-dot-4, #historic-event-4").click(hoverOrClick).hover(hoverOrClick);
 
     // set up tooltip
-    jQuery('.back h3').tipso({
-        background: 'white',
-        titleBackground: '#c3c3c3',
-        color: 'black',
-        titleContent: 'eCommerce Web Developer',       
-        position: 'bottom-left',
-        size: 'default',
-        content: 'In Progress ...'
+    var titleList = jQuery(".back h3");
+
+    // Jewlr.com
+    titleList.eq(0).tipso({
+        background: "white",
+        titleBackground: "#c3c3c3",
+        color: "black",
+        tooltipHover: true,
+        titleContent: "Jewlr.com",       
+        position: "bottom-left",
+        size: "default",
+        content: "<p>In Progress ...</p><br><a style='color:black' target='_blank' href='https://www.jewlr.com'>See Website</a>"
+    });
+
+    // Ashlin BPG Marketing
+    titleList.eq(1).tipso({
+        background: "white",
+        titleBackground: "#c3c3c3",
+        color: "black",
+        tooltipHover: true,
+        titleContent: "Ashlin BPG Marketing",       
+        position: "bottom-right",
+        size: "default",
+        content: "<p>50% C#; 30% SQL; 10% HTML; 5% CSS; 5% Javascript</p><br><p>.Net/ASP.Net, Microsoft Azure, SQL Server</p><br>" +
+                 "<a style='color:black' target='_blank' href='https://www.ashlinbpg.com'>See Website</a>"
+    });
+
+    // University of Waterloo
+    titleList.eq(2).tipso({
+        background: "white",
+        titleBackground: "#c3c3c3",
+        color: "black",
+        tooltipHover: true,
+        titleContent: "University of Waterloo",       
+        position: "bottom-left",
+        size: "default",
+        content: "<p>Current: 1B</p><br><p>1.Embedded Systems</p><p>2.Fundamentals of Programming</p><p>3.Calculus for Engineering</p>" +
+                 "<p>4.Digital Circuits</p><br><a style='color:black' target='_blank' href='https://www.ashlinbpg.com'>See Website</a>"
     });
 }
     
