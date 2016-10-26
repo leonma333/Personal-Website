@@ -91,7 +91,20 @@ function initHistoryHandler() {
         position: "bottom-left",
         size: "default",
         content: "<p>Current: 1B</p><br><p>1.Embedded Systems</p><p>2.Fundamentals of Programming</p><p>3.Calculus for Engineering</p>" +
-                 "<p>4.Digital Circuits</p><br><a style='color:black' target='_blank' href='https://www.ashlinbpg.com'>See Website</a>"
+                 "<p>4.Digital Circuits</p><br><a style='color:black' target='_blank' href='https://uwaterloo.ca'>See Website</a>"
+    });
+
+    // Shanghai United International School
+    titleList.eq(3).tipso({
+        background: "white",
+        titleBackground: "#c3c3c3",
+        color: "black",
+        tooltipHover: true,
+        titleContent: "Shanghai United International School",       
+        position: "bottom-right",
+        size: "default",
+        content: "<p>Outstanding Alumnus</p><br><p>AP Cusculus: 94</p><p>Physics: 98</p><p>Chemistry: 95</p>" +
+                 "<p>Geography: 93</p><br><a style='color:black' target='_blank' href='http://www.suis.com.cn'>See Website</a>"
     });
 }
     

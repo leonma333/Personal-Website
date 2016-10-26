@@ -9,6 +9,15 @@
         <link rel="icon" type="image/png" sizes="96x96" href="favicon-96x96.png">
     </head>
     <body translate="no" >
+        <a id="toggle"><span></span></a>
+        <div id="menu">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="project.html">Project</a></li>
+                <li><a>Experience</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
         <div id="history">
 			<div id="history-clock">
 				<div id="clockface"> 
@@ -61,7 +70,16 @@
                 </li>
 			</ul>
 			<ul id="historic-event-4">
-      			<li id="historic-text-4"><p>Gotye releases a new Sting album</p></li>
+      			<li id="historic-text-4">
+                    <div class="overlay">
+                        <div class="flip-container" ontouchstart="this.classList.toggle('hover');">
+                            <div class="flipper">
+                                <div class="front"><img style="margin-top:15%" src="assets/image/suis.png"></div>
+                                <div class="back"><h3 style="margin-top:35%">2nd Place - Class of 2015</h3></div>
+                            </div>
+                        </div>
+                    </div>      
+                </li>
       			<li class="historic-year"><p>2012</p></li>
                 <li class="historic-dot-wrapper"><div id="historic-dot-4" class="historic-dot"></div></li>
 			</ul>
@@ -71,6 +89,10 @@
     <script>
         $(document).ready(function() {
             initHistoryHandler();
+            Menu.theToggle.onclick = function() {
+                Menu.toggleClass(this, "on");
+                return false;
+            }
 
             var changeSmall = false;
             var changeLarge = true;
@@ -82,6 +104,8 @@
                         changeLarge = false;
                         $("#historic-event-2 li:eq(0)").before($("#historic-event-2 li:eq(2)"));
                         $("#historic-event-2 li:eq(1)").before($("#historic-event-2 li:eq(2)"));
+                        $("#historic-event-4 li:eq(0)").before($("#historic-event-4 li:eq(2)"));
+                        $("#historic-event-4 li:eq(1)").before($("#historic-event-4 li:eq(2)"));
                         return;
                     }
                 } else {
@@ -90,6 +114,8 @@
                         changeLarge = true;
                         $("#historic-event-2 li:eq(0)").before($("#historic-event-2 li:eq(2)"));
                         $("#historic-event-2 li:eq(1)").before($("#historic-event-2 li:eq(2)"));
+                        $("#historic-event-4 li:eq(0)").before($("#historic-event-4 li:eq(2)"));
+                        $("#historic-event-4 li:eq(1)").before($("#historic-event-4 li:eq(2)"));
                     }
                 }
             });
