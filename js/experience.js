@@ -103,7 +103,7 @@ function initHistoryHandler() {
         titleContent: "Shanghai United International School",       
         position: "bottom-right",
         size: "default",
-        content: "<p>Outstanding Alumnus</p><br><p>AP Cusculus: 94</p><p>Physics: 98</p><p>Chemistry: 95</p>" +
+        content: "<p>2nd Place - Class of 2015</p><br><p>AP Cusculus: 94</p><p>Physics: 98</p><p>Chemistry: 95</p>" +
                  "<p>Geography: 93</p><br><a style='color:black' target='_blank' href='http://www.suis.com.cn'>See Website</a>"
     });
 }
