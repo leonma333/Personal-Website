@@ -549,7 +549,8 @@ form#phone-form input[type=submit]:hover {
     cursor: pointer;
 }
 
-form#phone-form input[type=text] {
+/*form#phone-form input[type=text]*/
+form#phone-form input#phone-number {
     border: none;
     background: white;
     width: 150px;
@@ -558,7 +559,8 @@ form#phone-form input[type=text] {
     letter-spacing: 0.05em;
 }
 
-form#phone-form input[type=text]:focus {
+/*form#phone-form input[type=text]:focus*/
+form#phone-form input#phone-number:focus {
     outline: none;
 }
 
