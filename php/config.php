@@ -5,9 +5,10 @@ return array(
     'email' => null,
     'email-password' => null,
     'sid' => null,
-    'token' => null,
+    'token-twilio' => null,
     'phone-twilio' => null,
-    'phone-mobile' => null 
+    'phone-mobile' => null,
+    'token-messenger' => null
 );
 
 ?>

@@ -14,7 +14,7 @@ header('Content-type: application/json');
 if (isset($_POST['contact_number'])) {
 
 	# initialize the Client object
-	$client = new Client($config['sid'], $config['token']);
+	$client = new Client($config['sid'], $config['token-twilio']);
 
 	// strat sending text messages
 	$success = false;
