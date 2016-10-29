@@ -76,7 +76,7 @@ function ContactForm() {
     /* function that submit data to server */
     this.sumbitForm = function(url, method) {
         // get the submit button first
-        submitButton = $("form#email-form input[type='submit']");
+        var submitButton = $("form#email-form input[type='submit']");
 
         // set email form submit action
         $("#email-form").submit(function(event) {
@@ -93,6 +93,7 @@ function ContactForm() {
                 msgText.focus();
                 return false;
             }
+
             submitButton.val("Sending");
             submitButton.prop("disabled", true);
 
@@ -162,7 +163,7 @@ function PhonePopup() {
     /* function that submit data to server */
     this.sumbitForm = function(url, method) {
         // get the submit button first
-        submitButton = $("form#phone-form input[type='submit']");
+        var submitButton = $("form#phone-form input[type='submit']");
 
         // set email form submit action
         $("#phone-form").submit(function(event) {
