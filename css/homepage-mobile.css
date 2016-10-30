@@ -186,6 +186,10 @@ a {
 }
 
 #slide-2 {
+    background-image: url("../assets/image/lhm.png");
+    background-repeat: no-repeat;
+    background-size: auto 70%;
+    background-position: center bottom;
     background-color: white;
 }
 /* ------------ End Slides ------------- */
