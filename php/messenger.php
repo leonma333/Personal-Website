@@ -73,7 +73,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                                 $long = $attachment['payload']['coordinates']['long'];
                                 $message = null;
 
-                                if ($lat > 42 && $lat < 45 && $long > -81 && $long < -78)
+                                if ($lat > 43.3 && $lat < 44.3 && $long > -80 && $long < -79)
                                     $message = array('text' => 'Oh my god! You know me so well. Yes, I am in Toronto right now. Come and visit me :)');
                                 else
                                     $message = array('text' => 'Unfortunately, you are wrong, I am not here.');
@@ -199,7 +199,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                                 $message = array(
                                     'attachment' => array(
                                         'type' => 'file',
-                                        'payload' => array('url' => 'https://www.lhm-website.herokuapp.com/assets/resume.pdf')
+                                        'payload' => array('url' => 'https://lhm-website.herokuapp.com/assets/resume.pdf')
                                         )
                                     );
                                 send_messenger($user_id, $message, $config['token-messenger']);
@@ -273,7 +273,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                             $message = array(
                                 'attachment' => array(
                                     'type' => 'file',
-                                    'payload' => array('url' => 'https://www.lhm-website.herokuapp.com/assets/resume.pdf')
+                                    'payload' => array('url' => 'https://lhm-website.herokuapp.com/assets/resume.pdf')
                                     )
                                 );
                             send_messenger($user_id, $message, $config['token-messenger']);
@@ -288,7 +288,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             }
         }
     }
-
     return;
 }
 

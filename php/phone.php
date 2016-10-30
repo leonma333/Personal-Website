@@ -1,27 +1,27 @@
 <?php
 
-# get necessary files
+# Get necessary files
 require 'vendor/autoload.php';
 $config = include('config.php');
 
-# using Twilio REST API Client
+# Using Twilio REST API Client
 use Twilio\Rest\Client;
 
-# set response header to json object
+# Set response header to json object
 header('Content-type: application/json');
 
-# only send the email if all parameters are satisfied
+# Only send the email if all parameters are satisfied
 if (isset($_POST['contact_number'])) {
 
-	# initialize the Client object
+	# Initialize the Client object
 	$client = new Client($config['sid'], $config['token-twilio']);
 
-	// strat sending text messages
+	// Strat sending text messages
 	$success = false;
 	$message = null;
 	$status_code = 200;
 	try {
-		# send to client
+		# Send to client
 		$client->messages->create(
 		    $_POST['contact_number'],
 		    array(
@@ -32,7 +32,7 @@ if (isset($_POST['contact_number'])) {
 		    )
 		);
 
-		# send to myself for reference
+		# Send to myself for reference
 		$client->messages->create(
 		    $config['phone-mobile'],
 		    array(
@@ -41,23 +41,23 @@ if (isset($_POST['contact_number'])) {
 		    )
 		);
 
-		# respond with status code 200 and success true if sms sent successfully
+		# Respond with status code 200 and success true if sms sent successfully
 		$success = true;
 		$message = 'Text sent';
 	} catch (Exception $e) {
-		# respond with status code 400 and success false if sms sent unsuccessfully
+		# Respond with status code 400 and success false if sms sent unsuccessfully
 		$message = $e->getMessage();
 		$status_code = 400;
 	}
 
-	# construct response
+	# Construct response
 	$response = array('success' => $success, 'message' => $message);
 	http_response_code($status_code);
 	echo json_encode($response);
 	return;
 }
 
-# the parameters are not satisfied -> return error and response with status code 406
+# The parameters are not satisfied -> return error and response with status code 406
 http_response_code(406);
 $response = array('success' => false, 'message' => 'Parameter missing');
 echo json_encode($response);
