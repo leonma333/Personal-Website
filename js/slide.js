@@ -25,7 +25,7 @@ function onSlideButtonClick(event) {
 	// get clicked button
 	var button = $(this);
 
-	// the slide the button points to
+	// the slide that the button points to
 	var slide = $(button.attr("href"));
 
 	// if the slide exists, we go to it
