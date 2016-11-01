@@ -13,9 +13,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
   		$ch = curl_init('https://graph.facebook.com/me/messages?access_token=' . $token);
 
   		$body = array(
-      		'recipient' => array(
-      			'id' => $recipient_id
-      		),
+      		'recipient' => array( 'id' => $recipient_id ),
       		'message' => $message
         	);
 
@@ -47,11 +45,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                                   'elements' => array(
                                           array(
                                               'title' => 'Thank you for visiting my Website',
-                                              'subtitle' => 'Please share it if you enjoy. Cheers!',
+                                              'subtitle' => 'Please share it if you enjoy. Cheers! (www.lhm.rocks)',
                                               'image_url' => 'https://lhm-website.herokuapp.com/assets/image/personal-website.png',
-                                              'buttons' => array (
-                                                  array('type' => 'element_share')
-                                                  )
+                                              'buttons' => array ( array('type' => 'element_share') )
                                               )
                                       )
                                   )
@@ -90,9 +86,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                             $message = array(
                                 'attachment' => array(
                                     'type' => 'image',
-                                    'payload' => array(
-                                        'url' => $sticker[rand (0, 2)]
-                                        )
+                                    'payload' => array( 'url' => $sticker[rand (0, 2)] )
                                     )
                                 );
                             send_messenger($user_id, $message, $config['token-messenger']);
@@ -157,9 +151,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                             case 'i_am_all':
                                 $message = array(
                                     'text' => 'Where am I?',
-                                    'quick_replies' => array(
-                                            array('content_type' => 'location')
-                                        )
+                                    'quick_replies' => array( array('content_type' => 'location') )
                                     );
                                 send_messenger($user_id, $message, $config['token-messenger']);
                                 break;
@@ -281,6 +273,33 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                         case 'help':
                             $message = array('text' => 'Enter \'game\' to play guessing game. Enter \'resume\' to see my resume. ' .
                                                        'Enter \'help\' to see list of commands, which you are looking at right now :D');
+                            send_messenger($user_id, $message, $config['token-messenger']);
+                            break;
+                        case 'get_started':
+                            # Send website share
+                            $message = array(
+                                'attachment' => array(
+                                    'type' => 'template',
+                                    'payload' => array(
+                                          'template_type' => 'generic',
+                                          'elements' => array(
+                                                  array(
+                                                      'title' => 'Thank you for Opt in',
+                                                      'subtitle' => 'Come and visit my website and share it if you enjoy. Cheers! (www.lhm.rocks)',
+                                                      'image_url' => 'https://lhm-website.herokuapp.com/assets/image/personal-website.png',
+                                                      'buttons' => array ( 
+                                                            array('type' => 'element_share'), 
+                                                            array(
+                                                                'type' => 'web_url',
+                                                                'url' => 'http://lhm.rocks',
+                                                                'title' => 'See my website'
+                                                                )
+                                                            )   
+                                                      )
+                                              )
+                                          )
+                                    )
+                                );
                             send_messenger($user_id, $message, $config['token-messenger']);
                             break;
                     }
