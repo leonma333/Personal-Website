@@ -26,7 +26,7 @@ if (isset($_POST['contact_number'])) {
 		    $_POST['contact_number'],
 		    array(
 		        'from' => $config['phone-twilio'],
-		        'body' => "(lhm.com)\nThanks for visiting my website. The following are my contact information:\nemail: " . 
+		        'body' => "(lhm.rocks)\nThanks for visiting my website. The following are my contact information:\nemail: " . 
 		        		  $config['email'] . "\nphone: +15197228665\nFeel free to contact me, and here are my mottos:\n" .
 		        		  "1.Write clean and elegant code.\n2.Design with user in mind.\nBy the way, Any time is House time."
 		    )
@@ -37,7 +37,7 @@ if (isset($_POST['contact_number'])) {
 		    $config['phone-mobile'],
 		    array(
 		        'from' => $config['phone-twilio'],
-		        'body' => "(lhm.com)\n" . $_POST['contact_number'] . ' sent text from my website.'
+		        'body' => "(lhm.rocks)\n" . $_POST['contact_number'] . ' sent text from my website.'
 		    )
 		);
 

@@ -829,49 +829,58 @@ a {
 }
 
 .popup .popup-piece:nth-child(12) .popup-piece-inner:nth-child(1) {
-  -webkit-transform: translate3d(40vw, -48vh, -407px) rotateX(424deg) rotateY(139deg);
-          transform: translate3d(40vw, -48vh, -407px) rotateX(424deg) rotateY(139deg);
-  -webkit-clip-path: polygon(0 0, 0 100%, 42% 100%);
-          clip-path: polygon(0 0, 0 100%, 42% 100%);
+    -webkit-transform: translate3d(40vw, -48vh, -407px) rotateX(424deg) rotateY(139deg);
+    transform: translate3d(40vw, -48vh, -407px) rotateX(424deg) rotateY(139deg);
+    -webkit-clip-path: polygon(0 0, 0 100%, 42% 100%);
+    clip-path: polygon(0 0, 0 100%, 42% 100%);
 }
+
 .popup .popup-piece:nth-child(12) .popup-piece-inner:nth-child(2) {
-  -webkit-transform: translate3d(12vw, 60vh, -272px) rotateX(180deg) rotateY(310deg);
-          transform: translate3d(12vw, 60vh, -272px) rotateX(180deg) rotateY(310deg);
-  -webkit-clip-path: polygon(0 0, 42% 100%, 100% 0);
-          clip-path: polygon(0 0, 42% 100%, 100% 0);
+    -webkit-transform: translate3d(12vw, 60vh, -272px) rotateX(180deg) rotateY(310deg);
+    transform: translate3d(12vw, 60vh, -272px) rotateX(180deg) rotateY(310deg);
+    -webkit-clip-path: polygon(0 0, 42% 100%, 100% 0);
+    clip-path: polygon(0 0, 42% 100%, 100% 0);
 }
+
 .popup .popup-piece:nth-child(12) .popup-piece-inner:nth-child(3) {
-  -webkit-transform: translate3d(-48vw, -51vh, 102px) rotateX(475deg) rotateY(331deg);
-          transform: translate3d(-48vw, -51vh, 102px) rotateX(475deg) rotateY(331deg);
-  -webkit-clip-path: polygon(100% 0, 100% 100%, 42% 100%);
-          clip-path: polygon(100% 0, 100% 100%, 42% 100%);
+    -webkit-transform: translate3d(-48vw, -51vh, 102px) rotateX(475deg) rotateY(331deg);
+    transform: translate3d(-48vw, -51vh, 102px) rotateX(475deg) rotateY(331deg);
+    -webkit-clip-path: polygon(100% 0, 100% 100%, 42% 100%);
+    clip-path: polygon(100% 0, 100% 100%, 42% 100%);
 }
+
 .popup.s-closed .popup-piece:nth-child(12) {
-  -webkit-transform: translate3d(0, 108vh, 0);
-          transform: translate3d(0, 108vh, 0);
+    -webkit-transform: translate3d(0, 108vh, 0);
+    transform: translate3d(0, 108vh, 0);
 }
+
 .popup.s-closed .popup-piece:nth-child(12) .popup-piece-inner:nth-child(1) {
-  -webkit-transform: translate3d(74vw, 0, 0) rotateX(248deg) rotateY(370deg);
-          transform: translate3d(74vw, 0, 0) rotateX(248deg) rotateY(370deg);
+    -webkit-transform: translate3d(74vw, 0, 0) rotateX(248deg) rotateY(370deg);
+    transform: translate3d(74vw, 0, 0) rotateX(248deg) rotateY(370deg);
 }
+
 .popup.s-closed .popup-piece:nth-child(12) .popup-piece-inner:nth-child(2) {
-  -webkit-transform: translate3d(72vw, 0, 0) rotateX(182deg) rotateY(326deg);
-          transform: translate3d(72vw, 0, 0) rotateX(182deg) rotateY(326deg);
+    -webkit-transform: translate3d(72vw, 0, 0) rotateX(182deg) rotateY(326deg);
+    transform: translate3d(72vw, 0, 0) rotateX(182deg) rotateY(326deg);
 }
+
 .popup.s-closed .popup-piece:nth-child(12) .popup-piece-inner:nth-child(3) {
-  -webkit-transform: translate3d(-79vw, 0, 0) rotateX(133deg) rotateY(286deg);
-          transform: translate3d(-79vw, 0, 0) rotateX(133deg) rotateY(286deg);
+    -webkit-transform: translate3d(-79vw, 0, 0) rotateX(133deg) rotateY(286deg);
+    transform: translate3d(-79vw, 0, 0) rotateX(133deg) rotateY(286deg);
 }
+
 .popup .popup-piece:nth-child(13) {
-  height: 18.66667%;
-  width: 15.66667%;
+    height: 18.66667%;
+    width: 15.66667%;
 }
+
 .popup .popup-piece:nth-child(13) .popup-piece-inner:nth-child(1) {
-  -webkit-transform: translate3d(-15vw, 35vh, -307px) rotateX(432deg) rotateY(149deg);
-          transform: translate3d(-15vw, 35vh, -307px) rotateX(432deg) rotateY(149deg);
-  -webkit-clip-path: polygon(0 0, 0 100%, 56% 100%);
-          clip-path: polygon(0 0, 0 100%, 56% 100%);
+    -webkit-transform: translate3d(-15vw, 35vh, -307px) rotateX(432deg) rotateY(149deg);
+    transform: translate3d(-15vw, 35vh, -307px) rotateX(432deg) rotateY(149deg);
+    -webkit-clip-path: polygon(0 0, 0 100%, 56% 100%);
+    clip-path: polygon(0 0, 0 100%, 56% 100%);
 }
+
 .popup .popup-piece:nth-child(13) .popup-piece-inner:nth-child(2) {
   -webkit-transform: translate3d(1vw, -56vh, 608px) rotateX(167deg) rotateY(463deg);
           transform: translate3d(1vw, -56vh, 608px) rotateX(167deg) rotateY(463deg);
