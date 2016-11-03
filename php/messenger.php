@@ -3,7 +3,6 @@
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
   	$request_body = file_get_contents('php://input');
   	$request_json = json_decode($request_body, true);
-  	error_log(print_r($request_json, true));
 
     # Include necessary file
     $config = include('config.php');
@@ -23,7 +22,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     	curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
 
     	$response = curl_exec($ch);
-        error_log(print_r($response, true));
     	curl_close($ch);
   	}
 
@@ -309,8 +307,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     }
     return;
 }
-
-error_log(print_r($_REQUEST, true));
 
 # Get request from Facebook -> webhook callback verification
 echo $_GET['hub_challenge'];

@@ -882,71 +882,85 @@ a {
 }
 
 .popup .popup-piece:nth-child(13) .popup-piece-inner:nth-child(2) {
-  -webkit-transform: translate3d(1vw, -56vh, 608px) rotateX(167deg) rotateY(463deg);
-          transform: translate3d(1vw, -56vh, 608px) rotateX(167deg) rotateY(463deg);
-  -webkit-clip-path: polygon(0 0, 56% 100%, 100% 0);
-          clip-path: polygon(0 0, 56% 100%, 100% 0);
+    -webkit-transform: translate3d(1vw, -56vh, 608px) rotateX(167deg) rotateY(463deg);
+    transform: translate3d(1vw, -56vh, 608px) rotateX(167deg) rotateY(463deg);
+    -webkit-clip-path: polygon(0 0, 56% 100%, 100% 0);
+    clip-path: polygon(0 0, 56% 100%, 100% 0);
 }
+
 .popup .popup-piece:nth-child(13) .popup-piece-inner:nth-child(3) {
-  -webkit-transform: translate3d(-11vw, -7vh, 39px) rotateX(348deg) rotateY(241deg);
-          transform: translate3d(-11vw, -7vh, 39px) rotateX(348deg) rotateY(241deg);
-  -webkit-clip-path: polygon(100% 0, 100% 100%, 56% 100%);
-          clip-path: polygon(100% 0, 100% 100%, 56% 100%);
+    -webkit-transform: translate3d(-11vw, -7vh, 39px) rotateX(348deg) rotateY(241deg);
+    transform: translate3d(-11vw, -7vh, 39px) rotateX(348deg) rotateY(241deg);
+    -webkit-clip-path: polygon(100% 0, 100% 100%, 56% 100%);
+    clip-path: polygon(100% 0, 100% 100%, 56% 100%);
 }
+
 .popup.s-closed .popup-piece:nth-child(13) {
-  -webkit-transform: translate3d(0, 134vh, 0);
-          transform: translate3d(0, 134vh, 0);
+    -webkit-transform: translate3d(0, 134vh, 0);
+    transform: translate3d(0, 134vh, 0);
 }
+
 .popup.s-closed .popup-piece:nth-child(13) .popup-piece-inner:nth-child(1) {
-  -webkit-transform: translate3d(-69vw, 0, 0) rotateX(146deg) rotateY(159deg);
-          transform: translate3d(-69vw, 0, 0) rotateX(146deg) rotateY(159deg);
+    -webkit-transform: translate3d(-69vw, 0, 0) rotateX(146deg) rotateY(159deg);
+    transform: translate3d(-69vw, 0, 0) rotateX(146deg) rotateY(159deg);
 }
+
 .popup.s-closed .popup-piece:nth-child(13) .popup-piece-inner:nth-child(2) {
-  -webkit-transform: translate3d(-60vw, 0, 0) rotateX(244deg) rotateY(280deg);
-          transform: translate3d(-60vw, 0, 0) rotateX(244deg) rotateY(280deg);
+    -webkit-transform: translate3d(-60vw, 0, 0) rotateX(244deg) rotateY(280deg);
+    transform: translate3d(-60vw, 0, 0) rotateX(244deg) rotateY(280deg);
 }
+
 .popup.s-closed .popup-piece:nth-child(13) .popup-piece-inner:nth-child(3) {
-  -webkit-transform: translate3d(53vw, 0, 0) rotateX(168deg) rotateY(413deg);
-          transform: translate3d(53vw, 0, 0) rotateX(168deg) rotateY(413deg);
+    -webkit-transform: translate3d(53vw, 0, 0) rotateX(168deg) rotateY(413deg);
+    transform: translate3d(53vw, 0, 0) rotateX(168deg) rotateY(413deg);
 }
+
 .popup .popup-piece:nth-child(14) {
-  height: 18.66667%;
-  width: 13.66667%;
+    height: 18.66667%;
+    width: 13.66667%;
 }
+
 .popup .popup-piece:nth-child(14) .popup-piece-inner:nth-child(1) {
-  -webkit-transform: translate3d(-33vw, 56vh, -741px) rotateX(243deg) rotateY(333deg);
-          transform: translate3d(-33vw, 56vh, -741px) rotateX(243deg) rotateY(333deg);
-  -webkit-clip-path: polygon(0 0, 0 100%, 61% 100%);
-          clip-path: polygon(0 0, 0 100%, 61% 100%);
+    -webkit-transform: translate3d(-33vw, 56vh, -741px) rotateX(243deg) rotateY(333deg);
+    transform: translate3d(-33vw, 56vh, -741px) rotateX(243deg) rotateY(333deg);
+    -webkit-clip-path: polygon(0 0, 0 100%, 61% 100%);
+    clip-path: polygon(0 0, 0 100%, 61% 100%);
 }
+
 .popup .popup-piece:nth-child(14) .popup-piece-inner:nth-child(2) {
-  -webkit-transform: translate3d(-6vw, -54vh, -511px) rotateX(304deg) rotateY(215deg);
-          transform: translate3d(-6vw, -54vh, -511px) rotateX(304deg) rotateY(215deg);
-  -webkit-clip-path: polygon(0 0, 61% 100%, 100% 0);
-          clip-path: polygon(0 0, 61% 100%, 100% 0);
+    -webkit-transform: translate3d(-6vw, -54vh, -511px) rotateX(304deg) rotateY(215deg);
+    transform: translate3d(-6vw, -54vh, -511px) rotateX(304deg) rotateY(215deg);
+    -webkit-clip-path: polygon(0 0, 61% 100%, 100% 0);
+    clip-path: polygon(0 0, 61% 100%, 100% 0);
 }
+
 .popup .popup-piece:nth-child(14) .popup-piece-inner:nth-child(3) {
-  -webkit-transform: translate3d(-33vw, -37vh, -109px) rotateX(322deg) rotateY(272deg);
-          transform: translate3d(-33vw, -37vh, -109px) rotateX(322deg) rotateY(272deg);
-  -webkit-clip-path: polygon(100% 0, 100% 100%, 61% 100%);
-          clip-path: polygon(100% 0, 100% 100%, 61% 100%);
+    -webkit-transform: translate3d(-33vw, -37vh, -109px) rotateX(322deg) rotateY(272deg);
+    transform: translate3d(-33vw, -37vh, -109px) rotateX(322deg) rotateY(272deg);
+    -webkit-clip-path: polygon(100% 0, 100% 100%, 61% 100%);
+    clip-path: polygon(100% 0, 100% 100%, 61% 100%);
 }
+
 .popup.s-closed .popup-piece:nth-child(14) {
-  -webkit-transform: translate3d(0, 114vh, 0);
-          transform: translate3d(0, 114vh, 0);
+    -webkit-transform: translate3d(0, 114vh, 0);
+    transform: translate3d(0, 114vh, 0);
 }
+
 .popup.s-closed .popup-piece:nth-child(14) .popup-piece-inner:nth-child(1) {
-  -webkit-transform: translate3d(-10vw, 0, 0) rotateX(269deg) rotateY(471deg);
-          transform: translate3d(-10vw, 0, 0) rotateX(269deg) rotateY(471deg);
+    -webkit-transform: translate3d(-10vw, 0, 0) rotateX(269deg) rotateY(471deg);
+    transform: translate3d(-10vw, 0, 0) rotateX(269deg) rotateY(471deg);
 }
+
 .popup.s-closed .popup-piece:nth-child(14) .popup-piece-inner:nth-child(2) {
-  -webkit-transform: translate3d(-33vw, 0, 0) rotateX(167deg) rotateY(455deg);
-          transform: translate3d(-33vw, 0, 0) rotateX(167deg) rotateY(455deg);
+    -webkit-transform: translate3d(-33vw, 0, 0) rotateX(167deg) rotateY(455deg);
+    transform: translate3d(-33vw, 0, 0) rotateX(167deg) rotateY(455deg);
 }
+
 .popup.s-closed .popup-piece:nth-child(14) .popup-piece-inner:nth-child(3) {
-  -webkit-transform: translate3d(28vw, 0, 0) rotateX(272deg) rotateY(370deg);
-          transform: translate3d(28vw, 0, 0) rotateX(272deg) rotateY(370deg);
+    -webkit-transform: translate3d(28vw, 0, 0) rotateX(272deg) rotateY(370deg);
+    transform: translate3d(28vw, 0, 0) rotateX(272deg) rotateY(370deg);
 }
+
 .popup .popup-piece:nth-child(15) {
   height: 18.66667%;
   width: 16.66667%;
