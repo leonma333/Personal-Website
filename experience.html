@@ -9,6 +9,13 @@
         <link rel="icon" type="image/png" sizes="96x96" href="favicon-96x96.png">
     </head>
     <body translate="no" >
+        <div class="loader-wrapper">
+            <div class="loader">
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+            </div>
+        </div> 
         <a id="toggle"><span></span></a>
         <div id="menu">
             <ul>
@@ -120,6 +127,12 @@
                 }
             });
             $(window).resize();
+
+            window.onload = function() {
+                setTimeout(function() { 
+                    $(".loader-wrapper").fadeOut("slow", function() { $(this).remove(); }); 
+                }, 2000);
+            }
         });
     </script>
     <script type="text/javascript" src="js/lib/tipso.js"></script>

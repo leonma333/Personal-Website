@@ -27,7 +27,7 @@ if (isset($_POST['contact_number'])) {
 		    array(
 		        'from' => $config['phone-twilio'],
 		        'body' => "(lhm.rocks)\nThanks for visiting my website. The following are my contact information:\nemail: " . 
-		        		  $config['email'] . "\nphone: +15197228665\nFeel free to contact me, and here are my mottos:\n" .
+		        		  $config['email'] . "\nphone: " . $config['phone-mobile'] . "\nFeel free to contact me, and here are my words for you:\n" .
 		        		  "1.Write clean and elegant code.\n2.Design with user in mind.\nBy the way, Any time is House time."
 		    )
 		);
