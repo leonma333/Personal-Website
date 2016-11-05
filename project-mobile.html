@@ -8,13 +8,13 @@
 			<link rel="icon" type="image/png" sizes="96x96" href="favicon-96x96.png">   
   	</head>
   	<body translate="no" >
-  		<!--<div class="loader-wrapper">
+  		<div class="loader-wrapper">
     		<div class="loader">
       			<div class="dot"></div>
       			<div class="dot"></div>
       			<div class="dot"></div>
     		</div>
-    	</div>-->
+    	</div>
 		<div class="content">
 			<div class="row">
 				<a id="kicks4love" class="set" style="background:black" 
@@ -176,6 +176,21 @@
 			document.querySelector(".popup-pieces").appendChild(Popup.frag);
 			document.querySelector(".popup-close").addEventListener("click", Popup.closeHandler);
 			document.querySelector(".popups-content-overlay").addEventListener("click", Popup.closeHandler);
+
+			var loader = document.querySelector(".loader-wrapper");
+			var opacity = 1;
+			setTimeout(function() {
+				var timer = setInterval(function() {
+					opacity -= 0.05;
+				  	if(opacity <= 0) {
+				  		clearInterval(timer);
+				    	loader.remove();
+					} else {
+				  		loader.style.opacity = opacity;
+				  		loader.style.filter = "alpha(opacity=" + opacity * 100 + ")";
+				  	}
+				}, 50);
+			}, 2000);
 		}
 
         /*
@@ -251,4 +266,3 @@
     </script>
     <script type ="text/javascript" src="js/menu.js"></script>
 </html>
- 
