@@ -178,9 +178,9 @@
 			    return false;
 			}
 
-			homeWindow.on("mousewheel DOMMouseScroll", onMouseWheel);
-			homeDocument.on("keydown", onKeyDown);
-			updownButtons.on("click", onSlideButtonClick);
+			Slide.homeWindow.on("mousewheel DOMMouseScroll", Slide.onMouseWheel);
+			Slide.homeDocument.on("keydown", Slide.onKeyDown);
+			Slide.updownButtons.on("click", Slide.onSlideButtonClick);
 
 			// event listners trigger page transition on click of menu item
 			$("#language").click(function(){Bubble.menuSelect(4, 1, true, 'Java, C#, C++, Ruby, PHP, JavaScript, SQL, HTML, CSS, XML, JSON, UML ...');});
@@ -213,16 +213,16 @@
 
 			window.onresize = function(event) {
 				/* Slide */
-				var newPageHeight = homeWindow.innerHeight();
-				if(pageHeight !== newPageHeight) {
-					pageHeight = newPageHeight;
-					TweenLite.set([slidesContainer, slidesList], {height: pageHeight + "px"});
-					TweenLite.set(slidesContainer, {scrollTo: {y: pageHeight * currentSlide.index()}});
+				var newPageHeight = Slide.homeWindow.innerHeight();
+				if(Slide.pageHeight !== newPageHeight) {
+					Slide.pageHeight = newPageHeight;
+					TweenLite.set([Slide.slidesContainer, Slide.slidesList], {height: Slide.pageHeight + "px"});
+					TweenLite.set(Slide.slidesContainer, {scrollTo: {y: Slide.pageHeight * Slide.currentSlide.index()}});
 				}
 
 				/* Typeface */
 				var myList = $(".visible li");
-				if (homeWindow.innerWidth() < 825) {
+				if (Slide.homeWindow.innerWidth() < 825) {
 					$.each(myList, function(index, value) {
     					subList = $(this);
     					switch(index) {
@@ -252,7 +252,7 @@
 			}
 			
 			window.onresize();
-			goToSlide(currentSlide);
+			Slide.goToSlide(Slide.currentSlide);
 		});
 	</script>
  	<script type ="text/javascript" src="js/menu.js"></script>
