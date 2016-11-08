@@ -148,12 +148,6 @@
         window.onresize = resize;
         resize();
 
-        window.onload = function() {
-            setTimeout(function() { 
-                $(".loader-wrapper").fadeOut("slow", function() { $(this).remove(); }); 
-            }, 2000);
-        }
-
         var angle = 0;
         function galleryspin(sign) { 
             var spinner = document.querySelectorAll("#spinner");
@@ -226,6 +220,12 @@
                     break;
             }
         });
+
+        window.onload = function() {
+            setTimeout(function() { 
+                $(".loader-wrapper").fadeOut("slow", function() { $(this).remove(); }); 
+            }, 2000);
+        }
     </script>
     <script type ="text/javascript" src="js/menu.js"></script>
 </html>
