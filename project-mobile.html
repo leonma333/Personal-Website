@@ -6,7 +6,6 @@
         <meta name="author" content="Liang-Hsuan Ma">
         <meta name="description" content="Liang-Hsuan Ma's (Leon's) personal website project page">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta property="og:image" content="http://lhm-website.herokuapp.com/assets/image/lhm.png">
         <link rel="stylesheet" type="text/css" href="css/project-mobile.css">
 		<link rel="icon" type="image/png" sizes="96x96" href="favicon-96x96.png">  
 		<script type="text/javascript">
@@ -172,7 +171,7 @@
 		</div>
   	</body>
     <script type ="text/javascript">
-        window.onload = function() {
+        document.onreadystatechange = function() {
 			Menu.theToggle.onclick = function() {
 			    Menu.toggleClass(this, "on");
 			    return false;
@@ -189,20 +188,22 @@
 			document.querySelector(".popup-close").addEventListener("click", Popup.closeHandler);
 			document.querySelector(".popups-content-overlay").addEventListener("click", Popup.closeHandler);
 
-			var loader = document.querySelector(".loader-wrapper");
-			var opacity = 1;
-			setTimeout(function() {
-				var timer = setInterval(function() {
-					opacity -= 0.05;
-				  	if(opacity <= 0) {
-				  		clearInterval(timer);
-				    	loader.remove();
-					} else {
-				  		loader.style.opacity = opacity;
-				  		loader.style.filter = "alpha(opacity=" + opacity * 100 + ")";
-				  	}
-				}, 50);
-			}, 2000);
+			window.onload = function() {
+				var loader = document.querySelector(".loader-wrapper");
+				var opacity = 1;
+				setTimeout(function() {
+					var timer = setInterval(function() {
+						opacity -= 0.05;
+					  	if(opacity <= 0) {
+					  		clearInterval(timer);
+					    	loader.remove();
+						} else {
+					  		loader.style.opacity = opacity;
+					  		loader.style.filter = "alpha(opacity=" + opacity * 100 + ")";
+					  	}
+					}, 50);
+				}, 2000);
+			}
 		}
 
         /*
