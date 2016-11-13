@@ -189,7 +189,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                                 $message = array(
                                     'attachment' => array(
                                         'type' => 'file',
-                                        'payload' => array('url' => 'https://lhm-website.herokuapp.com/assets/resume.pdf')
+                                        'payload' => array('url' => 'https://lhm-website.herokuapp.com/assets/lhm.pdf')
                                         )
                                     );
                                 send_messenger($user_id, $message, $config['token-messenger']);
