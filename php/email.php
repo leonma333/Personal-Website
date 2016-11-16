@@ -15,7 +15,7 @@ if (isset($_POST['contact_name']) && isset($_POST['contact_email']) && isset($_P
 
 	# Email set up
 	$mail->isSMTP();                                
-	$mail->Host = 'smtp.live.com';  
+	$mail->Host = 'smtp-mail.outlook.com';  
 	$mail->SMTPAuth = true;                              
 	$mail->Username = $config['email'];               
 	$mail->Password = $config['email-password'];                          
