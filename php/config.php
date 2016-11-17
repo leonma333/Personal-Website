@@ -2,7 +2,8 @@
 
 # config file that stores credentials
 return array(
-    'email' => null,
+    'gmail' => null,
+    'hotmail' => null,
     'email-password' => null,
     'sid' => null,
     'token-twilio' => null,

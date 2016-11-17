@@ -15,15 +15,15 @@ if (isset($_POST['contact_name']) && isset($_POST['contact_email']) && isset($_P
 
 	# Email set up
 	$mail->isSMTP();                                
-	$mail->Host = 'smtp-mail.outlook.com';  
+	$mail->Host = 'smtp.gmail.com';  
 	$mail->SMTPAuth = true;                              
-	$mail->Username = $config['email'];               
+	$mail->Username = $config['gmail'];               
 	$mail->Password = $config['email-password'];                          
 	$mail->SMTPSecure = 'tls';                            
 	$mail->Port = 587;                                    
 
-	$mail->setFrom($config['email']);
-	$mail->addAddress($config['email'], 'Liang-Husan Ma');  
+	$mail->setFrom($config['gmail']);
+	$mail->addAddress($config['hotmail'], 'Liang-Husan Ma');  
 	$mail->addCC($_POST['contact_email'], $_POST['contact_name']);  
 	$mail->isHTML(true);                                  
 
