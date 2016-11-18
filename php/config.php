@@ -2,7 +2,7 @@
 
 # config file that stores credentials
 return array(
-    'gmail' => null,
+    'zoho' => null,
     'hotmail' => null,
     'email-password' => null,
     'sid' => null,
