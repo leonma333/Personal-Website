@@ -9,15 +9,6 @@
 		<link rel="stylesheet" type="text/css" href="css/homepage-mobile.css">
 		<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Lato">
 		<link rel="icon" type="image/png" sizes="96x96" href="favicon-96x96.png">
-		<script type="text/javascript">
-			if (window.location.hostname.includes("lhm.rocks")) {
-				var currentDate = new Date();
-				var openDate = new Date(2016, 10, 20);
-				var dayTillOpen = parseInt((openDate - currentDate) / (1000 * 3600 * 24)); 
-				alert("My website will be opened in " + dayTillOpen + " days.\nPlease bear with me, thank you.");
-				window.location.href = "http://blog.awakeandwitness.net/wp/wp-content/uploads/2016/04/keep-calm-and-just-wait-25.png";
-			}
-		</script>
   	</head>
   	<body translate="no">
   		<div class="loader-wrapper">
@@ -33,10 +24,10 @@
 				  	<div class='visible'>
 				    <p>I am</p>
 				    	<ul>
-				      		<li>Developer !</li> 	<!-- Dev -->
-				      		<li>Designer !</li>		<!-- DSnr -->
-				      		<li>Maker !</li>		<!-- Mkr -->
-				      		<li>Disk Jockey !</li>	<!-- DJ -->
+				      		<li data-mobile="Dev" data-desktop="Developer !">Dev</li>
+				      		<li data-mobile="DSnr" data-desktop="Designer !">DSnr</li>
+				      		<li data-mobile="Mkr" data-desktop="Maker !">Mkr</li>
+				      		<li data-mobile="DJ" data-desktop="Disk Jockey !">DJ</li>
 				    	</ul>
 				  	</div>
 				</div>
@@ -202,13 +193,13 @@
 		    $("#other").click(function(){Bubble.menuSelect(4, 4, false, 'jUnit, OpenCV, JavaFX/Swing, UML ...');});
 
 		    $('#bubble-modal span').click(function() {
-			    Bubble.bubbleModal.css('display', 'none');
+			    Bubble.bubbleModal.hide();
 			    Bubble.animateBubbleMenu(4);
 			});
 
 			window.onclick = function(event) {
 			    if (event.target.id == Bubble.bubbleModal.attr("id")) {
-			        Bubble.bubbleModal.css("display", "none");
+			        Bubble.bubbleModal.hide();
 			        Bubble.animateBubbleMenu(4);
 			    }
 			}
@@ -227,29 +218,11 @@
 				var myList = $(".visible li");
 				if (Slide.homeWindow.innerWidth() < 825) {
 					$.each(myList, function(index, value) {
-    					subList = $(this);
-    					switch(index) {
-    						case 0: subList.text("Dev");
-    							break;
-    						case 1: subList.text("DSnr");
-    							break;
-    						case 2: subList.text("Mkr");
-    							break;
-    						default: subList.text("DJ");
-    					}
+						$(this).text($(this).data('mobile'));
 					});
 				} else {
 					$.each(myList, function(index, value) {
-    					subList = $(this);
-    					switch(index) {
-    						case 0: subList.text("Developer !");
-    							break;
-    						case 1: subList.text("Designer !");
-    							break;
-    						case 2: subList.text("Maker !");
-    							break;
-    						default: subList.text("Disk Jockey !");
-    					}
+    					$(this).text($(this).data('desktop'));
 					});
 				}
 			}

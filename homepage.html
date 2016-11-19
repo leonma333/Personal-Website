@@ -9,14 +9,6 @@
 		<link rel="stylesheet" type="text/css" href="css/homepage.css">
 		<link rel="icon" type="image/png" sizes="96x96" href="favicon-96x96.png">
 		<script type ="text/javascript">
-			if (window.location.hostname.includes("lhm.rocks")) {
-				var currentDate = new Date();
-				var openDate = new Date(2016, 10, 20);
-				var dayTillOpen = parseInt((openDate - currentDate) / (1000 * 3600 * 24)); 
-				alert("My website will be opened in " + dayTillOpen + " days.\nPlease bear with me, thank you.");
-				window.location.href = "http://blog.awakeandwitness.net/wp/wp-content/uploads/2016/04/keep-calm-and-just-wait-25.png";
-			}
-
             if ((!window.chrome || !window.chrome.webstore) && typeof InstallTrigger === "undefined") 
                 window.location.href = "homepage-mobile.html";
         </script>
@@ -195,13 +187,13 @@
 		    $("#other").click(function(){Bubble.menuSelect(4, 4, false, 'jUnit, OpenCV, JavaFX/Swing, UML ...');});
 
 		    $('#bubble-modal span').click(function() {
-			    Bubble.bubbleModal.css('display', 'none');
+			    Bubble.bubbleModal.hide();
 			    Bubble.animateBubbleMenu(4);
 			});
 
 			window.onclick = function(event) {
 			    if (event.target.id == Bubble.bubbleModal.attr('id')) {
-			        Bubble.bubbleModal.css('display', 'none');
+			        Bubble.bubbleModal.hide();
 			        Bubble.animateBubbleMenu(4);
 			    }
 			}

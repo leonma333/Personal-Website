@@ -107,7 +107,7 @@ var Bubble = {
 				break;
 		}
 		this.bubbleModalContent.text(text);
-		this.bubbleModal.css('display', 'block');
+		this.bubbleModal.show();
 	},
 
 	/* a function that shows circles into view */

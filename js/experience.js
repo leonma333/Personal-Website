@@ -13,7 +13,7 @@ function initHistoryHandler() {
 
     $("#historic-dot-1, #historic-event-1").click(hoverOrClick).hover(hoverOrClick);
        	
-    hoverOrClick = function(){
+    hoverOrClick = function() {
         clock.addClass("animate1");
         clock.removeClass("animate2 animate3");
         $(this).addClass("current");
@@ -27,7 +27,7 @@ function initHistoryHandler() {
 
     $("#historic-dot-2, #historic-event-2").click(hoverOrClick).hover(hoverOrClick);
        	
-    hoverOrClick = function(){
+    hoverOrClick = function() {
         clock.addClass("animate2");
        	clock.removeClass("animate1 animate3");
        	$(this).addClass("current");
@@ -41,7 +41,7 @@ function initHistoryHandler() {
 
     $("#historic-dot-3, #historic-event-3").click(hoverOrClick).hover(hoverOrClick);
        	
-    hoverOrClick = function(){
+    hoverOrClick = function() {
        	clock.addClass("animate3");
        	clock.removeClass("animate1 animate2");
        	$(this).addClass("current");
