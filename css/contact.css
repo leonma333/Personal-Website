@@ -686,6 +686,11 @@ form#phone-form input[type=text]:focus {
     outline: none;
 }
 
+form#phone-form span {
+    display: none;
+    font-size: 12px;
+}
+
 #plus {
     position: fixed;
     color: white;

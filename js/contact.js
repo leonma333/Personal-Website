@@ -156,18 +156,8 @@ function PhonePopup() {
             }
         });
 
-        jQuery("form#phone-form input[type='text']").tipso({
-            background: "black",
-            color: "white",      
-            position: "bottom",
-            size: "small",
-            width: 150,
-            useTitle: false,
-            content: "<p style=\"font-family:'Optima', sans-serif\">Include Country Code</p>"
-        });
-
-        $("form#phone-form input[type='text']").focus(function() { $(this).tipso("show"); });
-        $("form#phone-form input[type='text']").hover(function() { if (!$(this).is(":focus")) $(this).tipso("close"); });
+        $("form#phone-form input[type='text']").focus(function() { $(this).parent("form#phone-form").find("span").slideDown("slow") });
+        $("form#phone-form input[type='text']").blur(function() { $(this).parent("form#phone-form").find("span").slideUp("slow"); });
 
         // initialize phone form submit handler
         this.sumbitForm("php/phone.php", "POST");

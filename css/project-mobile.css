@@ -2079,7 +2079,7 @@ a {
 }
 
 .popup-close:before, .popup-close:after {
-    content: '✕';
+    content: '\00d7';
     position: absolute;
     font-size: 25pt;
     text-align: center;
