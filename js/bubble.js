@@ -114,7 +114,7 @@ var Bubble = {
 
 	/* a function that shows circles into view */
 	animateBubbleMenu: 
-	function(numCircles, actionList) {
+	function(numCircles) {
 		Slide.isAnimating = false;
 		
 		for(i = 0; i < numCircles; i++) {

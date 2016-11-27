@@ -712,6 +712,10 @@ form#phone-form span {
     left: 5px;
 }
 
+#plus span b {
+    font-size: 18px;
+}
+
 #plus::after {
     content: "";
     display: block;

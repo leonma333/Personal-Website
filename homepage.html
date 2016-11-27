@@ -186,7 +186,7 @@
 		    $("#version-control").click(function(){Bubble.menuSelect(4, 3, false, 'GitHub, Bitbucket, GitLab, SVN ...');});
 		    $("#other").click(function(){Bubble.menuSelect(4, 4, false, 'jUnit, OpenCV, JavaFX/Swing, UML ...');});
 
-		    $('#bubble-modal span').click(function() {
+		    $('#bubble-modal .close').click(function() {
 			    Bubble.bubbleModal.hide();
 			    Bubble.animateBubbleMenu(4);
 			});
