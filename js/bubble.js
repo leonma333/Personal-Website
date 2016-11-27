@@ -106,13 +106,17 @@ var Bubble = {
 				this.bubbleModalHeader.text('Other Tools and Frameworks I know');
 				break;
 		}
+
 		this.bubbleModalContent.text(text);
 		this.bubbleModal.show();
+		Slide.isAnimating = true;
 	},
 
 	/* a function that shows circles into view */
 	animateBubbleMenu: 
-	function(numCircles){
+	function(numCircles, actionList) {
+		Slide.isAnimating = false;
+		
 		for(i = 0; i < numCircles; i++) {
 			var delay = i * 500;
 			    	

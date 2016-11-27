@@ -398,7 +398,7 @@ a {
     font-size: 1.4vmax;
 }
 
-.bubbleIcon {
+.bubble-icon {
     width: 40%;
     height: 50%;
     display: block;
@@ -408,7 +408,7 @@ a {
 
 #bubble-modal {
     display: none;
-    position: fixed;
+    position: relative;
     z-index: 1;
     left: 0;
     top: 0;
