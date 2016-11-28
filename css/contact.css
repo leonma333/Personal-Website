@@ -696,6 +696,7 @@ form#phone-form span {
     color: white;
     bottom: 14%;
     font-size: 15px;
+    line-height: 15px;
     margin-left: -425px;
     -webkit-transition: all 1.25s ease;
     -moz-transition: all 1.25s ease;
@@ -707,8 +708,9 @@ form#phone-form span {
 }
 
 #plus span {
+    text-align: center;
     position: absolute;
-    margin-top: 40px;
+    margin-top: 43px;
     left: 5px;
 }
 
@@ -719,7 +721,6 @@ form#phone-form span {
 #plus::after {
     content: "";
     display: block;
-    display: relative;
     border-top: 55px solid transparent;
     border-bottom: 55px solid transparent;
     border-left: 55px solid black;
