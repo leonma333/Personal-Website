@@ -108,7 +108,7 @@
             var changeLarge = true;
 
             $(window).resize(function() {
-                if ($(this).width() < 600) {
+                if (window.matchMedia("(max-width: 600px)").matches) {
                     if (!changeSmall) {
                         changeSmall = true;
                         changeLarge = false;
