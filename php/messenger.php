@@ -22,6 +22,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     	curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
 
     	$response = curl_exec($ch);
+        error_log(print_r($response, true));
     	curl_close($ch);
   	}
 
@@ -263,7 +264,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                             $message = array(
                                 'attachment' => array(
                                     'type' => 'file',
-                                    'payload' => array('url' => 'https://lhm-website.herokuapp.com/assets/resume.pdf')
+                                    'payload' => array('url' => 'https://lhm-website.herokuapp.com/assets/lhm.pdf')
                                     )
                                 );
                             send_messenger($user_id, $message, $config['token-messenger']);
