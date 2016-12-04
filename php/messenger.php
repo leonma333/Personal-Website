@@ -22,7 +22,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     	curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
 
     	$response = curl_exec($ch);
-        error_log(print_r($response, true));
     	curl_close($ch);
   	}
 
