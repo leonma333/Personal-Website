@@ -122,7 +122,6 @@ function ContactForm() {
 function PhonePopup() {
     // private flag
     var numberPass = false;
-    var sendAlready = false;
     var validKeyCode = { Delete: 8, Return: 13 }
 
     /* function that initialize event handler */
@@ -171,7 +170,7 @@ function PhonePopup() {
         // set email form submit action
         $("#phone-form").submit(function(event) {
             // fields missing or incorrect handling
-            if (!numberPass || sendAlready) return false;
+            if (!numberPass) return false;
         
             submitButton.val("Sending");
             submitButton.prop("disabled", true);
@@ -184,16 +183,36 @@ function PhonePopup() {
                 dataType: "json",
                 success: function(data) { 
                     submitButton.val("Sent");
-                    sendAlready = true; 
                 },
                 error: function(data) {
+                    console.log(data);
                     submitButton.val("Send");
                     submitButton.prop("disabled", false);
-                    alert("Sorry, my server said that\n" + data["responseJSON"]["message"]);
+                    if (data["responseJSON"]["validation_code"]) verifyNumberAnimation(data["responseJSON"]["validation_code"]);
+                    alert((data["responseJSON"]["validation_code"] ? "" : "Sorry, my server said that\n") + data["responseJSON"]["message"]);
                 }
             });
 
             event.preventDefault();
         });
+    }
+
+    /* function that show the validation code */
+    function verifyNumberAnimation(validationCode) {
+        var smsTitle = $("#phone-form h2");
+        smsTitle.text("Your validation code is \"" + validationCode + "\". Please try it again after your number is verified.");
+
+        function loop() {
+            smsTitle.animate({opacity: 0.5}, {
+                duration: "slow",
+                complete: function() {
+                    smsTitle.animate({opacity: 1}, {
+                        duration: "slow",
+                        complete: function() { loop (); }
+                    });
+                }
+            });
+        }
+        loop();
     }
 }
