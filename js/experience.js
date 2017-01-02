@@ -65,7 +65,8 @@ function initHistoryHandler() {
         titleContent: "Jewlr.com",       
         position: "bottom-left",
         size: "default",
-        content: "<p>In Progress ...</p><br><a style='color:black' target='_blank' href='https://www.jewlr.com'>See Website</a>"
+        content: "<p>40% Ruby; 30% Javascript; 20% Bash; 10% CSS</p><br><p>Ruby on Rails, Vagrant, Docker, OpenSSL, MySql</p><br>" +
+                 "<a style='color:black' target='_blank' href='https://www.jewlr.com'>See Website</a>"
     });
 
     // Ashlin BPG Marketing
@@ -90,8 +91,8 @@ function initHistoryHandler() {
         titleContent: "University of Waterloo",       
         position: "bottom-left",
         size: "default",
-        content: "<p>Current: 1B</p><br><p>1.Embedded Systems</p><p>2.Fundamentals of Programming</p><p>3.Calculus for Engineering</p>" +
-                 "<p>4.Digital Circuits</p><br><a style='color:black' target='_blank' href='https://uwaterloo.ca'>See Website</a>"
+        content: "<p>Current: 2A</p><br><p>1.Algorithms and Data Structures</p><p>2.Embedded Systems</p><p>3.Digital Computers</p>" +
+                 "<p>4.Advanced Calculus</p><br><a style='color:black' target='_blank' href='https://uwaterloo.ca'>See Website</a>"
     });
 
     // Shanghai United International School
