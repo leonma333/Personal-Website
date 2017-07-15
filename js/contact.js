@@ -63,11 +63,8 @@ function ContactForm() {
             });
         });
 
-        /* envelope animation events | TODO: make envelop able to close */
-        var enveloperContainer = $(".envelope-container");
-        $(".envelope").on("touchstart", function(event) {
-            enveloperContainer.hasClass("hover") ? enveloperContainer.removeClass("hover") : enveloperContainer.addClass("hover");
-        });
+        // trigger envelope animation on touch device
+        document.querySelector(".envelope-container").addEventListener("touchstart", function(){}, true);
 
         // initialize email form submit handler
         this.sumbitForm("php/email.php", "POST");
@@ -185,7 +182,6 @@ function PhonePopup() {
                     submitButton.val("Sent");
                 },
                 error: function(data) {
-                    console.log(data);
                     submitButton.val("Send");
                     submitButton.prop("disabled", false);
                     if (data["responseJSON"]["validation_code"]) verifyNumberAnimation(data["responseJSON"]["validation_code"]);

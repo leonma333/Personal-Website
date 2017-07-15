@@ -283,22 +283,22 @@ a {
   	text-decoration: none;
 }
 
-.set:hover .layer:not(.three) {
+.set:hover .layer:not(.three), .set:active .layer:not(.three) {
   	box-shadow: 0 0 8px 0 black;
   	cursor: pointer;
 }
 
-.set:hover .layer.one {
+.set:hover .layer.one, .set:active .layer.one {
   	-webkit-transform: translateZ(12px);
   	transform: translateZ(12px);
 }
 
-.set:hover .layer.two {
+.set:hover .layer.two, .set:active .layer.two {
   	-webkit-transform: translateZ(24px);
   	transform: translateZ(24px);
 }
 
-.set:hover .layer.three {
+.set:hover .layer.three, .set:active .layer.three {
   	-webkit-transform: translateZ(32px);
   	transform: translateZ(32px);
   	text-shadow: 0 0 4px black;

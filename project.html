@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   	<head>
-        <title>Liang-Hsuan Ma | Project</title>
+        <title>Project | Liang-Hsuan Ma</title>
         <meta charset="UTF-8">
         <meta name="author" content="Liang-Hsuan Ma">
         <meta name="description" content="Hello, my name is Liang-Hsuan Ma (Leon). I am Developer, Designer, Hacker and DJ. This is my Project page, which lists some of my awesome works.">
@@ -25,7 +25,7 @@
 				   					'Collaborating with other sneaker enthusiasts to produce a latest sportswear information website.',
 				   					'Dedicated to front-end design and user experience to ensure page visits.'
 				   ], { website: {
-				   			link: 'http://kicks4love.com',
+				   			link: 'https://kicks4love.com',
 				   			title: 'visit kicks4love.com',
 				   			source: 'assets/image/browser-white.png' 
 				   }});">
@@ -179,6 +179,7 @@
 			document.querySelector(".popup-pieces").appendChild(Popup.frag);
 			document.querySelector(".popup-close").addEventListener("click", Popup.closeHandler);
 			document.querySelector(".popups-content-overlay").addEventListener("click", Popup.closeHandler);
+			document.getElementsByTagName("body")[0].addEventListener("touchstart", function(){}, true);
 
 			window.onload = function() {
 				var loader = document.querySelector(".loader-wrapper");

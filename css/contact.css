@@ -446,7 +446,7 @@ form#email-form input[type=submit]:focus {
     -webkit-transition: margin-top 300ms;
 }
 
-.envelope-container:hover .envelope, .envelope-container.hover .envelope {
+.envelope-container:hover .envelope, .envelope-container:active .envelope {
     transition-delay: 150ms;
     -ms-transition-delay: 150ms;
     -moz-transition-delay: 150ms;
@@ -476,7 +476,7 @@ form#email-form input[type=submit]:focus {
     -webkit-transition: -webkit-transform 300ms 150ms, z-index 0ms 150ms, height 300ms 0ms, top 300ms 0ms;
 }
 
-.envelope-container:hover .envelope .top, .envelope-container.hover .envelope .top {
+.envelope-container:hover .envelope .top, .envelope-container:active .envelope .top {
     transition: transform 300ms 0ms, height 300ms 150ms, top 300ms 150ms;
     -ms-transition: -ms-transform 300ms 0ms, height 300ms 150ms, top 300ms 150ms;
     -moz-transition: -moz-transform 300ms 0ms, height 300ms 150ms, top 300ms 150ms;
@@ -564,7 +564,7 @@ form#email-form input[type=submit]:focus {
     -webkit-transition: margin-top 300ms 0ms;
 }
 
-.envelope-container:hover .envelope .paper, .envelope-container.hover .envelope .paper {
+.envelope-container:hover .envelope .paper, .envelope-container:active .envelope .paper {
     margin-top: -60px;
     transition: margin-top 300ms 150ms;
     -ms-transition: margin-top 300ms 150ms;
