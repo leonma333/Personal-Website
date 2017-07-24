@@ -11,7 +11,7 @@ function initHistoryHandler() {
        	$("#historic-event-2, #historic-event-3, #historic-event-4").removeClass("current");
     }
 
-    $("#historic-dot-1, #historic-event-1").on("click hover touchstart", hoverOrClick);
+    $("#historic-dot-1, #historic-event-1").on("click mouseover touchstart", hoverOrClick);
        	
     hoverOrClick = function() {
         clock.addClass("animate1");
@@ -25,7 +25,7 @@ function initHistoryHandler() {
         $("#historic-event-1, #historic-event-3, #historic-event-4").removeClass("current");
     }
 
-    $("#historic-dot-2, #historic-event-2").on("click hover touchstart", hoverOrClick);
+    $("#historic-dot-2, #historic-event-2").on("click mouseover touchstart", hoverOrClick);
        	
     hoverOrClick = function() {
         clock.addClass("animate2");
@@ -39,7 +39,7 @@ function initHistoryHandler() {
        	$("#historic-event-1, #historic-event-2, #historic-event-4").removeClass("current");
     }
 
-    $("#historic-dot-3, #historic-event-3").on("click hover touchstart", hoverOrClick);
+    $("#historic-dot-3, #historic-event-3").on("click mouseover touchstart", hoverOrClick);
        	
     hoverOrClick = function() {
        	clock.addClass("animate3");
@@ -51,7 +51,7 @@ function initHistoryHandler() {
        	$("#historic-event-1, #historic-event-2, #historic-event-3").removeClass("current");
     }
 
-    $("#historic-dot-4, #historic-event-4").on("click hover touchstart", hoverOrClick);
+    $("#historic-dot-4, #historic-event-4").on("click mouseover touchstart", hoverOrClick);
 
     // set up tooltip
     var titleList = jQuery(".back h3");
