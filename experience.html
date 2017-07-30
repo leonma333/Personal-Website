@@ -37,61 +37,75 @@
 				</div>
 			</div>
 			<div id="timeline-track"></div>
-			<ul id="historic-event-1" class="current">
-                <li class="historic-dot-wrapper"><div id="historic-dot-1" class="historic-dot"></div></li>
-    			<li class="historic-year"><p style="font-size:18px">2016</p></li>
-    			<li id="historic-text-1">
+            <ul id="historic-event-1" class="current">
+                <li id="historic-text-1">
                     <div class="overlay">
                         <div class="flip-container" ontouchstart="this.classList.toggle('hover');">
                             <div class="flipper">
-                                <div class="front"><img style="margin-top:20%" src="assets/image/jewlr.png"></div>
-                                <div class="back"><h3 style="margin-top:35%">eCommerce Web Developer</h3></div>
+                                <div class="front"><img class="vertical-center" src="assets/image/kicks4love-main.png"></div>
+                                <div class="back"><h3 class="vertical-center">CTO,<br>Co-Founder</h3></div>
+                            </div>
+                        </div>
+                    </div>         
+                </li>
+                <li class="historic-year"><p style="font-size:18px">2017</p></li>
+                <li class="historic-dot-wrapper"><div id="historic-dot-1" class="historic-dot"></div></li>
+            </ul>
+			<ul id="historic-event-2">
+                <li class="historic-dot-wrapper"><div id="historic-dot-2" class="historic-dot"></div></li>
+    			<li class="historic-year"><p>2016</p></li>
+    			<li id="historic-text-2">
+                    <div class="overlay">
+                        <div class="flip-container" ontouchstart="this.classList.toggle('hover');">
+                            <div class="flipper">
+                                <div class="front"><img class="vertical-center" src="assets/image/jewlr.png"></div>
+                                <div class="back"><h3 class="vertical-center">eCommerce Web Developer</h3></div>
                             </div>
                         </div>
                     </div>         
                 </li>
 			</ul>
-			<ul id="historic-event-2">
-                <li id="historic-text-2">
+			<ul id="historic-event-3">
+                <li id="historic-text-3">
                     <div class="overlay">
                         <div class="flip-container" ontouchstart="this.classList.toggle('hover');">
                             <div class="flipper">
-                                <div class="front"><img style="margin-top:15%" src="assets/image/ashlin.png"></div>
-                                <div class="back"><h3 style="margin-top:30%">eCommerce Application Developer</h3></div>
+                                <div class="front"><img class="vertical-center" src="assets/image/ashlin.png"></div>
+                                <div class="back"><h3 class="vertical-center">eCommerce Application Developer</h3></div>
                             </div>
                         </div>
                     </div>         
                 </li>
                 <li class="historic-year"><p>2016</p></li>
-                <li class="historic-dot-wrapper"><div id="historic-dot-2" class="historic-dot"></div></li>
+                <li class="historic-dot-wrapper"><div id="historic-dot-3" class="historic-dot"></div></li>
 			</ul>
-			<ul id="historic-event-3">  
-        		<li class="historic-dot-wrapper"><div id="historic-dot-3" class="historic-dot"></div></li>
+			<ul id="historic-event-4">  
+        		<li class="historic-dot-wrapper"><div id="historic-dot-4" class="historic-dot"></div></li>
         		<li class="historic-year"><p>2015</p></li>
-        		<li id="historic-text-3">
+        		<li id="historic-text-4">
                     <div class="overlay">
                         <div class="flip-container" ontouchstart="this.classList.toggle('hover');">
                             <div class="flipper">
-                                <div class="front"><img style="margin-top:20%" src="assets/image/uw.png"></div>
-                                <div class="back"><h3 style="margin-top:35%">Computer Engineering</h3></div>
+                                <div class="front"><img class="vertical-center" src="assets/image/uw.png"></div>
+                                <div class="back"><h3 class="vertical-center">Computer Engineering</h3></div>
                             </div>
                         </div>
                     </div>         
                 </li>
 			</ul>
-			<ul id="historic-event-4">
-      			<li id="historic-text-4">
+			<ul id="historic-event-5">
+      			<li id="historic-text-5">
                     <div class="overlay">
                         <div class="flip-container" ontouchstart="this.classList.toggle('hover');">
                             <div class="flipper">
-                                <div class="front"><img style="margin-top:15%" src="assets/image/suis.png"></div>
-                                <div class="back"><h3 style="margin-top:35%">Outstanding Alumnus</h3></div>
+                                <div class="front"><img class="vertical-center" src="assets/image/suis.png"></div>
+                                <div class="back"><h3 class="vertical-center">Outstanding Alumnus</h3></div>
                             </div>
                         </div>
                     </div>      
                 </li>
       			<li class="historic-year"><p>2012</p></li>
-                <li class="historic-dot-wrapper"><div id="historic-dot-4" class="historic-dot"></div></li>
+                <li class="historic-dot-wrapper"><div id="historic-dot-5" class="historic-dot"></div></li>
 			</ul>
 		</div>    
     </body>
@@ -112,20 +126,24 @@
                     if (!changeSmall) {
                         changeSmall = true;
                         changeLarge = false;
-                        $("#historic-event-2 li:eq(0)").before($("#historic-event-2 li:eq(2)"));
-                        $("#historic-event-2 li:eq(1)").before($("#historic-event-2 li:eq(2)"));
-                        $("#historic-event-4 li:eq(0)").before($("#historic-event-4 li:eq(2)"));
-                        $("#historic-event-4 li:eq(1)").before($("#historic-event-4 li:eq(2)"));
+                        $("#historic-event-1 li:eq(0)").before($("#historic-event-1 li:eq(2)"));
+                        $("#historic-event-1 li:eq(1)").before($("#historic-event-1 li:eq(2)"));
+                        $("#historic-event-3 li:eq(0)").before($("#historic-event-3 li:eq(2)"));
+                        $("#historic-event-3 li:eq(1)").before($("#historic-event-3 li:eq(2)"));
+                        $("#historic-event-5 li:eq(0)").before($("#historic-event-5 li:eq(2)"));
+                        $("#historic-event-5 li:eq(1)").before($("#historic-event-5 li:eq(2)"));
                         return;
                     }
                 } else {
                     if (!changeLarge) {
                         changeSmall = false;
                         changeLarge = true;
-                        $("#historic-event-2 li:eq(0)").before($("#historic-event-2 li:eq(2)"));
-                        $("#historic-event-2 li:eq(1)").before($("#historic-event-2 li:eq(2)"));
-                        $("#historic-event-4 li:eq(0)").before($("#historic-event-4 li:eq(2)"));
-                        $("#historic-event-4 li:eq(1)").before($("#historic-event-4 li:eq(2)"));
+                        $("#historic-event-1 li:eq(0)").before($("#historic-event-1 li:eq(2)"));
+                        $("#historic-event-1 li:eq(1)").before($("#historic-event-1 li:eq(2)"));
+                        $("#historic-event-3 li:eq(0)").before($("#historic-event-3 li:eq(2)"));
+                        $("#historic-event-3 li:eq(1)").before($("#historic-event-3 li:eq(2)"));
+                        $("#historic-event-5 li:eq(0)").before($("#historic-event-5 li:eq(2)"));
+                        $("#historic-event-5 li:eq(1)").before($("#historic-event-5 li:eq(2)"));
                     }
                 }
             });
