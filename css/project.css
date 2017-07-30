@@ -425,23 +425,6 @@ a {
   	transform-style: preserve-3d;
 }
 
-.link {
-    position: relative;
-    text-align: center;
-}
-
-.link a {
-    position: relative;
-    display: inline-block;
-    vertical-align: middle;
-    width: 10%;
-    margin: 0% 3%;
-}
-
-.link img {
-    width: 100%;
-}
-
 .popup .popup-piece:nth-child(1) {
   	height: 21.66667%;
   	width: 21.66667%;
@@ -2069,6 +2052,23 @@ a {
     -webkit-transition: opacity 0.2s;
     transition: opacity 0.2s;
     opacity: 0;
+}
+
+.popup-content .link {
+    text-align: center;
+}
+
+.popup-content .link a {
+    display: inline-block;
+    margin: 0% 3%;
+}
+
+.popup-content .link a i.white {
+    color: white;
+}
+
+.popup-content .link a i.black {
+    color: black;
 }
 
 .popup.s-active .popup-content {

@@ -277,20 +277,21 @@ ul#spinner li {
     outline:1px solid transparent; 
 }
 
-.link {
-    position: relative;
+ul#spinner .link {
+    text-align: center;
 }
 
-.link a {
-    position: relative;
+ul#spinner .link a {
     display: inline-block;
-    vertical-align: middle;
-    width: 10%;
     margin: 0% 3%;
 }
 
-.link img {
-    width: 100%;
+ul#spinner .link i.white {
+    color: white;
+}
+
+ul#spinner .link i.black {
+    color: black;
 }
 
 figure#spinner img:nth-child(1) { transform: rotateY(0deg); }

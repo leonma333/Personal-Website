@@ -8,6 +8,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta property="og:image" content="https://lhm-website.herokuapp.com/assets/image/lhm.png">
         <link rel="stylesheet" type="text/css" href="css/project.css">
+        <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 		<link rel="icon" type="image/png" sizes="96x96" href="favicon-96x96.png">  
   	</head>
   	<body translate="no" >
@@ -27,7 +28,7 @@
 				   ], { website: {
 				   			link: 'https://kicks4love.com',
 				   			title: 'visit kicks4love.com',
-				   			source: 'assets/image/browser-white.png' 
+				   			faClass: 'fa fa-globe fa-3x white'
 				   }});">
 					<span class="layer one" style="background:#c3c3c3"></span>
 					<span class="layer two" style="background:white"><img src="assets/image/kicks4love-nav.png"></span>
@@ -40,11 +41,11 @@
 				   ], { website: {
 				   			link: 'http://www.survivalgameonline.com',
 				   			title: 'visit survivalgameonline.com',
-				   			source: 'assets/image/browser-black.png'
+				   			faClass: 'fa fa-globe fa-3x black'
 				   },	git: {
 				   			link: 'https://github.com/x65han/EngHack-2016',
 				   			title: 'go to see survival game on github',
-				   			source: 'assets/image/git-black.png'
+				   			faClass: 'fa fa-github fa-3x black'
 				   }});">
 					<span class="layer one" style="background:white"></span>
 					<span class="layer two" style="background:black"><img src="assets/image/survival-game.png"></span>
@@ -57,7 +58,7 @@
 				   ], { git: {
 				   			link: 'https://github.com/Liang-Hsuan/A.C.E.',
 				   			title: 'go to see A.C.E. on github',
-				   			source: 'assets/image/git-white.png'
+				   			faClass: 'fa fa-github fa-3x white'
 				   }});">
 					<span class="layer one" style="background:#c3c3c3"></span>
 					<span class="layer two" style="background:white"><img src="assets/image/ace.png"></span>
@@ -73,11 +74,11 @@
 				   ], { git: {
 				   			link: 'https://github.com/Liang-Hsuan/Order-Manager',
 				   			title: 'go to see order manager on github',
-				   			source: 'assets/image/git-black.png'
+				   			faClass: 'fa fa-github fa-3x black'
 				   }, 	video: {
 				   			link: 'https://youtu.be/E7fsC4W7EdU',
 				   			title: 'watch order manager demo video',
-				   			source: 'assets/image/video-black.png'
+				   			faClass: 'fa fa-video-camera fa-3x black'
 				   }});">
 						<span class="layer one" style="background:white"></span>
 						<span class="layer two" style="background:black"><img src="assets/image/order-manager.png"></span>
@@ -92,11 +93,11 @@
 				   ], { website: {
 				   			link: 'homepage-mobile.html',
 				   			title: 'visit awesome home page',
-				   			source: 'assets/image/browser-white.png'
+				   			faClass: 'fa fa-globe fa-3x white'
 				   },	git: {
 				   			link: 'https://github.com/Liang-Hsuan/personal-website',
 				   			title: 'go to see survival game on github',
-				   			source: 'assets/image/git-white.png'
+				   			faClass: 'fa fa-github fa-3x white'
 				   }});">
 					<span class="layer one" style="background:#c3c3c3"></span>
 					<span class="layer two" style="background:white"><img src="assets/image/personal-website.png"></span>
@@ -109,7 +110,7 @@
 				   ], { git: {
 				   			link: 'https://github.com/Liang-Hsuan/SKU-Manager',
 				   			title: 'go to see SKU manager on github',
-				   			source: 'assets/image/git-black.png'
+				   			faClass: 'fa fa-github fa-3x black'
 				   }});">
 					<span class="layer one" style="background:white"></span>
 					<span class="layer two" style="background:black"><img src="assets/image/sku-manager.png"></span>
@@ -122,7 +123,7 @@
 				   ], { photo: {
 				   			link: 'https://1drv.ms/f/s!Ai9uR7d_jCB9h1Hx7aMjEwTFoNeZ',
 				   			title: 'look at some photos of the rover',
-				   			source: 'assets/image/photo-white.png'
+				   			faClass: 'fa fa-picture-o fa-3x white'
 				   }});">
 					<span class="layer one" style="background:#c3c3c3"></span>
 					<span class="layer two" style="background:white"><img src="assets/image/mini-rover.png"></span>
@@ -230,10 +231,11 @@
 					popupLink.title = linkDictionary[link].title;
 					popupLink.target = "_blank";
 
-					var popupLinkImg = document.createElement("img");
-					popupLinkImg.src = linkDictionary[link].source;
+					var popupLinkFa = document.createElement("i");
+					popupLinkFa.setAttribute("aria-hidden", true);
+					popupLinkFa.className = linkDictionary[link].faClass;
 
-					popupLink.appendChild(popupLinkImg);
+					popupLink.appendChild(popupLinkFa);
 					Popup.popupLinks.appendChild(popupLink);
 				}
 
