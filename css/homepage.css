@@ -1,3 +1,8 @@
+body {
+    -webkit-font-smoothing: antialiased;
+    font-family: 'Optima', sans-serif;
+}
+
 /* ------------ Loader ------------- */
 .loader-wrapper {
     background-color: black;
@@ -193,7 +198,6 @@
     width: 200px;
     padding: 10px;
     margin: auto;
-    font-family: 'Optima', sans-serif;
     text-align: center;
     border-radius: 4px;
     background: white;
@@ -262,7 +266,6 @@ a {
 
 #slide-1-centered a {
     padding: 10px 20px;
-    font-family: 'Optima', sans-serif;
     font-weight: normal;
     font-size: 20px;
     text-align: center;
@@ -276,7 +279,6 @@ a {
 
 #slide-2-centered a {
     padding: 10px 20px;
-    font-family: 'Optima', sans-serif;
     font-weight: normal;
     font-size: 20px;
     text-align: center;
@@ -388,7 +390,6 @@ a {
     line-height: 1em;
     color: black;
     opacity: 0;
-    font-family: 'Optima', sans-serif;
     font-weight: 400;
 }
 
@@ -449,11 +450,9 @@ a {
 }
 
 .modal-header {
-    font-family: 'Optima', sans-serif;
 }
 
 .modal-body {
-    font-family: 'Optima', sans-serif;
     font-size: 20px;
 }
 
@@ -505,7 +504,6 @@ footer ul {
 
 footer li {
     display: inline-block;
-    font-family: 'Optima', sans-serif;
     font-size: 1em;
     line-height: 20px;
     height: 20px;

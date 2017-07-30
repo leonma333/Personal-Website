@@ -7,10 +7,10 @@
 
 body {
     background-color: black;
+    font-family: 'Optima', sans-serif;
 }
 
 p, h3 {
-    font-family: 'Optima', sans-serif;
     font-weight: normal;
     font-size: 1em;
 }
@@ -210,7 +210,6 @@ p, h3 {
     width: 200px;
     padding: 10px;
     margin: auto;
-    font-family: 'Optima', sans-serif;
     text-align: center;
     border-radius: 4px;
     background: white;

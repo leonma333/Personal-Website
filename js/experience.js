@@ -76,7 +76,7 @@ function initHistoryHandler() {
         titleBackground: "#c3c3c3",
         color: "black",
         tooltipHover: true,
-        titleContent: "Kicks4Love",       
+        titleContent: "<strong>Kicks4Love</strong>",       
         position: "bottom-right",
         size: "default",
         content: "<p>40% Ruby (RoR); 40% Javascript (React Native); 20% Bash;</p><br><p>Ruby on Rails, React Native, Ngnix, Ngrok</p><br>" +
@@ -89,7 +89,7 @@ function initHistoryHandler() {
         titleBackground: "#c3c3c3",
         color: "black",
         tooltipHover: true,
-        titleContent: "Jewlr.com",       
+        titleContent: "<strong>Jewlr.com</strong>",       
         position: "bottom-left",
         size: "default",
         content: "<p>40% Ruby; 30% Javascript; 20% Bash; 10% CSS</p><br><p>Ruby on Rails, Vagrant, Docker, OpenSSL, MySql</p><br>" +
@@ -102,7 +102,7 @@ function initHistoryHandler() {
         titleBackground: "#c3c3c3",
         color: "black",
         tooltipHover: true,
-        titleContent: "Ashlin BPG Marketing",       
+        titleContent: "<strong>Ashlin BPG Marketing</strong>",       
         position: "bottom-right",
         size: "default",
         content: "<p>50% C#; 30% SQL; 10% HTML; 5% CSS; 5% Javascript</p><br><p>.Net/ASP.Net, Microsoft Azure, SQL Server</p><br>" +
@@ -115,7 +115,7 @@ function initHistoryHandler() {
         titleBackground: "#c3c3c3",
         color: "black",
         tooltipHover: true,
-        titleContent: "University of Waterloo",       
+        titleContent: "<strong>University of Waterloo</strong>",       
         position: "bottom-left",
         size: "default",
         content: "<p>Current: 2B</p><br><p>1.Algorithms and Data Structures</p><p>2.Operating Systems</p><p>3.Embedded Microprocessor Systems</p>" +
@@ -128,7 +128,7 @@ function initHistoryHandler() {
         titleBackground: "#c3c3c3",
         color: "black",
         tooltipHover: true,
-        titleContent: "Shanghai United International School",       
+        titleContent: "<strong>Shanghai United International School</strong>",       
         position: "bottom-right",
         size: "default",
         content: "<p>2nd Place - Class of 2015</p><br><p>AP Cusculus: 94</p><p>Physics: 98</p><p>Chemistry: 95</p>" +

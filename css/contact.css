@@ -1,3 +1,8 @@
+body {
+    -webkit-font-smoothing: antialiased;
+    font-family: 'Optima', sans-serif;
+}
+
 a {
     text-decoration: none;
 }
@@ -196,7 +201,6 @@ a {
     width: 200px;
     padding: 10px;
     margin: auto;
-    font-family: 'Optima', sans-serif;
     text-align: center;
     border-radius: 4px;
     background: black;
@@ -244,7 +248,6 @@ section#hire {
     border-top: 15px solid black;
     text-align: center;
     font-size: 62.5%;
-    font-family: 'Optima', sans-serif;
     font-weight: 300;
     color: white;
     padding: 50px 0 110px;
@@ -255,7 +258,6 @@ section#hire {
 section#hire h1 {
     margin-bottom: 40px;
     font-size: 4em;
-    font-family: 'Optima', sans-serif;
     font-weight: 100;
 }
 
@@ -415,7 +417,6 @@ form#email-form input[type=submit]:focus {
 
 .messenger-container h3 {
     font-size: 15px;
-    font-family: 'Optima', sans-serif;
 }
 /* ------------ End Messenger ------------- */
 
@@ -427,7 +428,6 @@ form#email-form input[type=submit]:focus {
     margin: 20px auto;
     height: 150px;
     width: 165px;
-    font-family: 'Optima', sans-serif;
 }
 
 .envelope-container .envelope {
@@ -615,7 +615,6 @@ form#email-form input[type=submit]:focus {
     bottom: 0;
     margin-left: -5px;
     z-index: 4;
-    font-family: 'Optima', sans-serif;
     -webkit-transition: all 1.5s ease;
     -moz-transition: all 1.5s ease;
     -o-transition: all 1.5s ease;
