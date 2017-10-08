@@ -79,7 +79,7 @@ function initHistoryHandler() {
         titleContent: "<strong>Kicks4Love</strong>",       
         position: "bottom-right",
         size: "default",
-        content: "<p>40% Ruby (RoR); 40% Javascript (React Native); 20% Bash;</p><br><p>Ruby on Rails, React Native, Ngnix, Ngrok</p><br>" +
+        content: "<p>40% Ruby (RoR); 40% JavaScript (React Native); 20% Bash;</p><br><p>Ruby on Rails, React Native, Ngnix, Ngrok</p><br>" +
                  "<a style='color:black' target='_blank' href='https://kicks4love.com'>See Website</a>"
     });
 
@@ -92,7 +92,7 @@ function initHistoryHandler() {
         titleContent: "<strong>Jewlr.com</strong>",       
         position: "bottom-left",
         size: "default",
-        content: "<p>40% Ruby; 30% Javascript; 20% Bash; 10% CSS</p><br><p>Ruby on Rails, Vagrant, Docker, OpenSSL, MySql</p><br>" +
+        content: "<p>40% Ruby; 30% JavaScript; 20% Bash; 10% CSS</p><br><p>Ruby on Rails, Vagrant, Docker, OpenSSL, MySql</p><br>" +
                  "<a style='color:black' target='_blank' href='https://www.jewlr.com'>See Website</a>"
     });
 
@@ -105,7 +105,7 @@ function initHistoryHandler() {
         titleContent: "<strong>Ashlin BPG Marketing</strong>",       
         position: "bottom-right",
         size: "default",
-        content: "<p>50% C#; 30% SQL; 10% HTML; 5% CSS; 5% Javascript</p><br><p>.Net/ASP.Net, Microsoft Azure, SQL Server</p><br>" +
+        content: "<p>50% C#; 30% SQL; 10% HTML; 5% CSS; 5% JavaScript</p><br><p>.Net/ASP.Net, Microsoft Azure, SQL Server</p><br>" +
                  "<a style='color:black' target='_blank' href='https://www.ashlinbpg.com'>See Website</a>"
     });
 
