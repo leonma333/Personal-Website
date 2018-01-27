@@ -438,7 +438,6 @@ form#email-form input[type=submit]:focus {
     margin-left: -83px;
     top: 50%;
     margin-top: -50px;
-        
     transition: margin-top 300ms;
     -ms-transition: margin-top 300ms;
     -moz-transition: margin-top 300ms;
@@ -462,13 +461,11 @@ form#email-form input[type=submit]:focus {
     height: 73px;
     z-index: 3;
     overflow: hidden;
-                        
     transform-origin: top;
     -ms-transform-origin: top;
     -moz-transform-origin: top;
     -o-transform-origin: top;
     -webkit-transform-origin: top;
-                    
     transition: transform 300ms 150ms, z-index 0ms 150ms, height 300ms 0ms, top 300ms 0ms;
     -ms-transition: -ms-transform 300ms 150ms, z-index 0ms 150ms, height 300ms 0ms, top 300ms 0ms;
     -moz-transition: -moz-transform 300ms 150ms, z-index 0ms 150ms, height 300ms 0ms, top 300ms 0ms;
@@ -482,10 +479,8 @@ form#email-form input[type=submit]:focus {
     -moz-transition: -moz-transform 300ms 0ms, height 300ms 150ms, top 300ms 150ms;
     -o-transition: -o-transform 300ms 0ms, height 300ms 150ms, top 300ms 150ms;
     -webkit-transition: -webkit-transform 300ms 0ms, height 300ms 150ms, top 300ms 150ms;
-        
     height: 10px;
     top: -60px;
-  
     transform: rotateX(180deg);
     -ms-transform: rotateX(180deg);
     -moz-transform: rotateX(180deg);

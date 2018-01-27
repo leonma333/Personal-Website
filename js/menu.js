@@ -6,20 +6,20 @@ var Menu = {
     theToggle: document.getElementById('toggle'),
 
     /* a function that checks if the element contains the given class */
-    hasClass: 
+    hasClass:
     function(elem, className) {
         return new RegExp(className).test(elem.className);
     },
 
     /* a function that add the given class name to the element */
-    addClass: 
+    addClass:
     function(elem, className) {
         if (!this.hasClass(elem, className))
             elem.className += className;
     },
 
     /* a function that remove the given class name from the element */
-    removeClass: 
+    removeClass:
     function(elem, className) {
         var newClass = elem.className.replace(/[\t\r\n]/g, '');
         if (this.hasClass(elem, className)) {
@@ -30,7 +30,7 @@ var Menu = {
     },
 
     /* a function that change the class name */
-    toggleClass: 
+    toggleClass:
     function(elem, className) {
         var newClass = elem.className.replace(/[\t\r\n]/g, '');
         if (this.hasClass(elem, className)) {

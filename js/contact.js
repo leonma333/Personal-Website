@@ -168,7 +168,7 @@ function PhonePopup() {
         $("#phone-form").submit(function(event) {
             // fields missing or incorrect handling
             if (!numberPass) return false;
-        
+
             submitButton.val("Sending");
             submitButton.prop("disabled", true);
 

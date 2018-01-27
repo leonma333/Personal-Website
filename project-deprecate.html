@@ -9,7 +9,7 @@
         <meta property="og:image" content="https://lhm-website.herokuapp.com/assets/image/lhm.png">
         <link rel="stylesheet" type="text/css" href="css/project-deprecate.css">
         <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-		<link rel="icon" type="image/png" sizes="96x96" href="assets/image/favicon-96x96.png">
+        <link rel="icon" type="image/png" sizes="96x96" href="assets/image/favicon-96x96.png">
         <script type ="text/javascript">
             if ((!window.chrome || !window.chrome.webstore) && typeof InstallTrigger === "undefined") 
                 window.location.href = "project.html";
@@ -142,7 +142,7 @@
             // horizontal ratio
             left = 0.000007611 * Math.pow(window.innerWidth, 2) - 0.005308 * window.innerWidth + 27.47;
             for (i = 0; i < img.length; i++) {
-                img[i].style.left = left + '%'; 
+                img[i].style.left = left + '%';
                 li[i].style.left = left + '%';
             }
         }
@@ -151,14 +151,14 @@
         resize();
 
         var angle = 0;
-        function galleryspin(sign) { 
+        function galleryspin(sign) {
             var spinner = document.querySelectorAll("#spinner");
             if (!sign) {
-                angle -= 45; 
+                angle -= 45;
                 MouseOver.currentIndex--;
                 if (MouseOver.currentIndex < 0) MouseOver.currentIndex = 7;
             } else {
-                angle += 45; 
+                angle += 45;
                 MouseOver.currentIndex++;
                 if (MouseOver.currentIndex > 7) MouseOver.currentIndex = 0;
             }
@@ -224,7 +224,7 @@
         });
 
         window.onload = function() {
-            setTimeout(function() { 
+            setTimeout(function() {
                 $(".loader-wrapper").fadeOut("slow", function() { $(this).remove(); }); 
             }, 2000);
         }

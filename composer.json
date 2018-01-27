@@ -1,5 +1,5 @@
 {
-	"config": {
+    "config": {
         "vendor-dir": "php/vendor"
     },
     "name": "leonma/together",

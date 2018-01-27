@@ -263,7 +263,7 @@ p, h3 {
 .flip-container:hover .flipper, .flip-container.hover .flipper {
     transform: rotateY(180deg);
 }
-                 
+
 .flip-container, .front, .back {
     width: 131.5px;
     height: 131.5px;
@@ -288,7 +288,7 @@ p, h3 {
 }
 
 .front {
-    z-index: 2; 
+    z-index: 2;
     background: white;
 }
 

@@ -479,7 +479,7 @@ a {
     transform-origin: 50% 170%;
     border-bottom: 1px solid rgba(0, 0, 0, 0.2);
     -webkit-transition: ease-in-out, width .35s ease-in-out; /* Safari 3.1 to 6.0 */
-    transition: ease-in-out, width .35s ease-in-out;       
+    transition: ease-in-out, width .35s ease-in-out;
 }
 
 .right-circle1 {
@@ -493,7 +493,7 @@ a {
     transform-origin: 50% 170%;
     border-bottom: 1px solid rgba(0, 0, 0, 0.2);
     -webkit-transition: ease-in-out, width .35s ease-in-out; /* Safari 3.1 to 6.0 */
-    transition: ease-in-out, width .35s ease-in-out;       
+    transition: ease-in-out, width .35s ease-in-out;
 }
 
 @keyframes defaultOrigin {
@@ -655,13 +655,13 @@ footer li {
     line-height: 20px;
     height: 20px;
 }
-             
+
 footer a {
     color: #fff;
     display: block;
     transition: .3s background-color;
 }
-             
+
 footer a:hover {
     background-color: #000000;
 }
@@ -678,7 +678,7 @@ footer a:hover {
         line-height: 50px;
         font-size: 1.4em;
     }
-             
+
     footer li {
         display: inline-block;
         margin-right: -4px;
