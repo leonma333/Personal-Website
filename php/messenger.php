@@ -1,38 +1,38 @@
 <?php
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-  	$request_body = file_get_contents('php://input');
-  	$request_json = json_decode($request_body, true);
+    $request_body = file_get_contents('php://input');
+    $request_json = json_decode($request_body, true);
 
     # Include necessary file
     $config = include('config.php');
 
-  	# Function for sending messenger message
-  	function send_messenger($recipient_id, $message, $token) {
-  		$ch = curl_init('https://graph.facebook.com/me/messages?access_token=' . $token);
+    # Function for sending messenger message
+    function send_messenger($recipient_id, $message, $token) {
+        $ch = curl_init('https://graph.facebook.com/me/messages?access_token=' . $token);
 
-  		$body = array(
-      		'recipient' => array( 'id' => $recipient_id ),
-      		'message' => $message
-        	);
+        $body = array(
+            'recipient' => array( 'id' => $recipient_id ),
+            'message' => $message
+            );
 
-    	curl_setopt($ch, CURLOPT_HTTPHEADER, array('Content-Type: application/json'));
-    	curl_setopt($ch, CURLOPT_POSTFIELDS, json_encode($body));
-    	curl_setopt($ch, CURLOPT_POST, true);
-    	curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+        curl_setopt($ch, CURLOPT_HTTPHEADER, array('Content-Type: application/json'));
+        curl_setopt($ch, CURLOPT_POSTFIELDS, json_encode($body));
+        curl_setopt($ch, CURLOPT_POST, true);
+        curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
 
-    	$response = curl_exec($ch);
-    	curl_close($ch);
-  	}
+        $response = curl_exec($ch);
+        curl_close($ch);
+    }
 
     # Page incomming message
     if ($request_json['object'] == 'page') {
         foreach ($request_json['entry'] as $entry) {
-          	foreach ($entry['messaging'] as $messaging) {
-          		$user_id = $messaging['sender']['id'];
+            foreach ($entry['messaging'] as $messaging) {
+                $user_id = $messaging['sender']['id'];
 
-          		# User opt in
-          		if (array_key_exists('optin', $messaging)) {
+                # User opt in
+                if (array_key_exists('optin', $messaging)) {
 
                     # Send website share
                     $message = array(
@@ -54,7 +54,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                     send_messenger($user_id, $message, $config['token-messenger']);
 
                 # User message
-          	    } else if (array_key_exists('message', $messaging)) {
+                } else if (array_key_exists('message', $messaging)) {
 
                     # User attachment message (e.g. sticker, emoji, location)
                     if (array_key_exists('attachments', $messaging['message'])) {
@@ -76,7 +76,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                             }
 
                             $sticker = array(
-                                'http://i19.photobucket.com/albums/b155/akikoprism87/oie_transparent-35-1.png',
+                                'http://dl.stickershop.line.naver.jp/products/0/0/15/608/android/stickers/5513.png',
                                 'http://www.stickees.com/files/cartoon/the-simpsons/2248-homer-simpson-happy.png',
                                 'http://katloterzo.com/wp-content/uploads/2016/03/Donald-Trump.png'
                                 );
@@ -285,14 +285,14 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                                                       'title' => 'Thank you for Opt in',
                                                       'subtitle' => 'Come and visit my website and share it if you enjoy. Cheers! (www.lhm.rocks)',
                                                       'image_url' => 'https://lhm-website.herokuapp.com/assets/image/personal-website.png',
-                                                      'buttons' => array ( 
-                                                            array('type' => 'element_share'), 
+                                                      'buttons' => array (
+                                                            array('type' => 'element_share'),
                                                             array(
                                                                 'type' => 'web_url',
                                                                 'url' => 'http://lhm.rocks',
                                                                 'title' => 'See my website'
                                                                 )
-                                                            )   
+                                                            )
                                                       )
                                               )
                                           )
