@@ -492,8 +492,8 @@ var textSet = [
     {text:"DEVELOPER", sphereRadius:ratio*110, sphereSpace:ratio*65, unitTime:50, time:2000},
     {text:"@@@@@@@@", sphereRadius:ratio*60 + ratio*Math.random()*60, sphereSpace:200, unitTime:100, time:4000},
     {text:"I_LIKE", sphereRadius:ratio*120, sphereSpace:ratio*70, unitTime:100, time:4000},
-    {text:"PROGRAMMING", sphereRadius:ratio*110, sphereSpace:ratio*65, unitTime:50, time:2000},
-    {text:"SPORTS", sphereRadius:ratio*120, sphereSpace:ratio*70, unitTime:50, time:2000},
+    {text:"WORKOUT", sphereRadius:ratio*110, sphereSpace:ratio*65, unitTime:50, time:2000},
+    {text:"CARS", sphereRadius:ratio*120, sphereSpace:ratio*70, unitTime:50, time:2000},
     {text:"EDM", sphereRadius:ratio*120, sphereSpace:ratio*70, unitTime:50, time:2000},
     {text:"@@@@@@@@", sphereRadius:ratio*60 + ratio*Math.random()*60, sphereSpace:200, unitTime:100, time:4000}
 ];
