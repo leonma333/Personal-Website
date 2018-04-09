@@ -209,7 +209,7 @@
             window.onresize = function(event) {
                 /* Slide */
                 var newPageHeight = Slide.homeWindow.innerHeight();
-                if(Slide.pageHeight !== newPageHeight) {
+                if (Slide.pageHeight !== newPageHeight) {
                     Slide.pageHeight = newPageHeight;
                     TweenLite.set([Slide.slidesContainer, Slide.slidesList], {height: Slide.pageHeight + "px"});
                     TweenLite.set(Slide.slidesContainer, {scrollTo: {y: Slide.pageHeight * Slide.currentSlide.index()}});
@@ -229,12 +229,14 @@
             }
 
             window.onresize();
-            Slide.goToSlide(Slide.currentSlide);
 
             window.onload = function() {
                 setTimeout(function() {
                     $(".loader-wrapper").fadeOut("slow", function() { $(this).remove(); });
                 }, 2000);
+
+                if (window.location.hash == "#skills")
+                    Slide.goToNextSlide();
             }
         });
     </script>
