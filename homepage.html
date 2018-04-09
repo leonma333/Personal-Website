@@ -111,11 +111,11 @@
                 </div>
                 <!--  third circle –– -->
                 <div id="right-circle3" class="right-circle1 circle-border">
-                    <a id="version-control" class="fill-div">
+                    <a id="saas" class="fill-div">
                         <div id="right-inner3" class="right-circle-inner">
                             <img id="right-icon3" class="bubble-icon" src="assets/image/version-control.png"/>
                             <div id="right-text3" class="score-text">
-                                V.C.
+                                SaaS
                             </div>
                         </div>
                     </a>
@@ -178,14 +178,14 @@
             Slide.updownButtons.on("click", Slide.onSlideButtonClick);
 
             // event listners trigger page transition on click of menu item
-            $("#language").click(function(){Bubble.menuSelect(4, 1, true, 'Java, C#, C++, Ruby, PHP, JavaScript, SQL, Bash, HTML, CSS, XML, JSON ...');});
-            $("#front-end").click(function(){Bubble.menuSelect(4, 2, true, 'jQuery, React, React Native, Bootstrap, Pure ...');});
-            $("#back-end").click(function(){Bubble.menuSelect(4, 3, true, 'ASP.Net, Ruby on Rails, Node, PHP ...');});
-            $("#database").click(function(){Bubble.menuSelect(4, 4, true, 'SQL Server, MySQL, PostgreSQL, Firebase ...');});
-            $("#technology").click(function(){Bubble.menuSelect(4, 1, false, 'AJAX, Git, RESTful API, Elasticsearch, Microsoft Azure, Nginx, OpenSSL, Ngrok ...');});
-            $("#tool").click(function(){Bubble.menuSelect(4, 2, false, 'Eclipse, Visual Studio, Xcode, Sublime Text, Dreamweaver, Android Studio, Vagrant, Docker ...');});
-            $("#version-control").click(function(){Bubble.menuSelect(4, 3, false, 'GitHub, Bitbucket, GitLab, SVN ...');});
-            $("#other").click(function(){Bubble.menuSelect(4, 4, false, 'jUnit, OpenCV, JavaFX/Swing, UML ...');});
+            $("#language").click(function(){Bubble.menuSelect(4, 1, true, 'Java, C#, C/C++, Go, Ruby, PHP, JavaScript, Bash/Shell, HTML, CSS ...');});
+            $("#front-end").click(function(){Bubble.menuSelect(4, 2, true, 'React, jQuery, React Native, Bootstrap, Sass, Pure ...');});
+            $("#back-end").click(function(){Bubble.menuSelect(4, 3, true, 'ASP.Net, Ruby on Rails, Node.js, PHP ...');});
+            $("#database").click(function(){Bubble.menuSelect(4, 4, true, 'MySQL, SQL Server, PostgreSQL, Redis ...');});
+            $("#technology").click(function(){Bubble.menuSelect(4, 1, false, 'Docker, Nginx, Vagrant, Hadoop, Kafka, Firebase, Elasticsearch, Git, RESTful API, AJAX ...');});
+            $("#tool").click(function(){Bubble.menuSelect(4, 2, false, 'Eclipse, Visual Studio, Xcode, Sublime, Android Studio, Dreamweaver, Ngrok, OpenSSL ...');});
+            $("#saas").click(function(){Bubble.menuSelect(4, 3, false, 'GitHub, DataDog, CircleCI, BuildKite, Digital Ocean, Microsoft Azure, AWS, Google Cloud, Alibaba Cloud ...');});
+            $("#other").click(function(){Bubble.menuSelect(4, 4, false, 'OpenCV, jUnit, JavaFX/Swing, UML ...');});
 
             $('#bubble-modal .close').click(function() {
                 Bubble.bubbleModal.hide();

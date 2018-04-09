@@ -94,13 +94,13 @@ var Bubble = {
                 this.bubbleModalHeader.text('Database I have been using');
                 break;
             case 'technology':
-                this.bubbleModalHeader.text('Technologies I am expert in');
+                this.bubbleModalHeader.text('Technologies I know');
                 break;
             case 'tool':
                 this.bubbleModalHeader.text('Tools I have been using');
                 break;
-            case 'version-control':
-                this.bubbleModalHeader.text('Version Control I know');
+            case 'saas':
+                this.bubbleModalHeader.text('SaaS I love');
                 break;
             case 'other':
                 this.bubbleModalHeader.text('Other Tools and Frameworks I know');
