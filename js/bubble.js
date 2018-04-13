@@ -103,7 +103,7 @@ var Bubble = {
                 this.bubbleModalHeader.text('SaaS I love');
                 break;
             case 'other':
-                this.bubbleModalHeader.text('Other Tools and Frameworks I know');
+                this.bubbleModalHeader.text('Other Tools/Frameworks/Knowledge I know');
                 break;
         }
 

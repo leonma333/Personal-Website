@@ -45,7 +45,7 @@
                 <div id="left-circle1" class="left-circle1 circle-border">
                     <a id="language">
                         <div id="left-inner1" class="left-circle-inner">
-                            <img id="left-icon1"  class="bubble-icon" src="assets/image/language.png"/>
+                            <img id="left-icon1"  class="bubble-icon bubble-icon-wider" src="assets/image/language.png"/>
                             <div id="left-text1" class="score-text">
                                 Language
                             </div>
@@ -113,7 +113,7 @@
                 <div id="right-circle3" class="right-circle1 circle-border">
                     <a id="saas" class="fill-div">
                         <div id="right-inner3" class="right-circle-inner">
-                            <img id="right-icon3" class="bubble-icon" src="assets/image/version-control.png"/>
+                            <img id="right-icon3" class="bubble-icon bubble-icon-wider" src="assets/image/saas.png"/>
                             <div id="right-text3" class="score-text">
                                 SaaS
                             </div>
@@ -178,14 +178,14 @@
             Slide.updownButtons.on("click", Slide.onSlideButtonClick);
 
             // event listners trigger page transition on click of menu item
-            $("#language").click(function(){Bubble.menuSelect(4, 1, true, 'Java, C#, C/C++, Go, Ruby, PHP, JavaScript, Bash/Shell, HTML, CSS ...');});
+            $("#language").click(function(){Bubble.menuSelect(4, 1, true, 'Java, C#, C, C++, Go, Ruby, Python, PHP, JavaScript, Bash, Shell, RegExp, HTML, CSS ...');});
             $("#front-end").click(function(){Bubble.menuSelect(4, 2, true, 'React, jQuery, React Native, Bootstrap, Sass, Pure ...');});
             $("#back-end").click(function(){Bubble.menuSelect(4, 3, true, 'ASP.Net, Ruby on Rails, Node.js, PHP ...');});
             $("#database").click(function(){Bubble.menuSelect(4, 4, true, 'MySQL, SQL Server, PostgreSQL, Redis ...');});
             $("#technology").click(function(){Bubble.menuSelect(4, 1, false, 'Docker, Nginx, Vagrant, Hadoop, Kafka, Firebase, Elasticsearch, Git, RESTful API, AJAX ...');});
-            $("#tool").click(function(){Bubble.menuSelect(4, 2, false, 'Eclipse, Visual Studio, Xcode, Sublime, Android Studio, Dreamweaver, Ngrok, OpenSSL ...');});
-            $("#saas").click(function(){Bubble.menuSelect(4, 3, false, 'GitHub, DataDog, CircleCI, BuildKite, Digital Ocean, Microsoft Azure, AWS, Google Cloud, Alibaba Cloud ...');});
-            $("#other").click(function(){Bubble.menuSelect(4, 4, false, 'OpenCV, jUnit, JavaFX/Swing, UML ...');});
+            $("#tool").click(function(){Bubble.menuSelect(4, 2, false, 'Eclipse, Visual Studio, Xcode, IntelliJ, Sublime, Android Studio, Dreamweaver, Ngrok, OpenSSL ...');});
+            $("#saas").click(function(){Bubble.menuSelect(4, 3, false, 'GitHub, CircleCI, BuildKite, Kubernetes, Digital Ocean, Heroku, Microsoft Azure, AWS, Google Cloud ...');});
+            $("#other").click(function(){Bubble.menuSelect(4, 4, false, 'OpenCV, jUnit, JavaFX/Swing, UML, Operating System, Compiler, Algorithm & Data Structure, Embedded System ...');});
 
             $('#bubble-modal .close').click(function() {
                 Bubble.bubbleModal.hide();
