@@ -47,8 +47,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                                               'image_url' => 'https://lhm-website.herokuapp.com/assets/image/personal-website.png',
                                               'buttons' => array ( array('type' => 'element_share') )
                                               )
-                                      )
-                                  )
+                                    )
+                                )
                             )
                         );
                     send_messenger($user_id, $message, $config['token-messenger']);
@@ -67,8 +67,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                                 $long = $attachment['payload']['coordinates']['long'];
                                 $message = null;
 
-                                if ($lat > 43.3 && $lat < 44.3 && $long > -80 && $long < -79)
-                                    $message = array('text' => 'Oh my god! You know me so well. Yes, I am in Toronto right now. Come and visit me :)');
+                                if ($lat > 42.958 && $lat < 43.958 && $long > -81.045 && $long < -80.045)
+                                    $message = array('text' => 'Oh my god! You know me so well. Yes, I am in Waterloo right now. Come and visit me :)');
                                 else
                                     $message = array('text' => 'Unfortunately, you are wrong, I am not here.');
                                 send_messenger($user_id, $message, $config['token-messenger']);
@@ -95,7 +95,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                         $payload = $messaging['message']['quick_reply']['payload'];
 
                         switch($payload) {
-                            case 'age_19':
+                            case 'age_20':
                                 $message = array(
                                     'text' => 'What is my favorite color?',
                                     'quick_replies' => array(
@@ -129,8 +129,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                                             ),
                                         array(
                                             'content_type' => 'text',
-                                            'title' => 'Designer',
-                                            'payload' => 'i_am_designer'
+                                            'title' => 'Calisthenics',
+                                            'payload' => 'i_am_calisthenics'
                                             ),
                                         array(
                                             'content_type' => 'text',
@@ -168,11 +168,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                                     'quick_replies' => array(
                                         array(
                                             'content_type' => 'text',
-                                            'title' => '18',
-                                            'payload' => 'age_18'
-                                            ),
-                                        array(
-                                            'content_type' => 'text',
                                             'title' => '19',
                                             'payload' => 'age_19'
                                             ),
@@ -180,6 +175,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                                             'content_type' => 'text',
                                             'title' => '20',
                                             'payload' => 'age_20'
+                                            ),
+                                        array(
+                                            'content_type' => 'text',
+                                            'title' => '21',
+                                            'payload' => 'age_21'
                                             )
                                         )
                                     );
@@ -242,11 +242,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                                 'quick_replies' => array(
                                     array(
                                         'content_type' => 'text',
-                                        'title' => '18',
-                                        'payload' => 'age_18'
-                                        ),
-                                    array(
-                                        'content_type' => 'text',
                                         'title' => '19',
                                         'payload' => 'age_19'
                                         ),
@@ -254,6 +249,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                                         'content_type' => 'text',
                                         'title' => '20',
                                         'payload' => 'age_20'
+                                        ),
+                                    array(
+                                        'content_type' => 'text',
+                                        'title' => '21',
+                                        'payload' => 'age_21'
                                         )
                                     )
                                 );
@@ -293,9 +293,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                                                                 'title' => 'See my website'
                                                                 )
                                                             )
-                                                      )
-                                              )
-                                          )
+                                                    )
+                                            )
+                                        )
                                     )
                                 );
                             send_messenger($user_id, $message, $config['token-messenger']);

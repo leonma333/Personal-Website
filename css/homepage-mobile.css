@@ -554,6 +554,11 @@ a {
     margin-top: 18%;
 }
 
+.bubble-icon.bubble-icon-wider {
+    width: 50%;
+    margin-left: 25%;
+}
+
 #bubble-modal {
     display: none;
     position: relative;

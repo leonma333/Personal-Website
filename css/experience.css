@@ -316,7 +316,7 @@ p, h3 {
     position: relative;
     margin: 0 auto;
     width: 6px;
-    height: 1050px;
+    height: 1250px;
     background-color: white;
     -webkit-border-radius: 3px;
     -moz-border-radius: 3px;
@@ -339,7 +339,8 @@ p, h3 {
 #historic-event-2,
 #historic-event-3,
 #historic-event-4,
-#historic-event-5 {
+#historic-event-5,
+#historic-event-6 {
     display: table;
     position: absolute;
     width: 300px;
@@ -363,7 +364,9 @@ p, h3 {
 #historic-event-4:hover,
 #historic-event-4.current,
 #historic-event-5:hover,
-#historic-event-5.current {
+#historic-event-5.current,
+#historic-event-6:hover,
+#historic-event-6.current {
     opacity: 1;
     filter: "alpha(opacity=100)";
     -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
@@ -399,6 +402,12 @@ p, h3 {
     margin-left: -273px;
 }
 
+#historic-event-6 {
+    top: 1050px;
+    left: 50%;
+    margin-left: -12px;
+}
+
 .historic-year {
     display: table-cell;
     vertical-align: middle;
@@ -411,7 +420,8 @@ p, h3 {
 #historic-text-2,
 #historic-text-3,
 #historic-text-4,
-#historic-text-5 {
+#historic-text-5,
+#historic-text-6 {
     display: table-cell;
     vertical-align: middle;
     width: 53%;
@@ -447,7 +457,8 @@ p, h3 {
 #historic-event-2:hover #historic-dot-2,
 #historic-event-3:hover #historic-dot-3,
 #historic-event-4:hover #historic-dot-4,
-#historic-event-5:hover #historic-dot-5 {
+#historic-event-5:hover #historic-dot-5,
+#historic-event-6:hover #historic-dot-6 {
     -webkit-transform: scale(1.15) translate3d(0, 0, 0);
     -moz-transform: scale(1.15) translate3d(0, 0, 0);
     -ms-transform: scale(1.15) translate3d(0, 0, 0);
@@ -458,7 +469,8 @@ p, h3 {
 #historic-dot-2,
 #historic-dot-3,
 #historic-dot-4,
-#historic-dot-5 {
+#historic-dot-5,
+#historic-dot-6 {
     display: block;
     position: relative;
     margin: 0 auto;
@@ -502,6 +514,10 @@ p, h3 {
 
 #history-clock.animate4 {
     top: 910px;
+}
+
+#history-clock.animate5 {
+    top: 1110px;
 }
 
 #clockface {
@@ -671,17 +687,6 @@ p, h3 {
     -o-transform-origin: 50% 8px;
 }
 
-#history-clock.animate4 #clockarm2 {
-    -webkit-transform: rotate(18.72turn) translate3d(0, 0, 0);
-    -moz-transform: rotate(18.72turn) translate3d(0, 0, 0);
-    -ms-transform: rotate(18.72turn) translate3d(0, 0, 0);
-    -o-transform: rotate(18.72turn) translate3d(0, 0, 0);
-    -webkit-transform-origin: 50% 8px;
-    -moz-transform-origin: 50% 8px;
-    -ms-transform-origin: 50% 8px;
-    -o-transform-origin: 50% 8px;
-}
-
 #history-clock.animate4 #clockarm1 {
     -webkit-transform: rotate(19.93turn) translate3d(0, 0, 0);
     -moz-transform: rotate(19.93turn) translate3d(0, 0, 0);
@@ -693,6 +698,39 @@ p, h3 {
     -o-transform-origin: 50% 10px;
 }
 
+#history-clock.animate4 #clockarm2 {
+    -webkit-transform: rotate(18.72turn) translate3d(0, 0, 0);
+    -moz-transform: rotate(18.72turn) translate3d(0, 0, 0);
+    -ms-transform: rotate(18.72turn) translate3d(0, 0, 0);
+    -o-transform: rotate(18.72turn) translate3d(0, 0, 0);
+    -webkit-transform-origin: 50% 8px;
+    -moz-transform-origin: 50% 8px;
+    -ms-transform-origin: 50% 8px;
+    -o-transform-origin: 50% 8px;
+}
+
+#history-clock.animate5 #clockarm1 {
+    -webkit-transform: rotate(10.85turn) translate3d(0, 0, 0);
+    -moz-transform: rotate(10.85turn) translate3d(0, 0, 0);
+    -ms-transform: rotate(10.85turn) translate3d(0, 0, 0);
+    -o-transform: rotate(10.85turn) translate3d(0, 0, 0);
+    -webkit-transform-origin: 50% 10px;
+    -moz-transform-origin: 50% 10px;
+    -ms-transform-origin: 50% 10px;
+    -o-transform-origin: 50% 10px;
+}
+
+#history-clock.animate5 #clockarm2 {
+    -webkit-transform: rotate(10.25turn) translate3d(0, 0, 0);
+    -moz-transform: rotate(10.25turn) translate3d(0, 0, 0);
+    -ms-transform: rotate(10.25turn) translate3d(0, 0, 0);
+    -o-transform: rotate(10.25turn) translate3d(0, 0, 0);
+    -webkit-transform-origin: 50% 8px;
+    -moz-transform-origin: 50% 8px;
+    -ms-transform-origin: 50% 8px;
+    -o-transform-origin: 50% 8px;
+}
+
 @media screen and (max-width: 600px) {
     #timeline-track {
         margin: 0 0 0 30px;
@@ -702,7 +740,12 @@ p, h3 {
         left: 33px;
     }
 
-    #historic-event-1, #historic-event-2, #historic-event-3, #historic-event-4, #historic-event-5 {
+    #historic-event-1,
+    #historic-event-2,
+    #historic-event-3,
+    #historic-event-4,
+    #historic-event-5,
+    #historic-event-6 {
         left: 20px;
         margin-left: 0;
     }
