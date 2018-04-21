@@ -29,8 +29,8 @@ if (isset($_POST['contact_name']) && isset($_POST['contact_email']) && isset($_P
 
     $mail->Subject = $_POST['contact_name'] . ' sent Liang-Husan Ma an email via Liang-Hsuan\'s website.';
     $mail->Body = '<b>Sender email is:</b> ' . $_POST['contact_email'] . '<br/><br/><b>The message is:</b><br/>' . $_POST['contact_msg'] .
-                  '<br/><br/>Thank you for visiting my website. Here are my words for you:<br/><ol><li>Write clean and elegant code.</li>' .
-                  '<li>Design with user in mind</li><li><strong>Any time is House time.</strong></li></ol><br/><img src="https://lhm-website.herokuapp.com/favicon-96x96.png">';
+                  '<br/><br/>Thank you for visiting my website. Here are my words for you:<br/><ol><li>Be a constant learner.</li>' .
+                  '<li>Write clean and strong code</li><li><strong>Any time is House time.</strong></li></ol><br/><img src="https://lhm-website.herokuapp.com/favicon-96x96.png">';
 
     # Start sending email
     $success = false;
