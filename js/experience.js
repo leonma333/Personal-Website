@@ -94,7 +94,7 @@ function initHistoryHandler() {
         content: "<ul>" +
                 "<li><b>$</b> Designed and developed a fault tolerance, low latency and high throughput Kafka stream processing application.</li>" +
                 "<li><b>$</b> Wrote high coverage and race condition detectable test to ensure code quality.</li>" +
-                "<li><b>$</b> Reporting StatsD metrics to visualize application performance.</li>" +
+                "<li><b>$</b> Reported StatsD metrics to visualize application performance.</li>" +
                 "<li><b>$</b> Setup thorough continuous integration to prevent building technical debt.</li>" +
                 "</ul><br><hr><br>" +
                 "<p>Kubernetes; Kafka; Hadoop; Go; Ruby; Bash; Shell</p><br>" +
