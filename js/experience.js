@@ -113,7 +113,7 @@ function initHistoryHandler() {
                 "<li><b>$</b> Wrote multiple reliably comprehensive user interaction simulation tests for the deployment pipeline.</li>" +
                 "<li><b>$</b> Involved in frequent meetings to update project progress on Jira board and share insights/reflections.</li>" +
                 "</ul><br><hr><br>" +
-                "<p>Google Cloud Platform; Flask; EmberJS; Capybara; Ruby; Python</p><br>" +
+                "<p>Google Cloud Platform; Flask; Ember.js; Capybara; Ruby; Python</p><br>" +
                 "<a style='color:black' target='_blank' href='https://www.freshbooks.com/'>See Website</a>"
     });
 
