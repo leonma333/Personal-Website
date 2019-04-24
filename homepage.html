@@ -10,7 +10,16 @@
         <link rel="stylesheet" type="text/css" href="css/homepage.css">
         <link rel="icon" type="image/png" sizes="96x96" href="assets/image/favicon-96x96.png">
         <script type ="text/javascript">
-            if ((!window.chrome || !window.chrome.webstore) && typeof InstallTrigger === "undefined")
+            var isChromium = window.chrome;
+            var winNav = window.navigator;
+            var vendorName = winNav.vendor;
+            var isFireFox = typeof InstallTrigger !== "undefined";
+            var isOpera = typeof window.opr !== "undefined";
+            var isIEedge = winNav.userAgent.indexOf("Edge") > -1;
+            var isIOSChrome = winNav.userAgent.match("CriOS");
+            var isChrome = !isIOSChrome && !!isChromium && vendorName === "Google Inc." && !isOpera && !isIEedge
+
+            if (!isChrome && !isFireFox)
                 window.location.href = "homepage-mobile.html" + window.location.hash;
         </script>
     </head>
