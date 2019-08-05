@@ -52,11 +52,11 @@
                 <!-- left part –– -->
                 <!--  first circle –– -->
                 <div id="left-circle1" class="left-circle1 circle-border">
-                    <a id="language">
+                    <a id="languages">
                         <div id="left-inner1" class="left-circle-inner">
                             <img id="left-icon1"  class="bubble-icon bubble-icon-wider" src="assets/image/language.png"/>
                             <div id="left-text1" class="score-text">
-                                Language
+                                Languages
                             </div>
                         </div>
                     </a>
@@ -85,11 +85,11 @@
                 </div>
                 <!--  fourth circle –– -->
                 <div id="left-circle4" class="left-circle1 circle-border">
-                    <a id="database" class="fill-div">
+                    <a id="data" class="fill-div">
                         <div id="left-inner4" class="left-circle-inner">
-                            <img id="left-icon4" class="bubble-icon" src="assets/image/database.png"/>
+                            <img id="left-icon4" class="bubble-icon" src="assets/image/data.png"/>
                             <div id="left-text4" class="score-text">
-                                Database
+                                Data
                             </div>
                         </div>
                     </a>
@@ -98,44 +98,44 @@
                 <!-- right part –– -->
                 <!--  first circle –– -->
                 <div id="right-circle1" class="right-circle1 circle-border">
-                    <a id="technology">
+                    <a id="devops">
                         <div id="right-inner1" class="right-circle-inner">
-                            <img id="right-icon1"  class="bubble-icon" src="assets/image/technology.png"/>
+                            <img id="right-icon1"  class="bubble-icon" src="assets/image/devops.png"/>
                             <div id="right-text1" class="score-text">
-                                Technology
+                                DevOps
                             </div>
                         </div>
                     </a>
                 </div>
                 <!--  second circle –– -->
                 <div id="right-circle2" class="right-circle1 circle-border">
-                    <a id="tool" class="fill-div">
+                    <a id="tools" class="fill-div">
                         <div id="right-inner2" class="right-circle-inner">
-                            <img id="right-icon2" class="bubble-icon" src="assets/image/tool.png"/>
+                            <img id="right-icon2" class="bubble-icon" src="assets/image/tools.png"/>
                             <div id="right-text2" class="score-text">
-                                Tool
+                                Tools
                             </div>
                         </div>
                     </a>
                 </div>
                 <!--  third circle –– -->
                 <div id="right-circle3" class="right-circle1 circle-border">
-                    <a id="saas" class="fill-div">
+                    <a id="utilities" class="fill-div">
                         <div id="right-inner3" class="right-circle-inner">
-                            <img id="right-icon3" class="bubble-icon bubble-icon-wider" src="assets/image/saas.png"/>
+                            <img id="right-icon3" class="bubble-icon bubble-icon-wider" src="assets/image/utilities.png"/>
                             <div id="right-text3" class="score-text">
-                                SaaS
+                                Utilities
                             </div>
                         </div>
                     </a>
                 </div>
                 <!--  fourth circle –– -->
                 <div id="right-circle4" class="right-circle1 circle-border">
-                    <a id="other" class="fill-div">
+                    <a id="courses" class="fill-div">
                         <div id="right-inner4" class="right-circle-inner">
-                            <img id="right-icon4" class="bubble-icon" src="assets/image/other.png"/>
+                            <img id="right-icon4" class="bubble-icon" src="assets/image/courses.png"/>
                             <div id="right-text4" class="score-text">
-                                Other
+                                Courses
                             </div>
                         </div>
                     </a>
@@ -190,11 +190,11 @@
             $("#language").click(function(){Bubble.menuSelect(4, 1, true, 'Java, C#, C, C++, Go, Ruby, Python, PHP, JavaScript, MATLAB, Bash, Shell, RegExp, HTML, CSS ...');});
             $("#front-end").click(function(){Bubble.menuSelect(4, 2, true, 'Ember.js, jQuery, React Native, Capybara, Bootstrap, Sass, Pure ...');});
             $("#back-end").click(function(){Bubble.menuSelect(4, 3, true, 'ASP.Net, Ruby on Rails, Flask, Node.js, PHP ...');});
-            $("#database").click(function(){Bubble.menuSelect(4, 4, true, 'MySQL, SQL Server, PostgreSQL, Redis ...');});
-            $("#technology").click(function(){Bubble.menuSelect(4, 1, false, 'Nginx, Docker, Vagrant, Hadoop, Kafka, Elasticsearch, Git, RESTful API, GraphQL; AJAX ...');});
-            $("#tool").click(function(){Bubble.menuSelect(4, 2, false, 'Eclipse, Visual Studio, Xcode, IntelliJ, Sublime, Android Studio, Dreamweaver, Ngrok, OpenSSL ...');});
-            $("#saas").click(function(){Bubble.menuSelect(4, 3, false, 'GitHub, Kubernetes, Jenkins, Heroku, CircleCI, AWS, Firebase, Azure ...');});
-            $("#other").click(function(){Bubble.menuSelect(4, 4, false, 'OpenCV, JavaFX/Swing, Operating Systems, Compilers, Computer Networks, Distributed Computing, Computer Security ...');});
+            $("#data").click(function(){Bubble.menuSelect(4, 4, true, 'MySQL, SQL Server, PostgreSQL, Redis, Hadoop, Spark ...');});
+            $("#devops").click(function(){Bubble.menuSelect(4, 1, false, 'Git, Docker, Vagrant, Kubernetes, StatsD ...');});
+            $("#tools").click(function(){Bubble.menuSelect(4, 2, false, 'Ngnix, Kafka, Elasticsearch, OpenSSL, Ngrok ...');});
+            $("#utilities").click(function(){Bubble.menuSelect(4, 3, false, 'GitHub, Jenkins, CircleCI, Buildkite, Google Analytics, Datadog, Heroku, AWS ...');});
+            $("#courses").click(function(){Bubble.menuSelect(4, 4, false, 'Distributed Computing, Computer Securities, Compilers, Operating Systems, Computer Networks, Algorithms and Data Structures ...');});
 
             $('#bubble-modal .close').click(function() {
                 Bubble.bubbleModal.hide();

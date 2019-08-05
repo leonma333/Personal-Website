@@ -82,28 +82,28 @@ var Bubble = {
         // change the content in the modal according to the selected topic
         switch($(circleName + ' a').attr('id')) {
             case 'language':
-                this.bubbleModalHeader.text('Programming, Scripting and Markup Languages I know');
+                this.bubbleModalHeader.text('Programming, Scripting and Markup Languages I Know');
                 break;
             case 'front-end':
-                this.bubbleModalHeader.text('Front-End Frameworks I know');
+                this.bubbleModalHeader.text('Front-End Frameworks I Have Worked With');
                 break;
             case 'back-end':
-                this.bubbleModalHeader.text('Back-End Frameworks and MVC I know');
+                this.bubbleModalHeader.text('Back-End Frameworks I Have Worked With');
                 break;
-            case 'database':
-                this.bubbleModalHeader.text('Database I have been using');
+            case 'data':
+                this.bubbleModalHeader.text('Ah, Big Data ~');
                 break;
-            case 'technology':
-                this.bubbleModalHeader.text('Technologies I know');
+            case 'devops':
+                this.bubbleModalHeader.text('DevOps Tools I Always Use');
                 break;
-            case 'tool':
-                this.bubbleModalHeader.text('Tools I have been using');
+            case 'tools':
+                this.bubbleModalHeader.text('Development Tools I Have Been Using');
                 break;
-            case 'saas':
-                this.bubbleModalHeader.text('SaaS I love');
+            case 'utilities':
+                this.bubbleModalHeader.text('Utilities I Love');
                 break;
-            case 'other':
-                this.bubbleModalHeader.text('Other Tools / Frameworks / Knowledge I know');
+            case 'courses':
+                this.bubbleModalHeader.text('Courses I Have Taken');
                 break;
         }
 
