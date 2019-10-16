@@ -8,7 +8,8 @@ $config = include('config.php');
 header('Content-type: application/json');
 
 # Only send the email if all parameters are satisfied
-if (isset($_POST['contact_name']) && isset($_POST['contact_email']) && isset($_POST['contact_msg'])) {
+if (isset($_POST['contact_name']) && isset($_POST['contact_email']) && isset($_POST['contact_msg']) &&
+    strpos($_SERVER['HTTP_ORIGIN'], 'lhm.rocks') !== false) {
 
     # Initialize PHPMailer
     $mail = new PHPMailer(true);
