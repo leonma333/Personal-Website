@@ -180,14 +180,30 @@ function initHistoryHandler() {
                 "<a style='color:black' target='_blank' href='https://kicks4love.com'>See Website</a>"
     });
 
-    // Jewlr.com
+    // UW&WE
     titleList.eq(4).tipso({
         background: "white",
         titleBackground: "#c3c3c3",
         color: "black",
         tooltipHover: true,
-        titleContent: "<strong>Jewlr.com</strong>",
+        titleContent: "<strong>UW&WE</strong>",
         position: "bottom-right",
+        width: 300,
+        content: "<ul>" +
+                "<li><b>$</b> Planning publicity strategies and campaigns.</li>" +
+                "<li><b>$</b> Seek opportunities for partnerships, sponsorships and advertising.</li>" +
+                "</ul><br><hr><br>" +
+                "<a style='color:black' target='_blank' href='https://uwwe.ca/'>See Website</a>"
+    });
+
+    // Jewlr.com
+    titleList.eq(5).tipso({
+        background: "white",
+        titleBackground: "#c3c3c3",
+        color: "black",
+        tooltipHover: true,
+        titleContent: "<strong>Jewlr.com</strong>",
+        position: "bottom-left",
         width: 300,
         content: "<ul>" +
                 "<li><b>$</b> Added new features to public commercial website and internal management system.</li>" +
@@ -200,13 +216,13 @@ function initHistoryHandler() {
     });
 
     // Ashlin BPG Marketing
-    titleList.eq(5).tipso({
+    titleList.eq(6).tipso({
         background: "white",
         titleBackground: "#c3c3c3",
         color: "black",
         tooltipHover: true,
         titleContent: "<strong>Ashlin BPG Marketing</strong>",
-        position: "bottom-left",
+        position: "bottom-right",
         width: 300,
         content: "<ul>" +
                 "<li><b>$</b> Independently designed, developed, and tested various financial applications.</li>" +
@@ -219,25 +235,25 @@ function initHistoryHandler() {
     });
 
     // University of Waterloo
-    titleList.eq(6).tipso({
-        background: "white",
-        titleBackground: "#c3c3c3",
-        color: "black",
-        tooltipHover: true,
-        titleContent: "<strong>University of Waterloo</strong>",
-        position: "bottom-right",
-        content: "<p>Current: 4A</p><br><p>1.Compilers</p><p>2.Operating Systems</p><p>3.Computer Networks</p><p>4.Distributed Computing</p>" +
-                 "<p>5.Computer Security</p><br><a style='color:black' target='_blank' href='https://uwaterloo.ca'>See Website</a>"
-    });
-
-    // Shanghai United International School
     titleList.eq(7).tipso({
         background: "white",
         titleBackground: "#c3c3c3",
         color: "black",
         tooltipHover: true,
-        titleContent: "<strong>Shanghai United International School</strong>",
+        titleContent: "<strong>University of Waterloo</strong>",
         position: "bottom-left",
+        content: "<p>Current: 4B</p><br><p>1.Distributed Computing</p><p>2.Programming for Performance</p><p>3.Advanced Topics in Networking</p><p>4.Computer Securities</p>" +
+                 "<p>5.Compilers</p><br><a style='color:black' target='_blank' href='https://uwaterloo.ca'>See Website</a>"
+    });
+
+    // Shanghai United International School
+    titleList.eq(8).tipso({
+        background: "white",
+        titleBackground: "#c3c3c3",
+        color: "black",
+        tooltipHover: true,
+        titleContent: "<strong>Shanghai United International School</strong>",
+        position: "bottom-right",
         content: "<p>2nd Place - Class of 2015</p><br><p>AP Cusculus: 94</p><p>Physics: 98</p><p>Chemistry: 95</p>" +
                  "<p>Geography: 93</p><br><a style='color:black' target='_blank' href='http://www.suis.com.cn'>See Website</a>"
     });
