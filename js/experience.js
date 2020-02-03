@@ -3,109 +3,121 @@ function initHistoryHandler() {
     var yearList = $(".historic-year p");
 
     var hoverOrClick = function() {
-        clock.removeClass("animate1 animate2 animate3 animate4 animate5 animate6 animate7");
+        clock.removeClass("animate1 animate2 animate3 animate4 animate5 animate6 animate7 animate8");
         $(this).addClass("current");
         yearList.eq(0).css("font-size", "18px");
         for (var i = 1; i < yearList.length; i++)
           yearList.eq(i).css("font-size", "16px");
-        $("#historic-event-2, #historic-event-3, #historic-event-4, #historic-event-5, #historic-event-6, #historic-event-7, #historic-event-8").removeClass("current");
+        $("#historic-event-2, #historic-event-3, #historic-event-4, #historic-event-5, #historic-event-6, #historic-event-7, #historic-event-8, #historic-event-9").removeClass("current");
     }
 
     $("#historic-dot-1, #historic-event-1").on("click mouseover touchstart", hoverOrClick);
 
     hoverOrClick = function() {
         clock.addClass("animate1");
-        clock.removeClass("animate2 animate3 animate4 animate5 animate6 animate7");
+        clock.removeClass("animate2 animate3 animate4 animate5 animate6 animate7 animate 8");
         $(this).addClass("current");
         yearList.eq(1).css("font-size", "18px");
         for (var i = 0; i < yearList.length; i++) {
           if (i == 1) continue;
           yearList.eq(i).css("font-size", "16px");
         }
-        $("#historic-event-1, #historic-event-3, #historic-event-4, #historic-event-5, #historic-event-6, #historic-event-7, #historic-event-8").removeClass("current");
+        $("#historic-event-1, #historic-event-3, #historic-event-4, #historic-event-5, #historic-event-6, #historic-event-7, #historic-event-8 #historic-event-9").removeClass("current");
     }
 
     $("#historic-dot-2, #historic-event-2").on("click mouseover touchstart", hoverOrClick);
 
     hoverOrClick = function() {
         clock.addClass("animate2");
-        clock.removeClass("animate1 animate3 animate4 animate5 animate6 animate7");
+        clock.removeClass("animate1 animate3 animate4 animate5 animate6 animate7 animate 8");
         $(this).addClass("current");
         yearList.eq(2).css("font-size", "18px");
         for (var i = 2; i < yearList.length; i++) {
           if (i == 2) continue;
           yearList.eq(i).css("font-size", "16px");
         }
-        $("#historic-event-1, #historic-event-2, #historic-event-4, #historic-event-5, #historic-event-6, #historic-event-7, #historic-event-8").removeClass("current");
+        $("#historic-event-1, #historic-event-2, #historic-event-4, #historic-event-5, #historic-event-6, #historic-event-7, #historic-event-8 #historic-event-9").removeClass("current");
     }
 
     $("#historic-dot-3, #historic-event-3").on("click mouseover touchstart", hoverOrClick);
 
     hoverOrClick = function() {
         clock.addClass("animate3");
-        clock.removeClass("animate1 animate2 animate4 animate5 animate6 animate7");
+        clock.removeClass("animate1 animate2 animate4 animate5 animate6 animate7 animate 8");
         $(this).addClass("current");
         yearList.eq(3).css("font-size", "18px");
         for (var i = 0; i < yearList.length; i++) {
           if (i == 3) continue;
           yearList.eq(i).css("font-size", "16px");
         }
-        $("#historic-event-1, #historic-event-2, #historic-event-3, #historic-event-5, #historic-event-6, #historic-event-7, #historic-event-8").removeClass("current");
+        $("#historic-event-1, #historic-event-2, #historic-event-3, #historic-event-5, #historic-event-6, #historic-event-7, #historic-event-8 #historic-event-9").removeClass("current");
     }
 
     $("#historic-dot-4, #historic-event-4").on("click mouseover touchstart", hoverOrClick);
 
     hoverOrClick = function() {
         clock.addClass("animate4");
-        clock.removeClass("animate1 animate2 animate3 animate5 animate6 animate7");
+        clock.removeClass("animate1 animate2 animate3 animate5 animate6 animate7 animate 8");
         $(this).addClass("current");
         yearList.eq(4).css("font-size", "18px");
         for (var i = 0; i < yearList.length; i++) {
           if (i == 4) continue;
           yearList.eq(i).css("font-size", "16px");
         }
-        $("#historic-event-1, #historic-event-2, #historic-event-3, #historic-event-4, #historic-event-6, #historic-event-7, #historic-event-8").removeClass("current");
+        $("#historic-event-1, #historic-event-2, #historic-event-3, #historic-event-4, #historic-event-6, #historic-event-7, #historic-event-8 #historic-event-9").removeClass("current");
     }
 
     $("#historic-dot-5, #historic-event-5").on("click mouseover touchstart", hoverOrClick);
 
     hoverOrClick = function() {
         clock.addClass("animate5");
-        clock.removeClass("animate1 animate2 animate3 animate4 animate6 animate7");
+        clock.removeClass("animate1 animate2 animate3 animate4 animate6 animate7 animate 8");
         $(this).addClass("current");
         yearList.eq(5).css("font-size", "18px");
         for (var i = 0; i < yearList.length; i++) {
           if (i == 5) continue;
           yearList.eq(i).css("font-size", "16px");
         }
-        $("#historic-event-1, #historic-event-2, #historic-event-3, #historic-event-4, #historic-event-5, #historic-dot-7, #historic-event-8").removeClass("current");
+        $("#historic-event-1, #historic-event-2, #historic-event-3, #historic-event-4, #historic-event-5, #historic-dot-7, #historic-event-8 #historic-event-9").removeClass("current");
     }
 
     $("#historic-dot-6, #historic-event-6").on("click mouseover touchstart", hoverOrClick);
 
     hoverOrClick = function() {
         clock.addClass("animate6");
-        clock.removeClass("animate1 animate2 animate3 animate4 animate5 animate7");
+        clock.removeClass("animate1 animate2 animate3 animate4 animate5 animate7 animate 8");
         $(this).addClass("current");
         yearList.eq(6).css("font-size", "18px");
         for (var i = 0; i < yearList.length - 1; i++)
           yearList.eq(i).css("font-size", "16px");
-        $("#historic-event-1, #historic-event-2, #historic-event-3, #historic-event-4, #historic-event-5, #historic-event-6, #historic-event-8").removeClass("current");
+        $("#historic-event-1, #historic-event-2, #historic-event-3, #historic-event-4, #historic-event-5, #historic-event-6, #historic-event-8 #historic-event-9").removeClass("current");
     }
 
     $("#historic-dot-7, #historic-event-7").on("click mouseover touchstart", hoverOrClick);
 
     hoverOrClick = function() {
         clock.addClass("animate7");
-        clock.removeClass("animate1 animate2 animate3 animate4 animate5 animate6");
+        clock.removeClass("animate1 animate2 animate3 animate4 animate5 animate6 animate8");
         $(this).addClass("current");
         yearList.eq(6).css("font-size", "18px");
         for (var i = 0; i < yearList.length - 1; i++)
           yearList.eq(i).css("font-size", "16px");
-        $("#historic-event-1, #historic-event-2, #historic-event-3, #historic-event-4, #historic-event-5, #historic-event-6, #historic-event-7").removeClass("current");
+        $("#historic-event-1, #historic-event-2, #historic-event-3, #historic-event-4, #historic-event-5, #historic-event-6, #historic-event-7 #historic-event-9").removeClass("current");
     }
 
     $("#historic-dot-8, #historic-event-8").on("click mouseover touchstart", hoverOrClick);
+
+    hoverOrClick = function() {
+        clock.addClass("animate8");
+        clock.removeClass("animate1 animate2 animate3 animate4 animate5 animate6 animate7");
+        $(this).addClass("current");
+        yearList.eq(6).css("font-size", "18px");
+        for (var i = 0; i < yearList.length - 1; i++)
+          yearList.eq(i).css("font-size", "16px");
+        $("#historic-event-1, #historic-event-2, #historic-event-3, #historic-event-4, #historic-event-5, #historic-event-6, #historic-event-7 #historic-event-8").removeClass("current");
+    }
+
+    $("#historic-dot-9, #historic-event-9").on("click mouseover touchstart", hoverOrClick);
 
     // set up tooltip
     var titleList = jQuery(".back h3");

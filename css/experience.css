@@ -669,7 +669,8 @@ p, h3 {
     -o-transform-origin: 50% 8px;
 }
 
-#history-clock.animate1 #clockarm1 {
+#history-clock.animate1 #clockarm1,
+#history-clock.animate5 #clockarm1 {
     -webkit-transform: rotate(10.85turn) translate3d(0, 0, 0);
     -moz-transform: rotate(10.85turn) translate3d(0, 0, 0);
     -ms-transform: rotate(10.85turn) translate3d(0, 0, 0);
@@ -680,7 +681,8 @@ p, h3 {
     -o-transform-origin: 50% 10px;
 }
 
-#history-clock.animate1 #clockarm2 {
+#history-clock.animate1 #clockarm2,
+#history-clock.animate5 #clockarm2 {
     -webkit-transform: rotate(10.25turn) translate3d(0, 0, 0);
     -moz-transform: rotate(10.25turn) translate3d(0, 0, 0);
     -ms-transform: rotate(10.25turn) translate3d(0, 0, 0);
@@ -691,7 +693,8 @@ p, h3 {
     -o-transform-origin: 50% 8px;
 }
 
-#history-clock.animate2 #clockarm1 {
+#history-clock.animate2 #clockarm1,
+#history-clock.animate6 #clockarm1 {
     -webkit-transform: rotate(13.11turn) translate3d(0, 0, 0);
     -moz-transform: rotate(13.11turn) translate3d(0, 0, 0);
     -ms-transform: rotate(13.11turn) translate3d(0, 0, 0);
@@ -702,7 +705,8 @@ p, h3 {
     -o-transform-origin: 50% 10px;
 }
 
-#history-clock.animate2 #clockarm2 {
+#history-clock.animate2 #clockarm2,
+#history-clock.animate6 #clockarm2 {
     -webkit-transform: rotate(13.34turn) translate3d(0, 0, 0);
     -moz-transform: rotate(13.34turn) translate3d(0, 0, 0);
     -ms-transform: rotate(13.34turn) translate3d(0, 0, 0);
@@ -713,7 +717,8 @@ p, h3 {
     -o-transform-origin: 50% 8px;
 }
 
-#history-clock.animate3 #clockarm1 {
+#history-clock.animate3 #clockarm1,
+#history-clock.animate7 #clockarm1 {
     -webkit-transform: rotate(16.46turn) translate3d(0, 0, 0);
     -moz-transform: rotate(16.46turn) translate3d(0, 0, 0);
     -ms-transform: rotate(16.46turn) translate3d(0, 0, 0);
@@ -724,7 +729,8 @@ p, h3 {
     -o-transform-origin: 50% 10px;
 }
 
-#history-clock.animate3 #clockarm2 {
+#history-clock.animate3 #clockarm2,
+#history-clock.animate7 #clockarm2 {
     -webkit-transform: rotate(16.84turn) translate3d(0, 0, 0);
     -moz-transform: rotate(16.84turn) translate3d(0, 0, 0);
     -ms-transform: rotate(16.84turn) translate3d(0, 0, 0);
@@ -753,72 +759,6 @@ p, h3 {
     -moz-transform: rotate(18.72turn) translate3d(0, 0, 0);
     -ms-transform: rotate(18.72turn) translate3d(0, 0, 0);
     -o-transform: rotate(18.72turn) translate3d(0, 0, 0);
-    -webkit-transform-origin: 50% 8px;
-    -moz-transform-origin: 50% 8px;
-    -ms-transform-origin: 50% 8px;
-    -o-transform-origin: 50% 8px;
-}
-
-#history-clock.animate5 #clockarm1 {
-    -webkit-transform: rotate(10.85turn) translate3d(0, 0, 0);
-    -moz-transform: rotate(10.85turn) translate3d(0, 0, 0);
-    -ms-transform: rotate(10.85turn) translate3d(0, 0, 0);
-    -o-transform: rotate(10.85turn) translate3d(0, 0, 0);
-    -webkit-transform-origin: 50% 10px;
-    -moz-transform-origin: 50% 10px;
-    -ms-transform-origin: 50% 10px;
-    -o-transform-origin: 50% 10px;
-}
-
-#history-clock.animate5 #clockarm2 {
-    -webkit-transform: rotate(10.25turn) translate3d(0, 0, 0);
-    -moz-transform: rotate(10.25turn) translate3d(0, 0, 0);
-    -ms-transform: rotate(10.25turn) translate3d(0, 0, 0);
-    -o-transform: rotate(10.25turn) translate3d(0, 0, 0);
-    -webkit-transform-origin: 50% 8px;
-    -moz-transform-origin: 50% 8px;
-    -ms-transform-origin: 50% 8px;
-    -o-transform-origin: 50% 8px;
-}
-
-#history-clock.animate6 #clockarm1 {
-    -webkit-transform: rotate(13.11turn) translate3d(0, 0, 0);
-    -moz-transform: rotate(13.11turn) translate3d(0, 0, 0);
-    -ms-transform: rotate(13.11turn) translate3d(0, 0, 0);
-    -o-transform: rotate(13.11turn) translate3d(0, 0, 0);
-    -webkit-transform-origin: 50% 10px;
-    -moz-transform-origin: 50% 10px;
-    -ms-transform-origin: 50% 10px;
-    -o-transform-origin: 50% 10px;
-}
-
-#history-clock.animate6 #clockarm2 {
-    -webkit-transform: rotate(13.34turn) translate3d(0, 0, 0);
-    -moz-transform: rotate(13.34turn) translate3d(0, 0, 0);
-    -ms-transform: rotate(13.34turn) translate3d(0, 0, 0);
-    -o-transform: rotate(13.34turn) translate3d(0, 0, 0);
-    -webkit-transform-origin: 50% 8px;
-    -moz-transform-origin: 50% 8px;
-    -ms-transform-origin: 50% 8px;
-    -o-transform-origin: 50% 8px;
-}
-
-#history-clock.animate7 #clockarm1 {
-    -webkit-transform: rotate(16.46turn) translate3d(0, 0, 0);
-    -moz-transform: rotate(16.46turn) translate3d(0, 0, 0);
-    -ms-transform: rotate(16.46turn) translate3d(0, 0, 0);
-    -o-transform: rotate(16.46turn) translate3d(0, 0, 0);
-    -webkit-transform-origin: 50% 10px;
-    -moz-transform-origin: 50% 10px;
-    -ms-transform-origin: 50% 10px;
-    -o-transform-origin: 50% 10px;
-}
-
-#history-clock.animate7 #clockarm2 {
-    -webkit-transform: rotate(16.84turn) translate3d(0, 0, 0);
-    -moz-transform: rotate(16.84turn) translate3d(0, 0, 0);
-    -ms-transform: rotate(16.84turn) translate3d(0, 0, 0);
-    -o-transform: rotate(16.84turn) translate3d(0, 0, 0);
     -webkit-transform-origin: 50% 8px;
     -moz-transform-origin: 50% 8px;
     -ms-transform-origin: 50% 8px;
