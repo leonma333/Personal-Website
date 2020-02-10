@@ -10,24 +10,17 @@
         <link rel="stylesheet" href="css/contact.css">
         <link rel="icon" type="image/png" sizes="96x96" href="assets/image/favicon-96x96.png">
     </head>
-    <script type ="text/javascript">
-        /* Set up Facebook SDK */
+    <script>
         window.fbAsyncInit = function() {
             FB.init({
-                appId: "1016163328505701",
-                xfbml: true,
-                version: "v2.8"
+                appId            : '1016163328505701',
+                autoLogAppEvents : true,
+                xfbml            : true,
+                version          : 'v6.0'
             });
         };
-
-        (function(d, s, id){
-            var js, fjs = d.getElementsByTagName(s)[0];
-            if (d.getElementById(id)) { return; }
-            js = d.createElement(s); js.id = id;
-            js.src = "//connect.facebook.net/en_US/sdk.js";
-            fjs.parentNode.insertBefore(js, fjs);
-        }(document, 'script', 'facebook-jssdk'));
     </script>
+    <script async defer src="https://connect.facebook.net/en_US/sdk.js"></script>
     <body translate="no" >
         <div class="loader-wrapper">
             <div class="loader">

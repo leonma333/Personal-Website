@@ -95,7 +95,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                         $payload = $messaging['message']['quick_reply']['payload'];
 
                         switch($payload) {
-                            case 'age_20':
+                            case 'age_22':
                                 $message = array(
                                     'text' => 'What is my favorite color?',
                                     'quick_replies' => array(
@@ -147,10 +147,12 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                                 send_messenger($user_id, $message, $config['token-messenger']);
                                 break;
                             case 'i_am_all':
-                                $message = array(
-                                    'text' => 'Where am I?',
-                                    'quick_replies' => array( array('content_type' => 'location') )
-                                    );
+                                // DEPRECATED
+                                // $message = array(
+                                //     'text' => 'Where am I?',
+                                //     'quick_replies' => array( array('content_type' => 'location') )
+                                //     );
+                                $message = array('text' => 'Oh my god! You know me so well.');
                                 send_messenger($user_id, $message, $config['token-messenger']);
                                 break;
                             default:
@@ -168,18 +170,18 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                                     'quick_replies' => array(
                                         array(
                                             'content_type' => 'text',
-                                            'title' => '19',
-                                            'payload' => 'age_19'
-                                            ),
-                                        array(
-                                            'content_type' => 'text',
-                                            'title' => '20',
-                                            'payload' => 'age_20'
-                                            ),
-                                        array(
-                                            'content_type' => 'text',
                                             'title' => '21',
                                             'payload' => 'age_21'
+                                            ),
+                                        array(
+                                            'content_type' => 'text',
+                                            'title' => '22',
+                                            'payload' => 'age_22'
+                                            ),
+                                        array(
+                                            'content_type' => 'text',
+                                            'title' => '23',
+                                            'payload' => 'age_23'
                                             )
                                         )
                                     );
@@ -242,18 +244,18 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                                 'quick_replies' => array(
                                     array(
                                         'content_type' => 'text',
-                                        'title' => '19',
-                                        'payload' => 'age_19'
-                                        ),
-                                    array(
-                                        'content_type' => 'text',
-                                        'title' => '20',
-                                        'payload' => 'age_20'
-                                        ),
-                                    array(
-                                        'content_type' => 'text',
                                         'title' => '21',
                                         'payload' => 'age_21'
+                                        ),
+                                    array(
+                                        'content_type' => 'text',
+                                        'title' => '22',
+                                        'payload' => 'age_22'
+                                        ),
+                                    array(
+                                        'content_type' => 'text',
+                                        'title' => '23',
+                                        'payload' => 'age_23'
                                         )
                                     )
                                 );

@@ -131,7 +131,11 @@ function initHistoryHandler() {
         titleContent: "<strong>Wish</strong>",
         position: "bottom-right",
         width: 300,
-        content: "<p>Coming soon</p><br>" +
+        content: "<ul>" +
+                "<li><b>$</b> Revamped user campaign architecture to improve content relevancy.</li>" +
+                "<li><b>$</b> Initiated end-to-end automated testing that increases system reliability and decreases alert.</li>" +
+                "</ul><br><hr><br>" +
+                "<p>Python, Tornado, MongoDB, Hive, Hadoop, Redis, PostgresSQL, gRPC, AWS, Prometheus</p><br>" +
                 "<a style='color:black' target='_blank' href='https://www.wish.com/'>See Website</a>"
     });
 
@@ -145,12 +149,10 @@ function initHistoryHandler() {
         position: "bottom-left",
         width: 300,
         content: "<ul>" +
-                "<li><b>$</b> Created time tracking feature on admin software.</li>" +
-                "<li><b>$</b> Utilized Google Cloud Platform to manage applications with Kubernetes.</li>" +
-                "<li><b>$</b> Wrote multiple reliably comprehensive user interaction simulation tests for the deployment pipeline.</li>" +
-                "<li><b>$</b> Involved in frequent meetings to update project progress on Jira board and share insights/reflections.</li>" +
+                "<li><b>$</b> Created time tracking feature on admin software to maximize user productivity.</li>" +
+                "<li><b>$</b> Improved Jenkins pipeline speed and reliability.</li>" +
                 "</ul><br><hr><br>" +
-                "<p>Google Cloud Platform; Flask; Ember.js; Capybara; Ruby; Python</p><br>" +
+                "<p>JavaScript, Ruby, Python, Ember.js, Capybara, Flask, Elasticsearch, MySQL, Docker, Jenkins, Kubernetes</p><br>" +
                 "<a style='color:black' target='_blank' href='https://www.freshbooks.com/'>See Website</a>"
     });
 
@@ -164,12 +166,9 @@ function initHistoryHandler() {
         position: "bottom-right",
         width: 300,
         content: "<ul>" +
-                "<li><b>$</b> Designed and developed a fault tolerance, low latency and high throughput Kafka stream processing application.</li>" +
-                "<li><b>$</b> Wrote high coverage and race condition detectable test to ensure code quality.</li>" +
-                "<li><b>$</b> Reported StatsD metrics to visualize application performance.</li>" +
-                "<li><b>$</b> Setup thorough continuous integration to prevent building technical debt.</li>" +
+                "<li><b>$</b> Designed and developed a fault tolerance, low latency and high throughput Kafka stream processing application to refine PII data for GDPR compliance.</li>" +
                 "</ul><br><hr><br>" +
-                "<p>Kubernetes; Kafka; Hadoop; Go; Ruby; Bash; Shell</p><br>" +
+                "<p>Go, Ruby, Python, Kafka, Hadoop, Spark, StatsD, Buildkite, Codecov, Docker, Zookeeper</p><br>" +
                 "<a style='color:black' target='_blank' href='https://www.shopify.ca/'>See Website</a>"
     });
 
@@ -183,12 +182,10 @@ function initHistoryHandler() {
         position: "bottom-left",
         width: 300,
         content: "<ul>" +
-                "<li><b>$</b> Started multi-language Kicks4Love web and app from scratch while arranging advertisement contract on the platform.</li>" +
-                "<li><b>$</b> Set up fast and secure Nginx web server that enable Gzip compression, leverage browser caching, and prevent DDoS attack.</li>" +
+                "<li><b>$</b> Started Kicks4Love web and app from scratch. Prevented DDoS attack.</li>" +
                 "<li><b>$</b> Executed fast production changes according to analytics data.</li>" +
-                "<li><b>$</b> Engaged in agile work environment with constant software updates and releases.</li>" +
                 "</ul><br><hr><br>" +
-                "<p>Ruby on Rails; React Native; Nginx; MySQL; Ruby; JavaScript; Bash</p><br>" +
+                "<p>Ruby, JavaScript, Ruby on Rails, React Native, MySQL, CircleCI, Nginx, Google AdSense, Google Analytics</p><br>" +
                 "<a style='color:black' target='_blank' href='https://kicks4love.com'>See Website</a>"
     });
 
@@ -218,12 +215,10 @@ function initHistoryHandler() {
         position: "bottom-left",
         width: 300,
         content: "<ul>" +
-                "<li><b>$</b> Added new features to public commercial website and internal management system.</li>" +
-                "<li><b>$</b> Individually integrated numerous payment methods such as Apple Pay on web, PayPal, ACH and Affirm.</li>" +
-                "<li><b>$</b> Utilized Vagrant to develop the software that shipped and deployed in daily basis.</li>" +
-                "<li><b>$</b> Cooperated within a small team with scrum development cycle.</li>" +
+                "<li><b>$</b> Integrated payment methods such as Apple Pay on the web, PayPal, ACH, and Affirm.</li>" +
+                "<li><b>$</b> I can show you more of my contribution on jewlr.com.</li>" +
                 "</ul><br><hr><br>" +
-                "<p>Ruby on Rails; Vagrant; AWS; MySQL; Ruby; JavaScript; Bash</p><br>" +
+                "<p>Ruby, JavaScript, Ruby on Rails, Redis, MySQL, Vagrant, OpenSSL, FullStory</p><br>" +
                 "<a style='color:black' target='_blank' href='https://www.jewlr.com'>See Website</a>"
     });
 
@@ -237,12 +232,10 @@ function initHistoryHandler() {
         position: "bottom-right",
         width: 300,
         content: "<ul>" +
-                "<li><b>$</b> Independently designed, developed, and tested various financial applications.</li>" +
-                "<li><b>$</b> Wrote multiple advanced SQL scripts in order to achieve better interaction between client and database.</li>" +
-                "<li><b>$</b> Engaged in cloud computing to host database, web app and improve security on Azure.</li>" +
-                "<li><b>$</b> Utilized numerous third party APIs to update and exchange data on ERP systems.</li>" +
+                "<li><b>$</b> Independently implemented microservice ERP system solution.</li>" +
+                "<li><b>$</b> Contributed to open source product and order management applications.</li>" +
                 "</ul><br><hr><br>" +
-                "<p>.Net/ASP.Net; Azure; SQL Server; C#</p><br>" +
+                "<p>C#, .NET, ASP.NET, SQL Server, Azure</p><br>" +
                 "<a style='color:black' target='_blank' href='https://www.ashlinbpg.com'>See Website</a>"
     });
 
