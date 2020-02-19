@@ -1,4 +1,56 @@
 /*
+ * Encryption
+ */
+function Encryption() {
+    const publicKey = 'MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAvlxDcMqPjSqPLKtVWcBMKsiq50BLg9iPeX0O7jmc89EZS/Ke2JWVNku0UJTT8kiUmR6g3ZoyBjhzlQeyTKws2krrbe39yPo/jI/DN5D4JyPcaugrRyVgz7+RL6lK6cvW+7ETgvuCBL/Kd1sQi1Mrk26aNhoR/v9W2OYvmj7FxldzanM1W5OnDYxPvcTfroxNm9MFkSEt/sfIrUpJMIHJBwcxA7o8KslyPwaMtWKDn0UQUwFUizn6XPelJO9hdr4b4gMY7/cC0JUWWxzMnbQMK0VhrbD/G6y/XRmhPLAcdDPwe9gZS6H7zNRRjQkhKQlw5YiSvPwKtZLi3FvbmvTytwIDAQAB';
+
+    this.encrypt = function(data) {
+        return window.crypto.subtle.importKey(
+            'spki',
+            str2ab(window.atob(publicKey)),
+            {
+                name: 'RSA-OAEP',
+                hash: {name: 'SHA-1'}
+            },
+            true,
+            ['encrypt']
+        ).then(function(cryptokey) {
+            return window.crypto.subtle.encrypt({name: "RSA-OAEP"}, cryptokey, str2ab(data)).then(function(encrypted) {
+                return window.btoa(ab2str(encrypted));
+            });
+        });
+    }
+
+    this.transform = async function(dataList) {
+        var data = {};
+
+        dataList.forEach(function(item) {
+            data[item['name']] = item['value'];
+        });
+
+        for (var key in data)
+            data[key] = await encryption.encrypt(data[key]);
+
+        return Promise.resolve(data);
+    }
+
+    function ab2str(buf) {
+        return String.fromCharCode.apply(null, new Uint8Array(buf));
+    }
+
+    function str2ab(str) {
+        var buf = new ArrayBuffer(str.length); // 2 bytes for each char
+        var bufView = new Uint8Array(buf);
+        for (var i=0, strLen=str.length; i < strLen; i++) {
+            bufView[i] = str.charCodeAt(i);
+        }
+        return buf;
+    }
+}
+
+const encryption = new Encryption();
+
+/*
  * Class for ContactForm
  */
 function ContactForm() {
@@ -75,8 +127,7 @@ function ContactForm() {
         // get the submit button first
         var submitButton = $("form#email-form input[type='submit']");
 
-        // set email form submit action
-        $("#email-form").submit(function(event) {
+        async function emailFormHandler(event) {
             // fields missing handling
             if (!namePass) {
                 nameText.focus();
@@ -94,11 +145,15 @@ function ContactForm() {
             submitButton.val("Sending");
             submitButton.prop("disabled", true);
 
+            event.preventDefault();
+
+            var data = await encryption.transform($(this).serializeArray());
+
             // ajax post request
             $.ajax({
                 type: method,
                 url: url,
-                data: $(this).serialize(),
+                data: $.param(data),
                 dataType: "json",
                 success: function(data) { submitButton.val("Sent"); },
                 error: function(data) {
@@ -107,9 +162,10 @@ function ContactForm() {
                     alert("Sorry, my server said that\n" + data["responseJSON"]["message"]);
                 }
             });
+        }
 
-            event.preventDefault();
-        });
+        // set email form submit action
+        $("#email-form").submit(emailFormHandler);
     };
 }
 
@@ -164,21 +220,24 @@ function PhonePopup() {
         // get the submit button first
         var submitButton = $("form#phone-form input[type='submit']");
 
-        // set email form submit action
-        $("#phone-form").submit(function(event) {
+        async function phoneFormHandler(event) {
             // fields missing or incorrect handling
             if (!numberPass) return false;
 
             submitButton.val("Sending");
             submitButton.prop("disabled", true);
 
+            event.preventDefault();
+
+            var data = await encryption.transform($(this).serializeArray());
+
             // ajax post request
             $.ajax({
                 type: method,
                 url: url,
-                data: $(this).serialize(),
+                data: $.param(data),
                 dataType: "json",
-                success: function(data) { 
+                success: function(data) {
                     submitButton.val("Sent");
                 },
                 error: function(data) {
@@ -188,9 +247,10 @@ function PhonePopup() {
                     alert((data["responseJSON"]["validation_code"] ? "" : "Sorry, my server said that\n") + data["responseJSON"]["message"]);
                 }
             });
+        }
 
-            event.preventDefault();
-        });
+        // set email form submit action
+        $("#phone-form").submit(phoneFormHandler);
     }
 
     /* function that show the validation code */

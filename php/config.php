@@ -9,7 +9,8 @@ return array(
     'token-twilio' => null,
     'phone-twilio' => null,
     'phone-mobile' => null,
-    'token-messenger' => null
+    'token-messenger' => null,
+    'private-key' => null
 );
 
 ?>

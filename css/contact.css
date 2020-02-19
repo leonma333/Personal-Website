@@ -241,10 +241,28 @@ a {
 }
 /* ------------ End Menu ------------- */
 
+/* ------------ Encryption Container ------------- */
+.encryption-container {
+    width: 80%;
+    text-align: center;
+    margin: 110px auto 0px;
+}
+
+.encryption-container h3 {
+    font-size: 15px;
+    margin-block-end: 0.5em;
+}
+
+.encryption-container p {
+    margin: 0;
+    font-size: 12px;
+}
+/* ------------ End Encryption Container ------------- */
+
 /* ------------ Contact Form ------------- */
 section#hire {
     background: #c3c3c3;
-    margin: 90px auto 40px;
+    margin: 40px auto 40px;
     border-top: 15px solid black;
     text-align: center;
     font-size: 62.5%;
@@ -253,6 +271,7 @@ section#hire {
     padding: 50px 0 110px;
     width: 80%;
     max-width: 1100px;
+    min-width: 300px;
 }
 
 section#hire h1 {

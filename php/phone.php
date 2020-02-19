@@ -2,6 +2,7 @@
 
 # Get necessary files
 require 'vendor/autoload.php';
+require 'rsa.php';
 $config = include('config.php');
 
 # Using Twilio REST API Client
@@ -11,7 +12,9 @@ use Twilio\Rest\Client;
 header('Content-type: application/json');
 
 # Only send the email if all parameters are satisfied
-if (isset($_POST['contact_number'])) {
+if (isset($_POST['contact_number']) && strpos($_SERVER['HTTP_ORIGIN'], 'lhm.rocks') !== false) {
+
+    $contact_number = decrypt($_POST['contact_number']);
 
     # Initialize the Client object
     $client = new Client($config['sid'], $config['token-twilio']);
@@ -24,7 +27,7 @@ if (isset($_POST['contact_number'])) {
     try {
         # Send to client
         $client->messages->create(
-            $_POST['contact_number'],
+            $contact_number,
             array(
                 'from' => $config['phone-twilio'],
                 'body' => "(lhm.rocks)\nThanks for visiting my website. The following are my contact information:\nemail: " . $config['hotmail'] . "\nphone: " . $config['phone-mobile'] . "\nFeel free to contact me, and here are my words for you:\n" . "1.Be a constant learner.\n2.Write clean and strong code.\nBy the way, Any time is House time."
@@ -36,7 +39,7 @@ if (isset($_POST['contact_number'])) {
             $config['phone-mobile'],
             array(
                 'from' => $config['phone-twilio'],
-                'body' => "(lhm.rocks)\n" . $_POST['contact_number'] . ' sent text from my website.'
+                'body' => "(lhm.rocks)\n" . $contact_number . ' sent text from my website.'
             )
         );
 
@@ -47,7 +50,7 @@ if (isset($_POST['contact_number'])) {
         if ($e->getCode() == 21608) {
             # Verifiy the number to Twilio
             $validationRequest = $client->validationRequests->create(
-                $_POST['contact_number'],
+                $contact_number,
                 array("friendlyName" => "Visitor's number from lhm.rocks")
             );
 

@@ -8,6 +8,7 @@
         <meta name="viewport" content="width=device-width,initial-scale=1">
         <meta property="og:image" content="https://lhm-website.herokuapp.com/assets/image/lhm.png">
         <link rel="stylesheet" href="css/contact.css">
+        <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <link rel="icon" type="image/png" sizes="96x96" href="assets/image/favicon-96x96.png">
     </head>
     <script>
@@ -37,6 +38,10 @@
                 <li><a href="experience.html">Experience</a></li>
                 <li><a>Contact</a></li>
             </ul>
+        </div>
+        <div class="encryption-container">
+            <h3><i class="fa fa-lock fa-lg"></i> Security & Privacy Guarantee</h3>
+            <p>No HTTPS because SSL configuration on Heroku need $, so I've done RSA myself</p>
         </div>
         <section id="hire">
             <h1>Contact Me</h1>
@@ -104,7 +109,7 @@
 
             window.onload = function() {
                 setTimeout(function() {
-                    $(".loader-wrapper").fadeOut("slow", function() { $(this).remove(); }); 
+                    $(".loader-wrapper").fadeOut("slow", function() { $(this).remove(); });
                 }, 2000);
             }
         });

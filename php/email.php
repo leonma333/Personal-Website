@@ -2,6 +2,7 @@
 
 # Get necessary files
 require 'phpmailer/PHPMailerAutoload.php';
+require 'rsa.php';
 $config = include('config.php');
 
 # Set response header to json object
@@ -10,6 +11,10 @@ header('Content-type: application/json');
 # Only send the email if all parameters are satisfied
 if (isset($_POST['contact_name']) && isset($_POST['contact_email']) && isset($_POST['contact_msg']) &&
     strpos($_SERVER['HTTP_ORIGIN'], 'lhm.rocks') !== false) {
+
+    $contact_name = decrypt($_POST['contact_name']);
+    $contact_email = decrypt($_POST['contact_email']);
+    $contact_msg = decrypt($_POST['contact_msg']);
 
     # Initialize PHPMailer
     $mail = new PHPMailer(true);
@@ -25,11 +30,11 @@ if (isset($_POST['contact_name']) && isset($_POST['contact_email']) && isset($_P
 
     $mail->setFrom($config['zoho']);
     $mail->addAddress($config['hotmail'], 'Liang-Husan Ma');
-    $mail->addCC($_POST['contact_email'], $_POST['contact_name']);
+    $mail->addCC($contact_email, $contact_name);
     $mail->isHTML(true);
 
-    $mail->Subject = $_POST['contact_name'] . ' sent Liang-Husan Ma an email via Liang-Hsuan\'s website.';
-    $mail->Body = '<b>Sender email is:</b> ' . $_POST['contact_email'] . '<br/><br/><b>The message is:</b><br/>' . $_POST['contact_msg'] .
+    $mail->Subject = $contact_name . ' sent Liang-Husan Ma an email via Liang-Hsuan\'s website.';
+    $mail->Body = '<b>Sender email is:</b> ' . $contact_email . '<br/><br/><b>The message is:</b><br/>' . $contact_msg .
                   '<br/><br/>Thank you for visiting my website. Here are my words for you:<br/><ol><li>Be a constant learner.</li>' .
                   '<li>Write clean and strong code</li><li><strong>Any time is House time.</strong></li></ol><br/><img src="https://lhm-website.herokuapp.com/assets/image/favicon-96x96.png">';
 
