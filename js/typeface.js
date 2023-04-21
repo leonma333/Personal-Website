@@ -214,7 +214,7 @@ closeValue.prototype = {
     }
 };
 
-var strokeColor = "rgba(255,255,255,0.1)";
+var strokeColor = "rgba(255,255,255,0.5)";
 var backgroundColor = "rgba(0,0,0,1)";
 var vibrateFlag = false;
 
@@ -530,10 +530,10 @@ var resume = function() {
             vibrateFlag = false;
         };
         if(invertCV.execution() > 0.7) {
-            strokeColor = "rgba(0,0,0,0.1)";
+            strokeColor = "rgba(0,0,0,0.5)";
             backgroundColor = "rgba(255,255,255,1)";
         } else {
-            strokeColor = "rgba(255,255,255,0.1)";
+            strokeColor = "rgba(255,255,255,0.5)";
             backgroundColor = "rgba(0,0,0,1)";
         };
         ctx.clearRect(0, 0, canvasWidth, canvasHeight);
@@ -560,10 +560,10 @@ var start = function() {
             vibrateFlag = false;
         };
         if(invertCV.execution() > 0.7) {
-            strokeColor = "rgba(0,0,0,0.1)";
+            strokeColor = "rgba(0,0,0,0.5)";
             backgroundColor = "rgba(255,255,255,1)";
         } else {
-            strokeColor = "rgba(255,255,255,0.1)";
+            strokeColor = "rgba(255,255,255,0.5)";
             backgroundColor = "rgba(0,0,0,1)";
         };
         ctx.clearRect(0, 0, canvasWidth, canvasHeight);

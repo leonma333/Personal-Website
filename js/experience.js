@@ -132,10 +132,9 @@ function initHistoryHandler() {
         position: "bottom-right",
         width: 300,
         content: "<ul>" +
-                "<li><b>$</b> Revamped user campaign architecture to improve content relevancy.</li>" +
-                "<li><b>$</b> Initiated end-to-end automated testing that increases system reliability and decreases alert.</li>" +
+                "<li><b>$</b> Proposed and developed a shared integration test framework for the monolith project. Added code coverage check and visualization. New instances of uncaught exception reduced by 80% for our team and numerous dead code had been identified.</li><br>" +
+                "<li><b>$</b> Improved automated campaign content result and relevancy by integrating with internal feed service. Campaign engagement rate increased by 10 %.</li>" +
                 "</ul><br><hr><br>" +
-                "<p>Python, Tornado, MongoDB, Hive, Hadoop, Redis, PostgresSQL, gRPC, AWS, Prometheus</p><br>" +
                 "<a style='color:black' target='_blank' href='https://www.wish.com/'>See Website</a>"
     });
 
@@ -149,10 +148,9 @@ function initHistoryHandler() {
         position: "bottom-left",
         width: 300,
         content: "<ul>" +
-                "<li><b>$</b> Created time tracking feature on admin software to maximize user productivity.</li>" +
-                "<li><b>$</b> Improved Jenkins pipeline speed and reliability.</li>" +
+                "<li><b>$</b> Collaborated within a small team to productionize time tracking feature on B2B SaaS to maximize businesses' productivity. NPS increased by 5%.</li><br>" +
+                "<li><b>$</b> Advocated and led a new API gateway middleware to enforce timezone data to ensure consistency of timezone information across services. Prevented technical debt and unblocked future projects development.</li>" +
                 "</ul><br><hr><br>" +
-                "<p>JavaScript, Ruby, Python, Ember.js, Capybara, Flask, Elasticsearch, MySQL, Docker, Jenkins, Kubernetes</p><br>" +
                 "<a style='color:black' target='_blank' href='https://www.freshbooks.com/'>See Website</a>"
     });
 
